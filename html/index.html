@@ -11,16 +11,18 @@
                 <header class="header scrolls">
                     <div class="brand-logo"><img src="../images/ITZonTarget_Logo_Primary.svg"></div>
                     <nav class="navigation">
-                        <ul>
+                        <ul class="menu-list">
                             <li><a href="#"  class="underline-orange">About</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#"  class="underline-orange">Case Study</a></li>
                             <li><a href="#">Resources</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li><img src="../images/magnify.svg"></li>
-                            <li></li>
                         </ul>
                     </nav>
+                    <div class="search-block">
+                        <img src="../images/magnify.svg">
+                        <a class="burger"><span></span></a>
+                    </div>
                 </header>
             </section>
             <section class="empty" style="height: 300px;"></section>
@@ -33,3 +35,11 @@
         </footer>
     </body>
 </html>
+
+<script>
+    document.querySelector('.burger').addEventListener("click", function() {
+        document.querySelector('.navigation').classList.toggle("open");
+        document.querySelector('.menu-list').classList.toggle("list-open");
+        document.querySelector('header').classList.toggle("nav-mobile-active");
+    });
+</script>
