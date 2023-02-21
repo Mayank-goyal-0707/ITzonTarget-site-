@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Greycliff CF - Heavy';
+  src: url("../font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.ttf") format("truetype"), url("../font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.woff") format("woff"), url("../font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.woff2") format("woff2"); }
+@font-face {
+  font-family: "Greycliff CF - bold";
+  src: url("../font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.ttf") format("truetype"), url("../font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.woff") format("woff"), url("../font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.woff2") format("woff2"); }
+/* variables for colors */
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+body {
+  padding: 0px;
+  margin: 0px; }
+
+/*css for header sections only */
+.header {
+  margin: 40px 0px;
+  padding: 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header.scrolls {
+    margin-top: 0px;
+    padding: 30px 40px;
+    background-color: #EFF8FC;
+    box-shadow: 0px 1px 10px rgba(82, 99, 116, 0.15);
+    border-radius: 0px 0px 9px 9px; }
+
+.brand-logo {
+  font-weight: bold; }
+
+.navigation ul {
+  list-style: none;
+  display: flex; }
+  .navigation ul li {
+    padding: 0px 20px; }
+    .navigation ul li a {
+      text-decoration: none;
+      font-family: 'Greycliff CF - Heavy';
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 900;
+      color: #00386C; }
+
+.underline-orange {
+  position: relative;
+  display: inline-block !important; }
+  .underline-orange::before {
+    position: absolute;
+    content: '';
+    height: 7px;
+    width: 100% !important;
+    border: solid 4px #FBBB5B;
+    border-color: #FBBB5B transparent transparent transparent;
+    border-radius: 64%;
+    bottom: -18px;
+    left: -4%; }
+
+.footer {
+  padding: 60px;
+  background: url(../images/footer-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.footer-text {
+  font-family: 'Greycliff CF - bold';
+  font-size: 44px;
+  line-height: 44px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 50.6px;
+  letter-spacing: -2%; }
+
+/*# sourceMappingURL=style.css.map */

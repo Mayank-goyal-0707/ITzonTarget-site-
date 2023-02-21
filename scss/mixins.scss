@@ -1,0 +1,36 @@
+
+@mixin font-greyclif-heavy($font-size , $font-color, $font-weight) {
+    font-family: 'Greycliff CF - Heavy';
+    font-size: $font-size;
+    line-height: $font-size;
+    font-weight: $font-weight;
+    color: $font-color;
+}
+@mixin font-greyclif-bold($font-size , $font-color, $font-weight) {
+    font-family: 'Greycliff CF - bold';
+    font-size: $font-size;
+    line-height: $font-size;
+    font-weight: $font-weight;
+    color: $font-color;
+}
+@mixin curved-underline($color)  {
+    position: absolute;
+    content: '';
+    height: 7px;
+    width: 100% !important;
+    border: solid 4px $color;
+    border-color: $color transparent transparent transparent;
+    border-radius: 64%;
+    bottom: -18px;
+    left: -4%;
+}
+@mixin pos-abs {
+    position: absolute;
+    content: '';
+}
+
+@mixin dispflex-spcbw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

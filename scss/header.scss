@@ -1,0 +1,37 @@
+/*css for header sections only */
+@import 'mixins';
+.header{
+   margin:  40px 0px;
+   padding: 0px 40px ;
+   @include dispflex-spcbw;
+   // css when page scrolls on desktop
+   &.scrolls{
+       margin-top: 0px;
+       padding: 30px 40px;
+       background-color: $light-blue;
+       box-shadow: 0px 1px 10px rgba(82, 99, 116, 0.15);
+       border-radius: 0px 0px 9px 9px;
+   }
+}
+.brand-logo { font-weight: bold;}
+.navigation {
+    ul{
+        list-style: none;
+        display: flex;
+        li{
+            padding: 0px 20px; 
+            a{
+                text-decoration: none;
+                @include font-greyclif-heavy(20px , $navy, 900);
+            }
+        }
+    }
+}
+// css for global active classes
+.underline-orange{
+    position: relative;
+    display: inline-block !important;
+    &::before{
+        @include curved-underline($orange);
+    }
+}

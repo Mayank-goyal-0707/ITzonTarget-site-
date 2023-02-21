@@ -1,0 +1,15 @@
+// css for footer section
+.footer {
+    padding: 60px;
+    background: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer-top{
+ @include dispflex-spcbw;
+}
+.footer-text{
+    @include font-greyclif-bold(44px , #fff,700);
+    line-height: 50.6px;
+    letter-spacing: -2%;
+}
