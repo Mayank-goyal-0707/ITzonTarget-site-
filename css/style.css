@@ -32,9 +32,11 @@ body {
 
 .brand-logo {
   font-weight: bold; }
-  @media (max-width: 767px) {
-    .brand-logo img {
-      width: 153px; } }
+  .brand-logo img {
+    width: 159px; }
+    @media (max-width: 767px) {
+      .brand-logo img {
+        width: 153px; } }
 
 .navigation ul {
   list-style: none;
@@ -88,6 +90,14 @@ body {
   align-items: center;
   width: 75px;
   justify-content: space-between; }
+  .search-block img, .search-block a {
+    cursor: pointer; }
+  @media (min-width: 991px) {
+    .search-block {
+      margin-left: -102px; } }
+  @media (min-width: 1140px) {
+    .search-block {
+      margin-left: -200px; } }
 
 .open {
   position: fixed;
@@ -199,6 +209,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding-bottom: 50px;
   width: 100%;
   border-bottom: 2px solid #60aef580; }
@@ -216,12 +227,14 @@ body {
   font-weight: 700;
   color: #fff;
   line-height: 50.6px;
-  letter-spacing: -0.02em; }
+  letter-spacing: -0.02em;
+  width: 65%; }
   @media (min-width: 768px) and (max-width: 990px) {
     .footer-text {
       width: 55%;
       margin: 0 auto;
-      line-height: 115%; } }
+      line-height: 115%;
+      text-align: center; } }
   @media (max-width: 767px) {
     .footer-text {
       font-family: 'Greycliff CF - bold';
