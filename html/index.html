@@ -11,16 +11,19 @@
                 <header class="header scrolls">
                     <div class="brand-logo"><img src="../images/ITZonTarget_Logo_Primary.svg"></div>
                     <nav class="navigation">
-                        <ul>
+                        <ul class="menu-list">
                             <li><a href="#"  class="underline-orange">About</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#"  class="underline-orange">Case Study</a></li>
                             <li><a href="#">Resources</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li><img src="../images/magnify.svg"></li>
-                            <li></li>
+                            <li><button class="cta-primary">Get a free quote today</button></li>
                         </ul>
                     </nav>
+                    <div class="search-block">
+                        <img src="../images/magnify.svg">
+                        <a class="burger"><span></span></a>
+                    </div>
                 </header>
             </section>
             <section class="empty" style="height: 300px;"></section>
@@ -28,8 +31,28 @@
         <footer class="footer">
             <div class="footer-top">
                 <div class="footer-text">Let’s revolutionize your ad strategy.</div>
-                <button class="cta">Get a free quote today</button>
+                <button class="cta-primary">Get a free quote today</button>
+            </div>
+            <div class="footer-menu">
+                <div class="brand-logo"><img src="../images/ITZonTarget_Logo_Primary-Dark.svg"></div>
+                <nav class="navigation footer-nav">
+                    <ul class="menu-list">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Case Study</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </footer>
     </body>
 </html>
+
+<script>
+    document.querySelector('.burger').addEventListener("click", function() {
+        document.querySelector('.navigation').classList.toggle("open");
+        document.querySelector('.menu-list').classList.toggle("list-open");
+        document.querySelector('header').classList.toggle("nav-mobile-active");
+    });
+</script>
