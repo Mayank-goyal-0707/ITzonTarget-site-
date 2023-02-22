@@ -36,13 +36,13 @@
 			a{
 				text-decoration: none;
 				@include font-greyclif-heavy(20px , $navy, 900);
-			}
-			.cta-primary {
-				margin-top: 16%;
-				@include Desktops {
-					display: none;
+				&.cta-primary {
+					margin-top: 16%;
+					@include Desktops {
+						display: none;
+					}
 				}
-			} 
+			}
 		}
 	}
 	&.open{
@@ -82,7 +82,7 @@
 	position: fixed;
 	background: #fff;
 	width: 100%;
-	height: calc(100vh - 117px);
+	height: calc(100vh - 89px);
 	bottom: 0;
 	right: 0;
 }
