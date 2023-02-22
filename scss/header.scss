@@ -13,7 +13,13 @@
        border-radius: 0px 0px 9px 9px;
    }
 }
-.brand-logo { font-weight: bold;}
+.brand-logo { font-weight: bold;
+  img {
+    @include mobiles {
+        width: 153px;
+    }
+  }
+}
 .navigation {
     ul{
         list-style: none;
@@ -23,6 +29,28 @@
             a{
                 text-decoration: none;
                 @include font-greyclif-heavy(20px , $navy, 900);
+            }
+            .cta-primary {
+                margin-top: 16%;
+                @include Desktops {
+                    display: none;
+                }
+            } 
+        }
+    }
+    &.open{
+        ul{
+            display: block;
+            text-align: center;
+            position: relative;
+            top: 50%;
+            transform: translateY(-66%);
+            padding: 0px;
+            li{
+                margin: 40px 0px;
+                a{
+                    @include font-greyclif-heavy(28px , $navy ,900);
+                }
             }
         }
     }
@@ -44,12 +72,11 @@
 }
 .open {
 	position: fixed;
-	background: #39D;
+	background: #fff;
 	width: 100%;
 	height: calc(100vh - 117px);
 	bottom: 0;
 	right: 0;
-	transform: scale(1.1);
 }
 .list-open {
 	opacity: 1;
@@ -111,6 +138,7 @@
 			transition-property: top,transform;
 		}
 	}
+    @include Desktops {display: none;}
 }
 .nav-mobile-active {
 	.burger {

@@ -1,15 +1,96 @@
 // css for footer section
 .footer {
-    padding: 60px;
+    padding: 70px 60px 10px 60px;
     background: url(../images/footer-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    @include mobiles {
+        padding: 70px 20px 10px 20px;
+    }
 }
 .footer-top{
  @include dispflex-spcbw;
+ padding-bottom: 50px;
+ width: 100%;
+ border-bottom: 2px solid #60aef580;
+ @include tablets {display: block;}
+ @include mobiles {display: block;}
+
 }
 .footer-text{
     @include font-greyclif-bold(44px , #fff,700);
     line-height: 50.6px;
-    letter-spacing: -2%;
+    letter-spacing: -0.02em;
+    @include tablets {
+        width: 55%;
+        margin: 0 auto;
+        line-height: 115%;
+    }
+    @include mobiles {
+        @include font-greyclif-bold(27px , #fff,700); 
+        line-height: 110%;
+        text-align: center;
+        width: 214px;
+        margin: 0 auto;
+    }
+}
+.cta-primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 36px;
+    gap: 10px;
+    background: linear-gradient(92.84deg, rgba(0, 56, 108, 0.3) 14.69%, rgba(9, 116, 228, 0.3) 50.57%, rgba(176, 211, 248, 0.3) 81.51%), #0974E4;
+    box-shadow: 0px 1px 30px rgba(82, 99, 116, 0.2);
+    border-radius: 60px;
+    border: 0px;
+    @include font-greyclif-extrabold(16px,$white,normal);
+    letter-spacing: 0.06em; 
+    text-transform: uppercase;
+    &:hover{
+        cursor: pointer;
+    }
+    @include tablets {
+       margin: 35px auto 20px auto;
+    }
+    @include mobiles {
+        margin: 35px auto 0px auto;
+        @include font-greyclif-extrabold(14px,$white,normal);
+        padding: 22px;
+    }
+}
+//css for footer-menu
+.footer-menu{
+    padding: 30px;
+    @include dispflex-spcbw;
+    @include tablets {
+        display: block;
+        text-align: center;
+    }
+    @include mobiles {
+         display: block;
+         text-align: center;}
+    
+    .brand-logo{
+        @include tablets {margin-top: 20px;}
+    }
+}
+
+.footer-nav {
+    display: block;
+    ul {
+        @include tablets {
+            padding:20px  0px;
+            justify-content: center;}
+        li{
+            a {
+               color: #fff;
+            }
+            @include tablets {
+                padding: 0px 10px;
+            }
+        }
+    }
+    @include mobiles {display: none;}
 }
