@@ -45,7 +45,7 @@
 // mixins for breakpoints
 // for mobiles
 @mixin small-mobiles {
-    @media (max-width:380px) {
+    @media (max-width:560px) {
         @content;
     }
 }
