@@ -21,63 +21,61 @@
     }
   }
 }
-.navigation {
-    ul{
-        list-style: none;
-        display: flex;
-        li{
-            padding: 0px 20px; 
-            a{
-                text-decoration: none;
-                @include font-greyclif-heavy(20px , $navy, 900);
-            }
-            .cta-primary {
-                margin-top: 16%;
-                @include Desktops {
-                    display: none;
-                }
-            } 
-        }
-    }
-    &.open{
-        ul{
-            display: block;
-            text-align: center;
-            position: relative;
-            top: 50%;
-            transform: translateY(-66%);
-            padding: 0px;
-            li{
-                margin: 40px 0px;
-                a{
-                    @include font-greyclif-heavy(28px , $navy ,900);
-                }
-            }
-        }
-    }
-}
-// css for global active classes
-.underline-orange{
-    position: relative;
-    display: inline-block !important;
-    &::before{
-        @include curved-underline($orange);
-    }
+.nav-items {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
+.navigation {
+	ul{
+		list-style: none;
+		display: flex;
+		li{
+			padding-left: 25px; 
+			a{
+				text-decoration: none;
+				@include font-greyclif-heavy(20px , $navy, 900);
+			}
+			.cta-primary {
+				margin-top: 16%;
+				@include Desktops {
+					display: none;
+				}
+			} 
+		}
+	}
+	&.open{
+		ul{
+			display: block;
+			text-align: center;
+			position: relative;
+			top: 50%;
+			transform: translateY(-66%);
+			padding: 0px;
+			li{
+				margin: 40px 0px;
+				a{
+					@include font-greyclif-heavy(28px , $navy ,900);
+				}
+			}
+		}
+	}
+}
 .search-block {
 	display: flex;
 	align-items: center;
-	width: 75px;
-	justify-content: space-between;
+	margin-left: 20px;
 	img , a {
 		cursor: pointer;
 	}
-	@include Desktops {
-		margin-left: -102px;
-	}
-	@include Large-Desktops {
-		margin-left: -200px;
+}
+// css for global active classes
+.underline-orange{
+	position: relative;
+	display: inline-block !important;
+	&::before{
+		@include curved-underline($orange);
 	}
 }
 .open {
@@ -104,6 +102,7 @@
 	cursor: pointer;
 	width: 30px;
 	transition: all .3s;
+	margin-left: 20px;
 	span {
 		display: block;
 		height: 3px;
