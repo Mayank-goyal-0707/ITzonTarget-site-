@@ -252,6 +252,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  text-align: center;
   align-items: center;
   padding: 22px 36px;
   gap: 10px;
