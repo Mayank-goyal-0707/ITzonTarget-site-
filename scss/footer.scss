@@ -16,6 +16,7 @@
  border-bottom: 2px solid #60aef580;
  @include tablets {display: block;}
  @include mobiles {display: block;}
+ @include small-mobiles {padding: 0px 16px;}
 
 }
 .footer-text{
@@ -35,6 +36,11 @@
         text-align: center;
         width: 214px;
         margin: 0 auto;
+    }
+    @include small-mobiles {
+        width: 97%;
+        margin: 0 auto;
+        text-align: center;
     }
 }
 .cta-primary {
@@ -64,6 +70,9 @@
         margin: 35px auto 0px auto;
         @include font-greyclif-extrabold(14px,$white,normal);
         padding: 22px;
+    }
+    @include small-mobiles {
+        margin-bottom:35px ;
     }
 }
 //css for footer-menu
