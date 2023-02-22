@@ -15,6 +15,7 @@
 }
 .brand-logo { font-weight: bold;
   img {
+	width: 159px;
     @include mobiles {
         width: 153px;
     }
@@ -69,6 +70,15 @@
 	align-items: center;
 	width: 75px;
 	justify-content: space-between;
+	img , a {
+		cursor: pointer;
+	}
+	@include Desktops {
+		margin-left: -102px;
+	}
+	@include Large-Desktops {
+		margin-left: -200px;
+	}
 }
 .open {
 	position: fixed;

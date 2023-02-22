@@ -10,6 +10,7 @@
 }
 .footer-top{
  @include dispflex-spcbw;
+ flex-wrap: wrap;
  padding-bottom: 50px;
  width: 100%;
  border-bottom: 2px solid #60aef580;
@@ -21,10 +22,12 @@
     @include font-greyclif-bold(44px , #fff,700);
     line-height: 50.6px;
     letter-spacing: -0.02em;
+    width: 65%;
     @include tablets {
         width: 55%;
         margin: 0 auto;
         line-height: 115%;
+        text-align: center
     }
     @include mobiles {
         @include font-greyclif-bold(27px , #fff,700); 
