@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Greycliff CF - Heavy';
-  src: url("../font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.ttf") format("truetype"), url("../font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.woff") format("woff"), url("../font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.woff2") format("woff2"); }
+  src: url("assets/font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.ttf") format("truetype"), url("assets/font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.woff") format("woff"), url("assets/font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.woff2") format("woff2"); }
 @font-face {
   font-family: "Greycliff CF - bold";
-  src: url("../font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.ttf") format("truetype"), url("../font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.woff") format("woff"), url("../font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.woff2") format("woff2"); }
+  src: url("assets/font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.ttf") format("truetype"), url("assets/font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.woff") format("woff"), url("assets/font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.woff2") format("woff2"); }
 @font-face {
   font-family: "Greycliff CF - Extra Bold";
-  src: url("../font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.ttf") format("truetype"), url("../font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.woff") format("woff"), url("../font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.woff2") format("woff2"); }
+  src: url("assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.ttf") format("truetype"), url("assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.woff") format("woff"), url("assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.woff2") format("woff2"); }
 /* variables for colors */
 .wrapper {
-  max-width: 1280px;
+  max-width: 1366px;
   margin: 0 auto; }
 
 body {
@@ -197,7 +197,7 @@ body {
       display: block; } }
 .footer {
   padding: 70px 60px 10px 60px;
-  background: url(../images/footer-bg.png);
+  background: url(assets/images/footer-bg.png);
   background-repeat: no-repeat;
   background-size: cover; }
   @media (max-width: 767px) {
