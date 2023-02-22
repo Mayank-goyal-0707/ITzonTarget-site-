@@ -1,0 +1,82 @@
+//css for homepage starts here
+.get-more-cutomers {
+    @include dispflex-spcbw;
+    padding: 20px 30px;
+    .left-text{
+        padding: 20px;
+    }
+    .right-img{
+        img{width: 587px;}
+    }
+}
+.h1-heading{
+    @include font-greyclif-heavy(74px ,$navy,900);
+    line-height: 110%;
+    z-index: 2;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+.light-blue {color: $light-navy;;}
+.underline-double{
+    position: relative;
+    &::after{
+        @include pos-abs;
+        width: 100%;
+        height: 55px;
+        background-image: url('assets/images/underline1.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        bottom: -17px;
+        left: 0%;
+        z-index: -1;
+    }
+}
+.regular-para{
+@include font-Greycliff-CF(18px , 27px , #526374 ,500);
+width: 72%;
+}
+.has-arrow {position: relative;
+   &::after{
+    @include pos-abs;
+    width: 121px;
+    height: 165px;
+    background-image: url('assets/images/side-curved.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 36px;
+    right: 66px;
+}
+}
+.cta-sec {margin: 60px 0px 20px 0px;}
+
+// css for nobel customer section stars here
+.noble-customers {
+    margin: 20px 0px 40px 0px;
+    padding: 60px;
+    background-color: $light-blue;
+    ul{
+        width: 85%;
+        margin: 40px auto 20px auto;
+    }
+}
+
+.h3-heading {
+    @include font-greyclif-bold( 32px ,$light-navy , 700);
+    line-height: 35px;
+    letter-spacing: -1%;
+}
+.circled-outline {
+    position: relative;
+    &::after{
+        @include pos-abs;
+        width: 125px;
+        height: 47px;
+        background-image: url('assets/images/circle-open-top.svg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        top:-10px;
+        left: -9px;
+        z-index: 999;
+    }
+}
+// css for homepage ends here

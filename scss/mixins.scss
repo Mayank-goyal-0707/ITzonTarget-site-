@@ -20,6 +20,13 @@
     font-weight: $font-weight;
     color: $font-color;
 }
+@mixin font-Greycliff-CF ($font-size ,$line-height, $font-color , $font-weight) {
+  font-family: 'Greycliff CF';
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $font-color;
+}
 @mixin curved-underline($color)  {
     position: absolute;
     content: '';

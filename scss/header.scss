@@ -59,6 +59,7 @@
 			padding: 0px;
 			li{
 				margin: 40px 0px;
+				padding-left: 0px;
 				a{
 					@include font-greyclif-heavy(28px , $navy ,900);
 					&.cta-primary {

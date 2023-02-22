@@ -7,6 +7,9 @@
 @font-face {
   font-family: "Greycliff CF - Extra Bold";
   src: url("assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.ttf") format("truetype"), url("assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.woff") format("woff"), url("assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.woff2") format("woff2"); }
+@font-face {
+  font-family: "Greycliff CF";
+  src: url("assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.ttf") format("truetype"), url("../assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff") format("woff"), url("../assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff2") format("woff2"); }
 /* variables for colors */
 .wrapper {
   max-width: 1366px;
@@ -15,6 +18,15 @@
 body {
   padding: 0px;
   margin: 0px; }
+
+.center {
+  text-align: center; }
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
 /*css for header sections only */
 .header {
@@ -72,7 +84,8 @@ body {
   transform: translateY(-66%);
   padding: 0px; }
   .navigation.open ul li {
-    margin: 40px 0px; }
+    margin: 40px 0px;
+    padding-left: 0px; }
     .navigation.open ul li a {
       font-family: 'Greycliff CF - Heavy';
       font-size: 28px;
@@ -334,5 +347,98 @@ body {
   @media (max-width: 767px) {
     .footer-nav {
       display: none; } }
+
+.get-more-cutomers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px; }
+  .get-more-cutomers .left-text {
+    padding: 20px; }
+  .get-more-cutomers .right-img img {
+    width: 587px; }
+
+.h1-heading {
+  font-family: 'Greycliff CF - Heavy';
+  font-size: 74px;
+  line-height: 74px;
+  font-weight: 900;
+  color: #00386C;
+  line-height: 110%;
+  z-index: 2;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px; }
+
+.light-blue {
+  color: #0974E4; }
+
+.underline-double {
+  position: relative; }
+  .underline-double::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 55px;
+    background-image: url("assets/images/underline1.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom: -17px;
+    left: 0%;
+    z-index: -1; }
+
+.regular-para {
+  font-family: 'Greycliff CF';
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #526374;
+  width: 72%; }
+
+.has-arrow {
+  position: relative; }
+  .has-arrow::after {
+    position: absolute;
+    content: '';
+    width: 121px;
+    height: 165px;
+    background-image: url("assets/images/side-curved.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 36px;
+    right: 66px; }
+
+.cta-sec {
+  margin: 60px 0px 20px 0px; }
+
+.noble-customers {
+  margin: 20px 0px 40px 0px;
+  padding: 60px;
+  background-color: #EFF8FC; }
+  .noble-customers ul {
+    width: 85%;
+    margin: 40px auto 20px auto; }
+
+.h3-heading {
+  font-family: 'Greycliff CF - bold';
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #0974E4;
+  line-height: 35px;
+  letter-spacing: -1%; }
+
+.circled-outline {
+  position: relative; }
+  .circled-outline::after {
+    position: absolute;
+    content: '';
+    width: 125px;
+    height: 47px;
+    background-image: url("assets/images/circle-open-top.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: -10px;
+    left: -9px;
+    z-index: 999; }
 
 /*# sourceMappingURL=style.css.map */
