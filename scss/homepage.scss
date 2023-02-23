@@ -1,4 +1,13 @@
 //css for homepage starts here
+.disp-mob {
+    @include tablets {display: none;}
+    @include Desktops {display: none;}
+    @include mobiles {display: block;}
+  }
+  .disp-desktop {
+    @include mobiles {display: none;}
+  }
+
 .get-more-cutomers {
     @include dispflex-spcbw;
     padding: 20px 30px;
@@ -10,15 +19,18 @@
             @include mobiles{
                 width: 280px;
             }
+            @include mobiles {width: 100%;}
         }
          @include tablets {
             text-align:center;
         }
+        @include mobiles {text-align: right;}   
     }
     @include tablets {
         display: block;
     }
-    @include mobiles{display: block;}
+    @include mobiles{display: block;
+     padding: 20px 0px ;}
     .regular-para{
         @include tablets {
             width: 89%;
