@@ -79,6 +79,12 @@
         background: $white ;
         color: $light-navy;
         box-shadow: 0px 1px 30px rgba(82, 99, 116, 0.2);
+        @include tablets {
+            margin: 35px 0px;
+           }
+           @include mobiles {
+            margin: 35px 0px;
+          }
     }
 }
 //css for footer-menu
