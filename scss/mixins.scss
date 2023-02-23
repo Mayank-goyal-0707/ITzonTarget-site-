@@ -49,6 +49,13 @@
     align-items: center;
 }
 
+@mixin font-Verveine ($font-size , $line-height , $color , $weight){
+    font-family: 'Verveine';
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    font-weight: $weight;
+}
 // mixins for breakpoints
 // for mobiles
 @mixin small-mobiles {

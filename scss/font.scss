@@ -23,7 +23,15 @@
 @font-face {
     font-family: "Greycliff CF";
     src: url('assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.ttf') format('truetype'),
-    url('../assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff') format('woff'),
-    url('../assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff2') format('woff2');
+    url('assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff') format('woff'),
+    url('assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff2') format('woff2');
+
+}
+
+@font-face {
+    font-family: "Verveine";
+    src: url('../assets/font/verveine/VerveineRegular.TTF') format('truetype'),
+    url('assets/font/verveine/VerveineRegular.woff') format('woff'),
+    url('assets/font/verveine/VerveineRegular.woff2') format('woff2');
 
 }

@@ -31,9 +31,31 @@
         z-index: -1;
     }
 }
+.underline-double {
+    &.opened-left{
+        position: relative;
+        &::after{
+            @include pos-abs;
+            width: 100%;
+            height: 55px;
+            background-image: url('assets/images/under-line-open-left.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            bottom: -32px;
+            left: 0%;
+            z-index: 2;
+        }
+    }
+}
 .regular-para{
 @include font-Greycliff-CF(18px , 27px , #526374 ,500);
-width: 72%;
+}
+.left-text {
+    .regular-para {
+        @include Desktops {
+            width: 520px;
+        }
+    }
 }
 .has-arrow {position: relative;
    &::after{
@@ -43,20 +65,27 @@ width: 72%;
     background-image: url('assets/images/side-curved.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    top: 36px;
-    right: 66px;
+    @include Large-Desktops {
+        top:-98px;
+        right: 246px;
+    }
 }
 }
 .cta-sec {margin: 60px 0px 20px 0px;}
 
 // css for nobel customer section stars here
 .noble-customers {
-    margin: 20px 0px 40px 0px;
+    margin: 20px 0px 0px 0px;
     padding: 60px;
     background-color: $light-blue;
     ul{
         width: 85%;
         margin: 40px auto 20px auto;
+        li{
+            width: 23%;
+            margin: 1%;
+            text-align: center
+        }
     }
 }
 
@@ -64,6 +93,11 @@ width: 72%;
     @include font-greyclif-bold( 32px ,$light-navy , 700);
     line-height: 35px;
     letter-spacing: -1%;
+}
+.h2-heading {
+    @include font-greyclif-heavy(44px , $navy , 700);
+    line-height: 50.6px;
+    letter-spacing: -2%;
 }
 .circled-outline {
     position: relative;
@@ -77,6 +111,74 @@ width: 72%;
         top:-10px;
         left: -9px;
         z-index: 999;
+    }
+}
+.simple-section {
+    padding: 30px;
+    width: 71%;
+    margin: 0 auto;
+    .regular-para {
+        width: 80%;
+    }
+    .cta-sec {margin: 35px 0px;}
+
+}
+.heading-cursive {
+    @include font-Verveine(26px,26px,$light-navy,400);
+}
+.three-grids{
+    justify-content: unset;
+    margin-bottom: 30px;
+    li{
+        width: 30%;
+        margin: 2% 0%;
+        padding: 10px 21px;
+        text-align: center;
+        position: relative;
+        .heading-cursive{
+            margin: 5px 0px;
+        }
+            &::after{
+                @include pos-abs;
+                height: 90%;
+                width: 2px;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0%;
+                background: url('assets/images/border-right.svg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        &:nth-child(3n){position: unset;}
+    }
+}
+.heading-h4{
+    @include font-greyclif-heavy(22px , $navy , 900);
+    line-height: 26.2px;
+    letter-spacing: -1%;
+    margin: 17px 0px;
+}
+.blue-box-cta{
+    margin: 40px auto;
+    width: 85%;
+    padding: 60px;
+    position: relative;
+    text-align: center;
+    background-color: $navy;
+    border-radius: 15px;
+    position: relative;
+    h2,h5{
+        margin: 20px;
+    }
+    &::after{
+        @include pos-abs;
+        width: 200px;
+        height: 200px;
+        bottom: -99px;
+        right: -41px;
+        background-image: url('assets/images/dotted-box-grid.svg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
     }
 }
 // css for homepage ends here

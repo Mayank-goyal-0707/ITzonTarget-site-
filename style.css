@@ -9,7 +9,10 @@
   src: url("assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.ttf") format("truetype"), url("assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.woff") format("woff"), url("assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.woff2") format("woff2"); }
 @font-face {
   font-family: "Greycliff CF";
-  src: url("assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.ttf") format("truetype"), url("../assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff") format("woff"), url("../assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff2") format("woff2"); }
+  src: url("assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.ttf") format("truetype"), url("assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff") format("woff"), url("assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff2") format("woff2"); }
+@font-face {
+  font-family: "Verveine";
+  src: url("../assets/font/verveine/VerveineRegular.TTF") format("truetype"), url("assets/font/verveine/VerveineRegular.woff") format("woff"), url("assets/font/verveine/VerveineRegular.woff2") format("woff2"); }
 /* variables for colors */
 .wrapper {
   max-width: 1366px;
@@ -27,6 +30,12 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
+
+.white {
+  color: #fff !important; }
+
+.margin-auto {
+  margin: 0 auto !important; }
 
 /*css for header sections only */
 .header {
@@ -315,6 +324,10 @@ ul {
   @media (max-width: 560px) {
     .cta-primary {
       margin-bottom: 35px; } }
+  .cta-primary.secondary {
+    background: #fff;
+    color: #0974E4;
+    box-shadow: 0px 1px 30px rgba(82, 99, 116, 0.2); }
 
 .footer-menu {
   padding: 30px 0;
@@ -386,13 +399,30 @@ ul {
     left: 0%;
     z-index: -1; }
 
+.underline-double.opened-left {
+  position: relative; }
+  .underline-double.opened-left::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 55px;
+    background-image: url("assets/images/under-line-open-left.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom: -32px;
+    left: 0%;
+    z-index: 2; }
+
 .regular-para {
   font-family: 'Greycliff CF';
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
-  color: #526374;
-  width: 72%; }
+  color: #526374; }
+
+@media (min-width: 991px) {
+  .left-text .regular-para {
+    width: 520px; } }
 
 .has-arrow {
   position: relative; }
@@ -403,20 +433,26 @@ ul {
     height: 165px;
     background-image: url("assets/images/side-curved.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    top: 36px;
-    right: 66px; }
+    background-size: 100% 100%; }
+    @media (min-width: 1140px) {
+      .has-arrow::after {
+        top: -98px;
+        right: 246px; } }
 
 .cta-sec {
   margin: 60px 0px 20px 0px; }
 
 .noble-customers {
-  margin: 20px 0px 40px 0px;
+  margin: 20px 0px 0px 0px;
   padding: 60px;
   background-color: #EFF8FC; }
   .noble-customers ul {
     width: 85%;
     margin: 40px auto 20px auto; }
+    .noble-customers ul li {
+      width: 23%;
+      margin: 1%;
+      text-align: center; }
 
 .h3-heading {
   font-family: 'Greycliff CF - bold';
@@ -426,6 +462,15 @@ ul {
   color: #0974E4;
   line-height: 35px;
   letter-spacing: -1%; }
+
+.h2-heading {
+  font-family: 'Greycliff CF - Heavy';
+  font-size: 44px;
+  line-height: 44px;
+  font-weight: 700;
+  color: #00386C;
+  line-height: 50.6px;
+  letter-spacing: -2%; }
 
 .circled-outline {
   position: relative; }
@@ -440,5 +485,78 @@ ul {
     top: -10px;
     left: -9px;
     z-index: 999; }
+
+.simple-section {
+  padding: 30px;
+  width: 71%;
+  margin: 0 auto; }
+  .simple-section .regular-para {
+    width: 80%; }
+  .simple-section .cta-sec {
+    margin: 35px 0px; }
+
+.heading-cursive {
+  font-family: 'Verveine';
+  font-size: 26px;
+  line-height: 26px;
+  color: #0974E4;
+  font-weight: 400; }
+
+.three-grids {
+  justify-content: unset;
+  margin-bottom: 30px; }
+  .three-grids li {
+    width: 30%;
+    margin: 2% 0%;
+    padding: 10px 21px;
+    text-align: center;
+    position: relative; }
+    .three-grids li .heading-cursive {
+      margin: 5px 0px; }
+    .three-grids li::after {
+      position: absolute;
+      content: '';
+      height: 90%;
+      width: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0%;
+      background: url("assets/images/border-right.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%; }
+    .three-grids li:nth-child(3n) {
+      position: unset; }
+
+.heading-h4 {
+  font-family: 'Greycliff CF - Heavy';
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 900;
+  color: #00386C;
+  line-height: 26.2px;
+  letter-spacing: -1%;
+  margin: 17px 0px; }
+
+.blue-box-cta {
+  margin: 40px auto;
+  width: 85%;
+  padding: 60px;
+  position: relative;
+  text-align: center;
+  background-color: #00386C;
+  border-radius: 15px;
+  position: relative; }
+  .blue-box-cta h2, .blue-box-cta h5 {
+    margin: 20px; }
+  .blue-box-cta::after {
+    position: absolute;
+    content: '';
+    width: 200px;
+    height: 200px;
+    bottom: -99px;
+    right: -41px;
+    background-image: url("assets/images/dotted-box-grid.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; }
 
 /*# sourceMappingURL=style.css.map */
