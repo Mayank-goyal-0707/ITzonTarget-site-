@@ -15,7 +15,7 @@
         <div class="wrapper">
             <!-- header starts here-->
             <section class="header-section">
-                <header class="header scrolls">
+                <header class="header scrolls" id ="masthead">
                     <div class="brand-logo"><img src="assets/images/ITZonTarget_Logo_Primary.svg"></div>
                     <div class="nav-items">
                         <nav class="navigation">
@@ -214,5 +214,35 @@
         document.querySelector('header .navigation').classList.toggle("open");
         document.querySelector('header .menu-list').classList.toggle("list-open");
         document.querySelector('header').classList.toggle("nav-mobile-active");
+    });
+    $('.burger').on("click", function() {
+        $('header .navigation').toggleClass("open");
+        $('header .menu-list').toggleClass("list-open");
+        $('header').toggleClass("nav-mobile-active");
+
+        $("#masthead").removeClass("scrolls");
+        if ($('header .navigation').hasClass("open")) {
+            $("#masthead").addClass("scrolls");
+        }
+    });
+
+    // Add active on nav menu
+    $(".navigation a").each(function(_, ele){
+        $(ele).attr('href') === window.location.href ? $(ele).attr('class', "underline-orange") : null;
+    })
+
+    // On scroll add class on navigation
+    $(window).scroll(function() {    
+        if ($('header .navigation').hasClass("open")) {
+            return;
+        }
+
+        var scroll = $(window).scrollTop();
+        if (scroll >= 100) {
+            $("#masthead").addClass("scrolls");
+        }
+        if (scroll == 0) {
+            $("#masthead").removeClass("scrolls");
+        }
     });
 </script>
