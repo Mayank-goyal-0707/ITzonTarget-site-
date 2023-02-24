@@ -15,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 		<link rel="stylesheet" type="text/css" href="slick/slick.css" /> </head>
 
-	<body>
+	<body onload="load()">
 		<div class="wrapper">
 			<!-- header starts here-->
 			<section class="header-section">
@@ -119,6 +119,47 @@
                 </div>
             </section>
             <!-- fourth section ends here-->
+            <!-- conter section starts here-->
+            <section class="simple-blue-bg">
+                <h3 class="h3-heading center">The Results</h3>
+                <ul class="res-counters">
+                    <li>
+                         <div class="count h2-heading" id="click-rate">5 <span>%</span></div>
+                         <h4 class="heading-h4">Clickthrough rate</h4>
+                    </li>
+                    <li>
+                        <div class="count h2-heading" id="visitors">2,272</div>
+                        <h4 class="heading-h4">Website Visitors</h4>
+                   </li>
+                   <li>
+                       <div class="count h2-heading" id="wact">409</div>
+                       <h4 class="heading-h4">Weighted Actions</h4>
+                   </li>
+                   <li>
+                       <div class="count h2-heading" id="gact">106</div>
+                       <h4 class="heading-h4">Geoweighted actions</h4>
+                </li>
+                </ul>
+            </section>
+            <!-- counter section ends here-->
+            <!-- next and prev section starts here-->
+            <section class="redirection">
+                <a  class="redirect-btn" href="#">
+                    <div class="btn-prev">
+                        <img src="assets/images/circle-arrow.svg">
+                        <div class="btn-texts"><span class="btn-nav">Previous</span></div>
+                    </div>
+                    <div class="btn"></div>
+                </a>
+                <a  class="redirect-btn" href="#">
+                    <div class="btn-prev next">
+                        <img src="assets/images/circle-arrow.svg">
+                        <div class="btn-texts"><span class="btn-nav">Next</span></div>
+                    </div>
+                    <div class="btn"></div>
+                </a>
+            </section>
+            <!-- next and prev section ends-->
 			<!-- footer starts here-->
 			<footer class="footer">
 				<div class="footer-top">
@@ -140,5 +181,49 @@
 		</div>
 	</body>
 </head>
+<script>
+    function animate(obj, initVal, lastVal, duration) {
+       let startTime = null;
 
+    //get the current timestamp and assign it to the currentTime variable
+    let currentTime = Date.now();
+
+    //pass the current timestamp to the step function
+    const step = (currentTime ) => {
+
+    //if the start time is null, assign the current time to startTime
+    if (!startTime) {
+       startTime = currentTime ;
+    }
+
+    //calculate the value to be used in calculating the number to be displayed
+    const progress = Math.min((currentTime - startTime)/ duration, 1);
+
+    // to add decimal value if number is in precentage
+
+
+    //calculate what to be displayed using the value gotten above
+    obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+
+    //checking to make sure the counter does not exceed the last value (lastVal)
+    if (progress < 1) {
+       window.requestAnimationFrame(step);
+    } else {
+          window.cancelAnimationFrame(window.requestAnimationFrame(step));
+       }
+    };
+    //start animating
+       window.requestAnimationFrame(step);
+    }
+    let text1 = document.getElementById('click-rate');
+    let text2 = document.getElementById('visitors');
+    let text3 = document.getElementById('wact');
+    let text4 = document.getElementById('gact');
+    const load = () => {
+       animate(text1, 0, 5, 7000);
+       animate(text2, 0, 2722, 7000);
+       animate(text3, 100, 509, 7000);
+       animate(text4, 0 , 106 , 7000);
+    }
+ </script>
 </html>

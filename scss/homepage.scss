@@ -162,6 +162,10 @@
     padding: 60px;
     background-color: $light-blue;
     ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0px;
       width: 85%;
       margin: 40px auto 20px auto;
       justify-content: left;
@@ -271,6 +275,11 @@
     @include font-Verveine(26px, 26px, $light-navy, 400);
   }
   .three-grids {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
     margin-bottom: 30px;
     margin: 0 28px;
     li {

@@ -1,3 +1,4 @@
+/*css for case study page starts here */
 @import 'mixins';
 @import 'variable';
 .pages-top-section {
@@ -22,6 +23,9 @@
         margin-bottom: 63px;
         width: 98%;
     }
+}
+.page-top-right {
+    @include mobiles {text-align: center;}
 }
 .h1-internal {
     @include font-greyclif-heavy(54px ,$navy , 800);
@@ -51,6 +55,7 @@
         @include mobiles {
             width: 297px;
             height: 187px;
+            display: inline-block;
         }
         img {
             width: 100%;
@@ -94,6 +99,7 @@
             left: 194px;
         }
     }
+    @include mobiles { display: inline-block;}
 }
 .simple-box-image {
     margin: 0 auto;
@@ -125,10 +131,10 @@
 .case-study-details {
     padding: 35px 180px 60px 180px;
     @include tablets {
-        padding: 35px 72px 60px 180px;
+        padding: 35px 72px 60px 87px;
     }
     @include mobiles {
-        padding: 20px 40px 72px 40px;
+        padding: 0px 40px 47px 40px;
     }
 }
 
@@ -149,6 +155,7 @@
     .case-study-right {
         width: 60%;
         ul {
+            list-style: none;
             display: block;
             li {
                 margin: 1% 0%;
@@ -167,6 +174,9 @@
                         left: -27px;
                         border-radius: 50px;
                     }
+                    @include mobiles {
+                        margin-left: 12%;
+                    }
                 }
             }
         }
@@ -178,3 +188,104 @@
         display: block;
     }
 }
+.simple-blue-bg {
+    width: 85%;
+    margin: 50px auto;
+    padding: 60px 40px;
+    background-color: $light-blue;
+    border-radius: 17px;
+    @include tablets {
+        width: 77%;
+        margin: 31px auto 90px;
+        padding: 20px;
+    }
+    @include mobiles {
+        margin: 0px auto 75px;
+        padding: 20px 6px;
+    }
+}
+.res-counters {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 42px 0px 20px;
+    li {
+        text-align: center;
+        width: 18%;
+        margin: 1%;
+        padding: 10px ;
+        .h2-heading {
+            letter-spacing: -0.02em;
+            background: linear-gradient(92.84deg, rgba(0, 56, 108, 0.3) 14.69%, rgba(9, 116, 228, 0.3) 50.57%, rgba(176, 211, 248, 0.3) 81.51%), #0974E4;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        @include tablets {
+            width: 43%;
+        }
+        @include mobiles {
+            width: 100%;
+        }
+    }
+    @include mobiles {
+        padding: 0px;
+    }
+}
+.redirection{
+    padding: 70px;
+    background: $light-blue;
+    margin-top: 100px;
+    @include dispflex-spcbw;
+    @include tablets {
+        padding: 43px 81px;
+    }
+    @include mobiles {
+        margin-top: 50px;
+        padding: 30px 37px;
+    }
+}
+.redirect-btn{
+    text-align: center;
+    width: fit-content;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    @include font-greyclif-bold(18px , $light-navy ,700);
+    @include mobiles {
+        width: 45px;
+        height: 45px;
+        padding: 0px;
+    }
+}
+.btn-prev {
+    display: flex;
+    align-items: center;
+    img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        @include mobiles {
+            width: 35px;
+            height: 28px;
+            margin-right: 0px;
+            margin-top: 8px;
+        }
+    }
+    &.next {
+        flex-direction: row-reverse;
+        img{
+            margin-left: 10px;
+            margin-right: 0px;
+            transform: rotate(180deg);
+            @include mobiles {margin-left: 0px;}
+        }
+    }
+    .btn-texts {
+        @include mobiles {display: none;}
+    }
+    @include mobiles {display: block;}
+}
+/* css for case study page ends here */
