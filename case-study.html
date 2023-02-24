@@ -125,7 +125,7 @@
                 <ul class="res-counters">
                     <li>
                          <div class="count h2-heading" id="click-rate">5 <span>%</span></div>
-                         <h4 class="heading-h4">Clickthrough rate</h4>
+                         <h4 class="heading-h4">Clickthrough rate </h4>
                     </li>
                     <li>
                         <div class="count h2-heading" id="visitors">2,272</div>
@@ -198,12 +198,17 @@
 
     //calculate the value to be used in calculating the number to be displayed
     const progress = Math.min((currentTime - startTime)/ duration, 1);
-
     // to add decimal value if number is in precentage
 
 
     //calculate what to be displayed using the value gotten above
-    obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+    if(obj.id != 'click-rate'){
+        obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal)
+    }
+    else{
+        var x = (progress * (lastVal - initVal) + initVal).toFixed(2);
+        obj.innerHTML=((x<1)?'.'+x.toString().split('.')[1] : x)+'%';
+    }
 
     //checking to make sure the counter does not exceed the last value (lastVal)
     if (progress < 1) {
@@ -220,7 +225,7 @@
     let text3 = document.getElementById('wact');
     let text4 = document.getElementById('gact');
     const load = () => {
-       animate(text1, 0, 5, 7000);
+       animate(text1, 0, 0.55, 7000);
        animate(text2, 0, 2722, 7000);
        animate(text3, 100, 509, 7000);
        animate(text4, 0 , 106 , 7000);
