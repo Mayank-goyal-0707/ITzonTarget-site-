@@ -888,6 +888,9 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 63px;
       width: 98%; } }
 
+@media (min-width: 768px) and (max-width: 990px) {
+  .page-top-right {
+    text-align: center; } }
 @media (max-width: 767px) {
   .page-top-right {
     text-align: center; } }
@@ -920,7 +923,8 @@ h1, h2, h3, h4, h5, h6 {
     @media (min-width: 768px) and (max-width: 990px) {
       .img-circle-btm .img-box {
         width: 570px;
-        height: 440px; } }
+        height: 440px;
+        display: inline-block; } }
     @media (max-width: 767px) {
       .img-circle-btm .img-box {
         width: 297px;
@@ -970,6 +974,9 @@ h1, h2, h3, h4, h5, h6 {
         height: 154px;
         bottom: -31px;
         left: 194px; } }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .img-circle-btm {
+      display: inline-block; } }
   @media (max-width: 767px) {
     .img-circle-btm {
       display: inline-block; } }

@@ -25,6 +25,7 @@
     }
 }
 .page-top-right {
+    @include tablets {text-align: center;}
     @include mobiles {text-align: center;}
 }
 .h1-internal {
@@ -51,6 +52,7 @@
         @include tablets{
             width: 570px;
             height: 440px;
+            display: inline-block;
         }
         @include mobiles {
             width: 297px;
@@ -99,6 +101,7 @@
             left: 194px;
         }
     }
+    @include tablets {display: inline-block;}
     @include mobiles { display: inline-block;}
 }
 .simple-box-image {
