@@ -8,7 +8,7 @@
        display: block;
      }
    @include mobiles {
-      padding: 18px 60px 140px 60px;
+      padding: 18px 18px 90px 18px ;
       display: block;
    }
 }
@@ -16,8 +16,10 @@
     width: 51%;
     @include tablets {
         width: 91%;
+        margin-bottom: 63px;
     }
     @include mobiles {
+        margin-bottom: 63px;
         width: 98%;
     }
 }
@@ -47,7 +49,7 @@
             height: 440px;
         }
         @include mobiles {
-            width: 280px;
+            width: 297px;
             height: 187px;
         }
         img {
@@ -85,6 +87,12 @@
         @include Desktops {
             display: none;
         }
+        @include small-mobiles {
+            width: 138px;
+            height: 154px;
+            bottom: -31px;
+            left: 194px;
+        }
     }
 }
 .simple-box-image {
@@ -112,5 +120,61 @@
     br{
         @include tablets {display: none;}
         @include mobiles {display: none;}
+    }
+}
+.case-study-details {
+    padding: 35px 180px 60px 180px;
+    @include tablets {
+        padding: 35px 72px 60px 180px;
+    }
+    @include mobiles {
+        padding: 20px 40px 72px 40px;
+    }
+}
+
+.case-study-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    .case-study-left {
+        width: 40%;
+        .h3-heading {
+            color: $navy;
+            font-weight: bolder;
+        }
+        @include mobiles {
+            width: 100%;
+        }
+    } 
+    .case-study-right {
+        width: 60%;
+        ul {
+            display: block;
+            li {
+                margin: 1% 0%;
+            }
+            &.with-dots {
+                li {
+                    margin: 1% 0% 1% 5%;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        background-color: $light-navy;
+                        top: 9px;
+                        left: -27px;
+                        border-radius: 50px;
+                    }
+                }
+            }
+        }
+        @include mobiles {
+            width: 100%;
+        }
+    }
+    @include mobiles {
+        display: block;
     }
 }
