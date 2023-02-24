@@ -1,0 +1,29 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_562_5784" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="150" height="150">
+<rect x="0.889404" y="0.65625" width="148.48" height="148.48" rx="74.2402" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_562_5784)">
+<g clip-path="url(#clip0_562_5784)">
+<path d="M8.98706 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M18.9871 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M28.9871 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M38.9871 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M48.9871 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M58.9871 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M68.9871 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M78.9871 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M88.9871 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M98.9871 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M108.987 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M118.987 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M128.987 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M138.987 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+<path d="M148.987 -12.666V387.334" stroke="#0974E4" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.05 10"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_562_5784">
+<rect x="-16.0129" y="-12.666" width="175.207" height="175.207" rx="87.6035" fill="white"/>
+</clipPath>
+</defs>
+</svg>

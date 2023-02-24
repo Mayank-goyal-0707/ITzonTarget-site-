@@ -1,0 +1,116 @@
+@import 'mixins';
+@import 'variable';
+.pages-top-section {
+   padding: 60px 60px 140px 60px;
+   @include dispflex-spcbw;
+   flex-direction: flex-end;
+   @include tablets {
+       display: block;
+     }
+   @include mobiles {
+      padding: 18px 60px 140px 60px;
+      display: block;
+   }
+}
+.page-top-left {
+    width: 51%;
+    @include tablets {
+        width: 91%;
+    }
+    @include mobiles {
+        width: 98%;
+    }
+}
+.h1-internal {
+    @include font-greyclif-heavy(54px ,$navy , 800);
+    line-height: 59px;
+    @include mobiles {
+        font-size: 44px;
+        line-height: 105%;
+    }
+}
+.img-circle-btm {
+     position: relative;
+     z-index: 5;
+    .img-box {
+        width: 500px;
+        height: 370px;
+        border-radius: 15px;
+        box-shadow: 0px 1px 30px 0px #52637433;
+        overflow: hidden;
+        @include Desktops {
+            width: 446px;
+            height: 337px;
+        }
+        @include tablets{
+            width: 570px;
+            height: 440px;
+        }
+        @include mobiles {
+            width: 280px;
+            height: 187px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &::before {
+        @include pos-abs;
+        content: '';
+        z-index: -1;
+        width: 200px;
+        height: 200px;
+        background-image: url('assets/images/dotted-circle.svg');
+        background-repeat: no-repeat;
+        bottom: -107px;
+        left: -62px;
+        @include tablets {display: none;}
+        @include mobiles {display: none;}
+    }
+    &::after {
+        @include pos-abs;
+        content: '';
+        z-index: -1;
+        width: 200px;
+        height: 200px;
+        background-image: url('assets/images/dotted-circle.svg');
+        background-repeat: no-repeat;
+        bottom: -107px;
+        left: 484px;
+        @include mobiles {
+            left: 201px;
+        }
+        @include Desktops {
+            display: none;
+        }
+    }
+}
+.simple-box-image {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 15px;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.only-headings {
+    padding: 30px 0px;
+    @include tablets {
+        width: 98%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    @include mobiles {
+        text-align: center;
+        width: 96%;
+        margin: 0 auto;}
+    br{
+        @include tablets {display: none;}
+        @include mobiles {display: none;}
+    }
+}
