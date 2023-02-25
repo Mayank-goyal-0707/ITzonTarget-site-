@@ -107,7 +107,7 @@
     @include pos-abs;
     width: 100%;
     height: 55px;
-    background-image: url("/wp-content/themes/itzontarget/assets/images/underline1.svg");
+    background-image: url("wp-content/themes/itzontarget/assets/images/underline1.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     bottom: -17px;
@@ -124,7 +124,7 @@
       @include pos-abs;
       width: 100%;
       height: 55px;
-      background-image: url("/wp-content/themes/itzontarget/assets/images/under-line-open-left.svg");
+      background-image: url("wp-content/themes/itzontarget/assets/images/under-line-open-left.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       bottom: -32px;
@@ -146,7 +146,7 @@
     @include pos-abs;
     width: 121px;
     height: 165px;
-    background-image: url("/wp-content/themes/itzontarget/assets/images/side-curved.png");
+    background-image: url("wp-content/themes/itzontarget/assets/images/side-curved.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -167,7 +167,7 @@
     }
 
     @include mobiles {
-      background: url("/wp-content/themes/itzontarget/assets/images/arrow-mob-left-svg.svg");
+      background: url("wp-content/themes/itzontarget/assets/images/arrow-mob-left-svg.svg");
       width: 58px;
       height: 61px;
       top: -31px;
@@ -284,25 +284,30 @@
 
 .circled-outline {
   position: relative;
+  background-image: url('/wp-content/themes/itzontarget/assets/images/circle-open-top.svg');
+  background-size: 106% 93%;
+  display: inline-block;
+  padding: 8px 7px;
+  background-repeat: no-repeat;
 
-  &::after {
-    @include pos-abs;
-    width: 125px;
-    height: 47px;
-    background-image: url("/wp-content/themes/itzontarget/assets/images/circle-open-top.svg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    top: -10px;
-    left: -9px;
-    z-index: 999;
+  // &::after {
+  //   @include pos-abs;
+  //   width: 125px;
+  //   height: 47px;
+  //   background-image: url("wp-content/themes/itzontarget/assets/images/circle-open-top.svg");
+  //   background-size: 100% 100%;
+  //   background-repeat: no-repeat;
+  //   top: -10px;
+  //   left: -9px;
+  //   z-index: 999;
 
-    @include mobiles {
-      width: 93px;
-      height: 47px;
-      top: -14px;
-      left: -5px;
-    }
-  }
+  //   @include mobiles {
+  //     width: 93px;
+  //     height: 47px;
+  //     top: -14px;
+  //     left: -5px;
+  //   }
+  // }
 }
 
 .detail-section {
@@ -384,7 +389,7 @@
         top: 50%;
         transform: translateY(-50%);
         right: 0%;
-        background: url("/wp-content/themes/itzontarget/assets/images/border-right.svg");
+        background: url("wp-content/themes/itzontarget/assets/images/border-right.svg");
         background-repeat: no-repeat;
         background-size: 100% 100%;
 
@@ -455,7 +460,7 @@
     height: 200px;
     bottom: -60px;
     right: 0px;
-    background-image: url("/wp-content/themes/itzontarget/assets/images/dotted-box-grid.svg");
+    background-image: url("wp-content/themes/itzontarget/assets/images/dotted-box-grid.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -544,7 +549,7 @@
     height: 194px;
     box-shadow: 0px 1px 10px rgba(82, 99, 116, 0.15);
     border-radius: 200px;
-    background-image: url("/wp-content/themes/itzontarget/assets/images/client1.png");
+    background-image: url("wp-content/themes/itzontarget/assets/images/client1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -558,7 +563,7 @@
       background-repeat: no-repeat;
       top: 8%;
       right: -11%;
-      background-image: url("/wp-content/themes/itzontarget/assets/images/quotes.svg");
+      background-image: url("wp-content/themes/itzontarget/assets/images/quotes.svg");
     }
 
     @include tablets {
@@ -648,7 +653,7 @@
   &::before {
     position: absolute;
     content: '';
-    background: url('/wp-content/themes/itzontarget/assets/images/arrow-mob-left-svg.svg');
+    background: url('wp-content/themes/itzontarget/assets/images/arrow-mob-left-svg.svg');
     width: 49px;
     height: 89px;
     /* top: -74px; */

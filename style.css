@@ -654,24 +654,12 @@ footer {
       line-height: 37px; } }
 
 .circled-outline {
-  position: relative; }
-  .circled-outline::after {
-    position: absolute;
-    content: '';
-    width: 125px;
-    height: 47px;
-    background-image: url("wp-content/themes/itzontarget/assets/images/circle-open-top.svg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    top: -10px;
-    left: -9px;
-    z-index: 999; }
-    @media (max-width: 767px) {
-      .circled-outline::after {
-        width: 93px;
-        height: 47px;
-        top: -14px;
-        left: -5px; } }
+  position: relative;
+  background-image: url("/wp-content/themes/itzontarget/assets/images/circle-open-top.svg");
+  background-size: 106% 93%;
+  display: inline-block;
+  padding: 8px 7px;
+  background-repeat: no-repeat; }
 
 .detail-section .simple-section {
   margin: 0 auto;
