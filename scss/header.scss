@@ -21,9 +21,20 @@
 			margin: 0 auto;
 			width: 90%;
 		}
+
+		@include mobiles {
+			padding: 30px 20px;
+			margin: unset;
+		}
 	}
 
 	@include tablets {
+		margin: unset;
+		padding: 30px 20px;
+	}
+
+	@include mobiles {
+		padding: 30px 20px;
 		margin: unset;
 	}
 }
@@ -115,6 +126,13 @@
 				}
 			}
 		}
+	}
+
+	@include mobiles {
+		z-index: -1;
+		height: 100%;
+		background: white;
+		padding-top: 25%;
 	}
 }
 
