@@ -33,7 +33,14 @@
 	justify-content: space-between;
 	align-items: center;
 }
-
+@keyframes line-anim {
+	from {
+	  transform: scaleX(0);
+	}
+	to {
+	  transform: scaleX(1);
+	}
+  }
 .navigation {
 	ul{
 		list-style: none;
@@ -48,6 +55,15 @@
 					@include Desktops {
 						display: none;
 					}
+				}
+				&:hover {
+					position: relative;
+					display: inline-block;
+					&::before{
+						animation: line-anim 0.3s forwards;
+						@include curved-underline($orange);
+					}
+
 				}
 			}
 		}

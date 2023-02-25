@@ -2,7 +2,7 @@
 @import 'mixins';
 @import 'variable';
 .pages-top-section {
-   padding: 60px 60px 140px 60px;
+   padding: 60px 30px 140px 30px;
    @include dispflex-spcbw;
    flex-direction: flex-end;
    @include tablets {
@@ -23,8 +23,12 @@
         margin-bottom: 63px;
         width: 98%;
     }
+    .cta-sec {
+        margin-top: 42px;
+    }
 }
 .page-top-right {
+    display: inline-block;
     @include tablets {text-align: center;}
     @include mobiles {text-align: center;}
 }
@@ -45,6 +49,7 @@
         border-radius: 15px;
         box-shadow: 0px 1px 30px 0px #52637433;
         overflow: hidden;
+        display: inline-block;
         @include Desktops {
             width: 446px;
             height: 337px;

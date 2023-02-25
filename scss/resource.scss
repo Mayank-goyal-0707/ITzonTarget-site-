@@ -1,0 +1,65 @@
+/* css for resource main page starts here */
+.page-top-right {
+    &.muli-image {
+        display: block;
+        padding: 0px 60px;
+    }
+}
+.squr-crcl-rtlft {
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+    .rect-img {
+        overflow: hidden;
+        width: 280px;
+        height: 343px;
+        border-radius: 15px;
+        box-shadow: 0px 1px 30px 0px #52637433;
+        img{
+            @include img-fitbg;
+        }
+    }
+    .rect-img-out {
+        position: relative;
+        display: flex;
+        &::after{
+            @include pos-abs;
+            width: 150px;
+            height: 150px;
+            background-image: url('assets/images/right-circle.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            top: 103px;
+            right: -64px;
+            z-index: -4;
+        }
+        &::before{
+            @include pos-abs;
+            width: 150px;
+            height: 150px;
+            background-image: url('wp-content/themes/itzontarget/assets/images/dotted-box-grid.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            top: 140px;
+            left: -38px;
+            z-index: -4;
+        }
+    }
+    .circle-img{
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 0px 1px 30px 0px #52637433;
+        z-index: 999;
+        margin-right: -43px;
+        margin-top: 54px;
+        img{
+           @include img-fitbg;
+        }
+    }
+}
+ .card-grids {
+
+ }
+/*css for resource main page ends here*/
