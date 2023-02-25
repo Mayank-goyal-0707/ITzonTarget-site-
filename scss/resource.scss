@@ -3,6 +3,9 @@
     &.muli-image {
         display: block;
         padding: 0px 60px;
+        @include mobiles {
+            padding: 0px;
+        }
     }
 }
 .squr-crcl-rtlft {
@@ -26,12 +29,19 @@
             @include pos-abs;
             width: 150px;
             height: 150px;
-            background-image: url('assets/images/right-circle.png');
+            background-image: url('wp-content/themes/itzontarget/assets/images/right-circle.png');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             top: 103px;
             right: -64px;
             z-index: -4;
+            @include small-mobiles {
+                width: 119px;
+                height: 119px;
+                top: -55px;
+                right: -7px;
+                z-index: -4;
+            }
         }
         &::before{
             @include pos-abs;
@@ -57,6 +67,9 @@
         img{
            @include img-fitbg;
         }
+    }
+    @include small-mobiles {
+        display: unset;
     }
 }
  .card-grids {

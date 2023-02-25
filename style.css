@@ -68,6 +68,11 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center; }
 
+@keyframes line-anim {
+  from {
+    transform: scaleX(0); }
+  to {
+    transform: scaleX(1); } }
 .navigation ul {
   list-style: none;
   display: flex; }
@@ -85,6 +90,20 @@ h1, h2, h3, h4, h5, h6 {
         @media (min-width: 991px) {
           .navigation ul li a.cta-primary {
             display: none; } }
+      .navigation ul li a:hover {
+        position: relative;
+        display: inline-block; }
+        .navigation ul li a:hover::before {
+          animation: line-anim 0.3s forwards;
+          position: absolute;
+          content: '';
+          height: 7px;
+          width: 100% !important;
+          border: solid 4px #FBBB5B;
+          border-color: #FBBB5B transparent transparent transparent;
+          border-radius: 64%;
+          bottom: -18px;
+          left: -4%; }
 .navigation.open {
   z-index: 99999;
   background: #fff; }
@@ -232,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
       display: block; } }
 .footer {
   padding: 70px 60px 10px 60px;
-  background: url(assets/images/footer-bg.png);
+  background: url(wp-content/themes/itzontarget/assets/images/footer-bg.png);
   background-repeat: no-repeat;
   background-size: cover; }
   @media (max-width: 767px) {
@@ -453,7 +472,7 @@ h1, h2, h3, h4, h5, h6 {
     content: '';
     width: 100%;
     height: 55px;
-    background-image: url("assets/images/underline1.svg");
+    background-image: url("wp-content/themes/itzontarget/assets/images/underline1.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     bottom: -17px;
@@ -467,7 +486,7 @@ h1, h2, h3, h4, h5, h6 {
     content: '';
     width: 100%;
     height: 55px;
-    background-image: url("assets/images/under-line-open-left.svg");
+    background-image: url("wp-content/themes/itzontarget/assets/images/under-line-open-left.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     bottom: -32px;
@@ -493,7 +512,7 @@ h1, h2, h3, h4, h5, h6 {
     content: '';
     width: 121px;
     height: 165px;
-    background-image: url("assets/images/side-curved.png");
+    background-image: url("wp-content/themes/itzontarget/assets/images/side-curved.png");
     background-repeat: no-repeat;
     background-size: 100% 100%; }
     @media (min-width: 1140px) {
@@ -511,7 +530,7 @@ h1, h2, h3, h4, h5, h6 {
         right: -126px; } }
     @media (max-width: 767px) {
       .has-arrow::after {
-        background: url("assets/images/arrow-mob-left-svg.svg");
+        background: url("wp-content/themes/itzontarget/assets/images/arrow-mob-left-svg.svg");
         width: 58px;
         height: 61px;
         top: -31px;
@@ -606,7 +625,7 @@ h1, h2, h3, h4, h5, h6 {
     content: '';
     width: 125px;
     height: 47px;
-    background-image: url("assets/images/circle-open-top.svg");
+    background-image: url("wp-content/themes/itzontarget/assets/images/circle-open-top.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     top: -10px;
@@ -673,7 +692,7 @@ h1, h2, h3, h4, h5, h6 {
       top: 50%;
       transform: translateY(-50%);
       right: 0%;
-      background: url("assets/images/border-right.svg");
+      background: url("wp-content/themes/itzontarget/assets/images/border-right.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%; }
       @media (max-width: 767px) {
@@ -720,7 +739,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 200px;
     bottom: -99px;
     right: -41px;
-    background-image: url("assets/images/dotted-box-grid.svg");
+    background-image: url("wp-content/themes/itzontarget/assets/images/dotted-box-grid.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat; }
     @media (max-width: 767px) {
@@ -780,7 +799,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 194px;
   box-shadow: 0px 1px 10px rgba(82, 99, 116, 0.15);
   border-radius: 200px;
-  background-image: url("assets/images/client1.png");
+  background-image: url("wp-content/themes/itzontarget/assets/images/client1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -794,7 +813,7 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     top: 8%;
     right: -11%;
-    background-image: url("assets/images/quotes.svg"); }
+    background-image: url("wp-content/themes/itzontarget/assets/images/quotes.svg"); }
   @media (min-width: 768px) and (max-width: 990px) {
     .client-image {
       margin: 10px auto; } }
@@ -859,7 +878,7 @@ h1, h2, h3, h4, h5, h6 {
   .arrow-with-text::before {
     position: absolute;
     content: '';
-    background: url(assets/images/arrow-mob-left-svg.svg);
+    background: url("wp-content/themes/itzontarget/assets/images/arrow-mob-left-svg.svg");
     width: 49px;
     height: 89px;
     /* top: -74px; */
@@ -873,7 +892,7 @@ h1, h2, h3, h4, h5, h6 {
 /*css for case study page starts here */
 /* variables for colors */
 .pages-top-section {
-  padding: 60px 60px 140px 60px;
+  padding: 60px 30px 140px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -896,13 +915,17 @@ h1, h2, h3, h4, h5, h6 {
     .page-top-left {
       margin-bottom: 63px;
       width: 98%; } }
+  .page-top-left .cta-sec {
+    margin-top: 42px; }
 
-@media (min-width: 768px) and (max-width: 990px) {
-  .page-top-right {
-    text-align: center; } }
-@media (max-width: 767px) {
-  .page-top-right {
-    text-align: center; } }
+.page-top-right {
+  display: inline-block; }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .page-top-right {
+      text-align: center; } }
+  @media (max-width: 767px) {
+    .page-top-right {
+      text-align: center; } }
 
 .h1-internal {
   font-family: 'Greycliff CF - Heavy';
@@ -924,7 +947,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 370px;
     border-radius: 15px;
     box-shadow: 0px 1px 30px 0px #52637433;
-    overflow: hidden; }
+    overflow: hidden;
+    display: inline-block; }
     @media (min-width: 991px) {
       .img-circle-btm .img-box {
         width: 446px;
@@ -950,7 +974,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: -1;
     width: 200px;
     height: 200px;
-    background-image: url("assets/images/dotted-circle.svg");
+    background-image: url("wp-content/themes/itzontarget/assets/images/dotted-circle.svg");
     background-repeat: no-repeat;
     bottom: -107px;
     left: -62px; }
@@ -967,7 +991,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: -1;
     width: 200px;
     height: 200px;
-    background-image: url("assets/images/dotted-circle.svg");
+    background-image: url("wp-content/themes/itzontarget/assets/images/dotted-circle.svg");
     background-repeat: no-repeat;
     bottom: -107px;
     left: 484px; }
@@ -1175,5 +1199,79 @@ h1, h2, h3, h4, h5, h6 {
       display: block; } }
 
 /* css for case study page ends here */
+/* css for resource main page starts here */
+.page-top-right.muli-image {
+  display: block;
+  padding: 0px 60px; }
+  @media (max-width: 767px) {
+    .page-top-right.muli-image {
+      padding: 0px; } }
+
+.squr-crcl-rtlft {
+  position: relative;
+  display: inline-block;
+  z-index: 4; }
+  .squr-crcl-rtlft .rect-img {
+    overflow: hidden;
+    width: 280px;
+    height: 343px;
+    border-radius: 15px;
+    box-shadow: 0px 1px 30px 0px #52637433; }
+    .squr-crcl-rtlft .rect-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-position: center; }
+  .squr-crcl-rtlft .rect-img-out {
+    position: relative;
+    display: flex; }
+    .squr-crcl-rtlft .rect-img-out::after {
+      position: absolute;
+      content: '';
+      width: 150px;
+      height: 150px;
+      background-image: url("wp-content/themes/itzontarget/assets/images/right-circle.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      top: 103px;
+      right: -64px;
+      z-index: -4; }
+      @media (max-width: 560px) {
+        .squr-crcl-rtlft .rect-img-out::after {
+          width: 119px;
+          height: 119px;
+          top: -55px;
+          right: -7px;
+          z-index: -4; } }
+    .squr-crcl-rtlft .rect-img-out::before {
+      position: absolute;
+      content: '';
+      width: 150px;
+      height: 150px;
+      background-image: url("wp-content/themes/itzontarget/assets/images/dotted-box-grid.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      top: 140px;
+      left: -38px;
+      z-index: -4; }
+  .squr-crcl-rtlft .circle-img {
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 30px 0px #52637433;
+    z-index: 999;
+    margin-right: -43px;
+    margin-top: 54px; }
+    .squr-crcl-rtlft .circle-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-position: center; }
+  @media (max-width: 560px) {
+    .squr-crcl-rtlft {
+      display: unset; } }
+
+/*css for resource main page ends here*/
 
 /*# sourceMappingURL=style.css.map */
