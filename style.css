@@ -119,6 +119,16 @@ h1, h2, h3, h4, h5, h6 {
 .navigation.open {
   z-index: 99999;
   background: #fff; }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .navigation.open {
+      height: 100%;
+      background-color: #EFF8FC;
+      z-index: -1; } }
+  @media (max-width: 767px) {
+    .navigation.open {
+      height: 100%;
+      background-color: #EFF8FC;
+      z-index: -1; } }
   .navigation.open ul {
     display: block;
     text-align: center;

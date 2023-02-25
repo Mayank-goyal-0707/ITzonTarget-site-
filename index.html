@@ -15,7 +15,7 @@
         <div class="wrapper">
             <!-- header starts here-->
             <section class="header-section">
-                <header class="header scrolls">
+                <header id="masthead" class="header">
                     <div class="brand-logo"><img src="wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary.svg"></div>
                     <div class="nav-items">
                         <nav class="navigation">
@@ -227,17 +227,12 @@
 </html>
 
 <script>
-    document.querySelector('.burger').addEventListener("click", function() {
-        document.querySelector('header .navigation').classList.toggle("open");
-        document.querySelector('header .menu-list').classList.toggle("list-open");
-        document.querySelector('header').classList.toggle("nav-mobile-active");
-    });
-    $('.burger').on("click", function() {
+     // Nav on click
+     $('.burger').on("click", function() {
         $('header .navigation').toggleClass("open");
         $('header .menu-list').toggleClass("list-open");
         $('header').toggleClass("nav-mobile-active");
 
-        $("#masthead").removeClass("scrolls");
         if ($('header .navigation').hasClass("open")) {
             $("#masthead").addClass("scrolls");
         }
@@ -262,4 +257,16 @@
             $("#masthead").removeClass("scrolls");
         }
     });
+
+    $('.customer-slider').slick({
+        dots: true,
+        infinite: false,
+        autoplay: false,
+        autoplayspeed: 1500,
+        speed: 300,
+        slideToShow: 1,
+        slideToScroll: 1,
+        arrows: false,
+    });
+
 </script>

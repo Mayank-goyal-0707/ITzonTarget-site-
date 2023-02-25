@@ -105,6 +105,18 @@
 		z-index: 99999;
 		background: #fff;
 
+		@include tablets {
+			height: 100%;
+			background-color: #EFF8FC;
+			z-index: -1;	
+		}
+
+		@include mobiles {
+			height: 100%;
+			background-color: #EFF8FC;
+			z-index: -1;	
+		}
+
 		ul {
 			display: block;
 			text-align: center;
