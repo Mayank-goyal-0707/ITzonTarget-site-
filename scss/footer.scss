@@ -44,7 +44,8 @@ footer {
         @include tablets {
             margin: 0 auto;
             line-height: 115%;
-            text-align: center
+            text-align: center;
+            width: unset;
         }
 
         @include mobiles {
