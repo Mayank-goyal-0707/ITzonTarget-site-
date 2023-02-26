@@ -14,7 +14,7 @@
     <body>
         <div class="wrapper">
             <!-- header starts here-->
-            <section class="header-section">
+            <section class="header-content">
                 <header id="masthead" class="header">
                     <div class="brand-logo"><img src="wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary.svg"></div>
                     <div class="nav-items">
@@ -234,7 +234,7 @@
         $('header').toggleClass("nav-mobile-active");
 
         if ($('header .navigation').hasClass("open")) {
-            $("#masthead").addClass("scrolls");
+            $("#masthead").parent().addClass("scrolls");
         }
     });
 
@@ -243,21 +243,20 @@
         $(ele).attr('href') === window.location.href ? $(ele).attr('class', "underline-orange") : null;
     })
 
-    // On scroll add class on navigation
-    $(window).scroll(function() {    
-        if ($('header .navigation').hasClass("open")) {
+      // On scroll add class on navigation
+    $(window).scroll(function () {
+        if ($("header .navigation").hasClass("open")) {
             return;
         }
 
         var scroll = $(window).scrollTop();
         if (scroll >= 100) {
-            $("#masthead").addClass("scrolls");
+            $("#masthead").parent().addClass("scrolls");
         }
         if (scroll == 0) {
-            $("#masthead").removeClass("scrolls");
+            $("#masthead").parent().removeClass("scrolls");
         }
     });
-
     $('.customer-slider').slick({
         dots: true,
         infinite: false,

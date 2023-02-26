@@ -1,44 +1,37 @@
 /*css for header sections only */
 @import 'mixins';
 
-.header {
-	margin: 40px 0px;
-	padding: 0px 40px;
-	@include dispflex-spcbw;
+.header-content {
+	padding: 30px 40px;
 
-	// css when page scrolls on desktop
+	@include tablets {
+		padding: 30px 20px;
+	}
+
+	@include mobiles {
+		padding: 30px 20px;
+	}
+
+	.header {
+		width: 100%;
+		margin: 0 auto;
+		@include dispflex-spcbw;
+	}
+
 	&.scrolls {
-		margin-top: 0px;
-		padding: 30px 40px;
 		background-color: $light-blue;
 		box-shadow: 0px 1px 10px rgba(82, 99, 116, 0.15);
 		border-radius: 0px 0px 9px 9px;
 		z-index: 9999;
 		position: sticky;
 		top: 0;
+		padding: 30px 0;
 
-		@include Desktops {
-			margin: 0 auto;
+		.header {
 			width: 90%;
 		}
-
-		@include mobiles {
-			padding: 30px 20px;
-			margin: unset;
-		}
-	}
-
-	@include tablets {
-		margin: unset;
-		padding: 30px 20px;
-	}
-
-	@include mobiles {
-		padding: 30px 20px;
-		margin: unset;
 	}
 }
-
 .brand-logo {
 	font-weight: bold;
 
