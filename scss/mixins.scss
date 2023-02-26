@@ -75,6 +75,12 @@
     }
 }
 
+@mixin x-small {
+    @media (max-width:418px){
+        @content;
+    }
+}
+
 // for tablets
 @mixin tablets {
     @media (min-width:768px) and (max-width:990px) {
