@@ -958,6 +958,14 @@ footer {
     .pages-top-section {
       display: block;
       padding: unset; } }
+  .pages-top-section.case-index {
+    padding: 30px 40px 246px; }
+    @media (min-width: 768px) and (max-width: 990px) {
+      .pages-top-section.case-index {
+        padding: 30px 0px 100px; } }
+    @media (max-width: 767px) {
+      .pages-top-section.case-index {
+        padding: 30px 0px 100px; } }
 
 .page-top-left {
   width: 50%; }
@@ -1204,6 +1212,23 @@ footer {
       width: 45px;
       height: 45px;
       padding: 0px; } }
+  .redirect-btn ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+    padding: 0px; }
+    .redirect-btn ul li {
+      margin: 0px 20px; }
+      .redirect-btn ul li a {
+        font-family: 'Greycliff CF - bold';
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 700;
+        color: #00386C;
+        text-decoration: none; }
+        .redirect-btn ul li a.active {
+          color: #00386C; }
 
 .btn-prev {
   display: flex;
@@ -1309,6 +1334,83 @@ footer {
     .squr-crcl-rtlft {
       display: unset; } }
 
-/*css for resource main page ends here*/
+.cards-wrapper-outer {
+  background-color: #EFF8FC;
+  padding: 30px 28px; }
+
+.cards-wrapper-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+  margin-top: -147px; }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .cards-wrapper-inner {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 767px) {
+    .cards-wrapper-inner {
+      grid-template-columns: repeat(1, 1fr); } }
+
+.grid-card {
+  position: relative; }
+  .grid-card .image-cardbg {
+    height: 382px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 15px;
+    position: relative; }
+    .grid-card .image-cardbg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease; }
+    .grid-card .image-cardbg .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(82, 99, 116, 0) 26.69%, #526374 69.25%);
+      mix-blend-mode: multiply;
+      transition: opacity 0.5s ease, background 0.5s ease; }
+    .grid-card .image-cardbg .overlay-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 35px; }
+      .grid-card .image-cardbg .overlay-text .card-top {
+        background-color: #fff;
+        width: fit-content;
+        border-radius: 50px;
+        font-family: 'Greycliff CF';
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: bolder;
+        color: #0974E4;
+        padding: 5px 10px;
+        line-height: 16px; }
+      .grid-card .image-cardbg .overlay-text .card-desc {
+        font-family: 'Greycliff CF - bold';
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: bold;
+        color: #fff;
+        line-height: 38px; }
+    .grid-card .image-cardbg:hover img {
+      transform: scale(1.1); }
+
+.case-study-navigate {
+  padding: 50px 0px;
+  text-align: center; }
+  .case-study-navigate .redirect-btn {
+    padding: 25px 50px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */
