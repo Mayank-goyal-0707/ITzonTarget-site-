@@ -16,7 +16,8 @@
 /* variables for colors */
 .wrapper {
   max-width: 1366px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border: 1px solid; }
 
 body {
   padding: 0px;
@@ -939,25 +940,38 @@ footer {
 
 /*css for case study page starts here */
 /* variables for colors */
+@media (min-width: 768px) and (max-width: 990px) {
+  .banner {
+    margin-bottom: 27px; } }
+@media (min-width: 768px) and (max-width: 990px) {
+  .banner.case-study {
+    margin-bottom: 120px; } }
+@media (max-width: 767px) {
+  .banner.case-study {
+    margin-bottom: 120px; } }
+
 .pages-top-section {
-  padding: 60px 30px 140px 30px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 40px 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: flex-end; }
+  flex-wrap: wrap; }
   @media (min-width: 768px) and (max-width: 990px) {
     .pages-top-section {
-      display: block; } }
+      display: block;
+      padding: unset; } }
   @media (max-width: 767px) {
     .pages-top-section {
-      padding: 18px 18px 90px 18px;
-      display: block; } }
+      display: block;
+      padding: unset; } }
 
 .page-top-left {
   width: 51%; }
   @media (min-width: 768px) and (max-width: 990px) {
     .page-top-left {
-      width: 91%;
+      width: 90%;
       margin-bottom: 63px; } }
   @media (max-width: 767px) {
     .page-top-left {
@@ -966,14 +980,12 @@ footer {
   .page-top-left .cta-sec {
     margin-top: 42px; }
 
-.page-top-right {
-  display: inline-block; }
-  @media (min-width: 768px) and (max-width: 990px) {
-    .page-top-right {
-      text-align: center; } }
-  @media (max-width: 767px) {
-    .page-top-right {
-      text-align: center; } }
+@media (min-width: 768px) and (max-width: 990px) {
+  .page-top-right {
+    text-align: center; } }
+@media (max-width: 767px) {
+  .page-top-right {
+    text-align: center; } }
 
 .h1-internal {
   font-family: 'Greycliff CF - Heavy';
@@ -1092,13 +1104,13 @@ footer {
       display: none; } }
 
 .case-study-details {
-  padding: 35px 180px 60px 180px; }
-  @media (min-width: 768px) and (max-width: 990px) {
-    .case-study-details {
-      padding: 35px 72px 60px 87px; } }
+  padding: 35px 50px;
+  width: 85%;
+  margin: 0 auto; }
   @media (max-width: 767px) {
     .case-study-details {
-      padding: 0px 40px 47px 40px; } }
+      padding: unset;
+      width: 92%; } }
 
 .case-study-section {
   display: flex;
@@ -1131,9 +1143,6 @@ footer {
           top: 9px;
           left: -27px;
           border-radius: 50px; }
-        @media (max-width: 767px) {
-          .case-study-section .case-study-right ul.with-dots li {
-            margin-left: 12%; } }
     @media (max-width: 767px) {
       .case-study-section .case-study-right {
         width: 100%; } }
@@ -1197,7 +1206,7 @@ footer {
   @media (max-width: 767px) {
     .redirection {
       margin-top: 50px;
-      padding: 30px 37px; } }
+      padding: 20px; } }
 
 .redirect-btn {
   text-align: center;

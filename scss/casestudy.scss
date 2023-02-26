@@ -1,22 +1,40 @@
 /*css for case study page starts here */
 @import 'mixins';
 @import 'variable';
+.banner {
+    @include tablets {
+        margin-bottom: 27px;
+    }
+    &.case-study {
+        @include tablets {
+            margin-bottom: 120px;
+        }
+        @include mobiles {
+            margin-bottom: 120px;
+        }
+    }
+}
 .pages-top-section {
-   padding: 60px 30px 140px 30px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 40px 120px;
    @include dispflex-spcbw;
-   flex-direction: flex-end;
+   flex-wrap: wrap;
    @include tablets {
        display: block;
+      // padding: 30px 0px 120px;
+      padding: unset;
      }
    @include mobiles {
-      padding: 18px 18px 90px 18px ;
+      //padding: 18px 18px 90px 18px ;
       display: block;
+      padding: unset;
    }
 }
 .page-top-left {
     width: 51%;
     @include tablets {
-        width: 91%;
+        width: 90%;
         margin-bottom: 63px;
     }
     @include mobiles {
@@ -28,7 +46,6 @@
     }
 }
 .page-top-right {
-    display: inline-block;
     @include tablets {text-align: center;}
     @include mobiles {text-align: center;}
 }
@@ -137,13 +154,19 @@
     }
 }
 .case-study-details {
-    padding: 35px 180px 60px 180px;
-    @include tablets {
-        padding: 35px 72px 60px 87px;
-    }
+    padding: 35px 50px;
+    width: 85%;
+    margin: 0 auto;
     @include mobiles {
-        padding: 0px 40px 47px 40px;
-    }
+        padding: unset;
+        width: 92%;
+    };
+    // @include tablets {
+    //     padding: 35px 72px 60px 87px;
+    // }
+    // @include mobiles {
+    //     padding: 0px 40px 47px 40px;
+    // }
 }
 
 .case-study-section {
@@ -183,7 +206,7 @@
                         border-radius: 50px;
                     }
                     @include mobiles {
-                        margin-left: 12%;
+                        //margin-left: 12%;
                     }
                 }
             }
@@ -251,7 +274,7 @@
     }
     @include mobiles {
         margin-top: 50px;
-        padding: 30px 37px;
+        padding:20px;
     }
 }
 .redirect-btn{

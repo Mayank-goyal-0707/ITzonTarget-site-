@@ -17,27 +17,46 @@
 	<body onload="load()">
 		<div class="wrapper">
 			<!-- header starts here-->
-			<section class="header-section">
-				<header class="header">
-					<div class="brand-logo"><img src="wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary.svg"></div>
-					<div class="nav-items">
-						<nav class="navigation">
-							<ul class="menu-list">
-								<li><a href="#">About</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="case-study.html">Case Study</a></li>
-								<li><a href="Resource-index.html">Resources</a></li>
-								<li><a href="#">Contact</a></li>
-								<li><a href="#" class="cta-primary">Get a free quote today</a></li>
-							</ul>
-						</nav>
-						<div class="search-block"> <img src="wp-content/themes/itzontarget/assets/images/magnify.svg"> <a class="burger"><span></span></a> </div>
-					</div>
-				</header>
-			</section>
+            <section class="header-section">
+                <header id="masthead" class="header">
+                    <div class="brand-logo"><img src="wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary.svg"></div>
+                    <div class="nav-items">
+                        <nav class="navigation">
+                            <ul class="menu-list">
+                                <li><a href="#"  class="underline-orange">About</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="case-study.html"  class="underline-orange">Case Study</a></li>
+                                <li><a href="Resource-index.html">Resources</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#" class="cta-primary">Get a free quote today</a></li>
+                            </ul>
+                        </nav>
+                        <div class="search-block">
+                            <img src="wp-content/themes/itzontarget/assets/images/magnify.svg">
+                            <a class="burger"><span></span></a>
+                        </div>
+                    </div>
+                </header>
+            </section>
 			<!-- header ends here-->
             <!--page-top section starts here-->
-            <section class="pages-top-section">
+            <div class="banner case-study">
+                <section class="pages-top-section">
+                    <div class="page-top-left">
+                       <h5 class="heading-cursive">Case study</h5>
+                       <h1 class="h1-internal">Water Park’s Multi-Channel Campaign Makes a Splash</h1>
+                       <div class="regular-para">Multi-Channel Campaign</div>
+                    </div>
+                    <div class="page-top-right">
+                        <div class="img-circle-btm">
+                            <div class="img-box">
+                               <img src="wp-content/themes/itzontarget/assets/images/baby-left-img.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- <section class="pages-top-section">
                 <div class="page-top-left">
                    <h5 class="heading-cursive">Case study</h5>
                    <h1 class="h1-internal">Water Park’s Multi-Channel Campaign Makes a Splash</h1>
@@ -50,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!--page-top section ends here-->
             <!-- single image section starts here-->
             <section class="simple-box-image"><img src="wp-content/themes/itzontarget/assets/images/image-only.png"></section>
@@ -159,28 +178,74 @@
                 </a>
             </section>
             <!-- next and prev section ends-->
-			<!-- footer starts here-->
-			<footer class="footer">
-				<div class="footer-top">
-					<div class="footer-text">Let’s revolutionize your ad strategy.</div> <a class="cta-primary">Get a free quote today</a> </div>
-				<div class="footer-menu">
-					<div class="brand-logo"><img src="wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary-Dark.svg"></div>
-					<nav class="navigation footer-nav">
-						<ul class="menu-list">
-							<li><a href="#">About</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="case-study.html">Case Study</a></li>
-							<li><a href="Resource-index.html">Resources</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</footer>
-			<!-- footer ends here-->
+			 <!-- footer starts here-->
+             <footer>
+                <div class="footer">
+                    <div class="footer-top">
+                        <div class="footer-text">Let’s revolutionize your ad strategy.</div>
+                        <a class="cta-primary">Get a free quote today</a>
+                    </div>
+                    <div class="footer-menu">
+                        <div class="brand-logo"><img src="/wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary-Dark.svg"></div>
+                        <nav class="navigation footer-nav">
+                            <ul class="menu-list">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="case-study.html">Case Study</a></li>
+                                <li><a href="Resource-index.html">Resources</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer ends here-->
 		</div>
 	</body>
 </head>
 <script>
+      // Nav on click
+      $('.burger').on("click", function() {
+        $('header .navigation').toggleClass("open");
+        $('header .menu-list').toggleClass("list-open");
+        $('header').toggleClass("nav-mobile-active");
+
+        if ($('header .navigation').hasClass("open")) {
+            $("#masthead").addClass("scrolls");
+        }
+    });
+
+    // Add active on nav menu
+    $(".navigation a").each(function(_, ele){
+        $(ele).attr('href') === window.location.href ? $(ele).attr('class', "underline-orange") : null;
+    })
+
+    // On scroll add class on navigation
+    $(window).scroll(function() {    
+        if ($('header .navigation').hasClass("open")) {
+            return;
+        }
+
+        var scroll = $(window).scrollTop();
+        if (scroll >= 100) {
+            $("#masthead").addClass("scrolls");
+        }
+        if (scroll == 0) {
+            $("#masthead").removeClass("scrolls");
+        }
+    });
+
+    $('.customer-slider').slick({
+        dots: true,
+        infinite: false,
+        autoplay: false,
+        autoplayspeed: 1500,
+        speed: 300,
+        slideToShow: 1,
+        slideToScroll: 1,
+        arrows: false,
+    });
+
     function animate(obj, initVal, lastVal, duration) {
        let startTime = null;
 
