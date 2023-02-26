@@ -17,7 +17,7 @@
 	<body onload="load()">
 		<div class="wrapper">
 			<!-- header starts here-->
-            <section class="header-section">
+            <section class="header-content">
                 <header id="masthead" class="header">
                     <div class="brand-logo"><img src="wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary.svg"></div>
                     <div class="nav-items">
@@ -161,21 +161,23 @@
             </section>
             <!-- counter section ends here-->
             <!-- next and prev section starts here-->
-            <section class="redirection">
-                <a  class="redirect-btn" href="#">
-                    <div class="btn-prev">
-                        <img src="wp-content/themes/itzontarget/assets/images/circle-arrow.svg">
-                        <div class="btn-texts"><span class="btn-nav">Previous</span></div>
-                    </div>
-                    <div class="btn"></div>
-                </a>
-                <a  class="redirect-btn" href="#">
-                    <div class="btn-prev next">
-                        <img src="wp-content/themes/itzontarget/assets/images/circle-arrow.svg">
-                        <div class="btn-texts"><span class="btn-nav">Next</span></div>
-                    </div>
-                    <div class="btn"></div>
-                </a>
+            <section class="redirection-section">
+                <div class="redirection">
+                    <a  class="redirect-btn" href="#">
+                        <div class="btn-prev">
+                            <img src="wp-content/themes/itzontarget/assets/images/circle-arrow.svg">
+                            <div class="btn-texts"><span class="btn-nav">Previous</span></div>
+                        </div>
+                        <div class="btn"></div>
+                    </a>
+                    <a  class="redirect-btn" href="#">
+                        <div class="btn-prev next">
+                            <img src="wp-content/themes/itzontarget/assets/images/circle-arrow.svg">
+                            <div class="btn-texts"><span class="btn-nav">Next</span></div>
+                        </div>
+                        <div class="btn"></div>
+                    </a>
+                </div>
             </section>
             <!-- next and prev section ends-->
 			 <!-- footer starts here-->
@@ -204,14 +206,14 @@
 	</body>
 </head>
 <script>
-      // Nav on click
-      $('.burger').on("click", function() {
+     // Nav on click
+     $('.burger').on("click", function() {
         $('header .navigation').toggleClass("open");
         $('header .menu-list').toggleClass("list-open");
         $('header').toggleClass("nav-mobile-active");
 
         if ($('header .navigation').hasClass("open")) {
-            $("#masthead").addClass("scrolls");
+            $("#masthead").parent().addClass("scrolls");
         }
     });
 
@@ -220,21 +222,20 @@
         $(ele).attr('href') === window.location.href ? $(ele).attr('class', "underline-orange") : null;
     })
 
-    // On scroll add class on navigation
-    $(window).scroll(function() {    
-        if ($('header .navigation').hasClass("open")) {
+      // On scroll add class on navigation
+    $(window).scroll(function () {
+        if ($("header .navigation").hasClass("open")) {
             return;
         }
 
         var scroll = $(window).scrollTop();
         if (scroll >= 100) {
-            $("#masthead").addClass("scrolls");
+            $("#masthead").parent().addClass("scrolls");
         }
         if (scroll == 0) {
-            $("#masthead").removeClass("scrolls");
+            $("#masthead").parent().removeClass("scrolls");
         }
     });
-
     $('.customer-slider').slick({
         dots: true,
         infinite: false,

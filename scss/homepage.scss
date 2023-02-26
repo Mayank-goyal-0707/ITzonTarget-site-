@@ -11,6 +11,9 @@
   @include mobiles {
     display: block;
   }
+  img {
+    width: 100%;
+  }
 }
 
 .disp-desktop {

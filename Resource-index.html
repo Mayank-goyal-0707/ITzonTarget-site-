@@ -15,7 +15,7 @@
         <div class="wrapper">
              <!-- header starts here-->
              <!-- header starts here-->
-            <section class="header-section">
+            <section class="header-content">
                 <header id="masthead" class="header">
                     <div class="brand-logo"><img src="wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary.svg"></div>
                     <div class="nav-items">
@@ -47,18 +47,19 @@
                         <div class="regular-para">Results-driven campaigns that drive traffic, increase conversions, and boost brand awareness.</div>
                         <div class="cta-sec"><a class="cta-primary">Get a free quote today</a></div>
                     </div>
-                    <div class="page-top-right">
+                    <div class="page-top-right disp-desktop ">
                         <div class="squr-crcl-rtlft">
                             <div class="rect-img-out">
                                 <div class="circle-img">
-                                    <img src="wp-content/themes/itzontarget/assets/images/pens.jpg">
+                                    <img src="/wp-content/themes/itzontarget/assets/images/pens.jpg">
                                 </div>
                                 <div class="rect-img">
-                                    <img src="wp-content/themes/itzontarget/assets/images/laptop1.jpg">
+                                    <img src="/wp-content/themes/itzontarget/assets/images/laptop1.jpg">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="page-top-right disp-mob"><div class="disp-mob"><img src="/wp-content/themes/itzontarget/assets/images/mob-case.png"></div></div>
                 </section>
             </div>
             <!-- first section ends here-->
@@ -136,11 +137,13 @@
                 <div class="case-study-navigate">
                     <div class="redirect-btn">
                         <ul>
+                            <li><a href="#"><img src="wp-content/themes/itzontarget/assets/images/circle-arrow.svg"></a></li>
                             <li><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                             <li><a href="#">4</a></li>
                             <li><a href="#">5</a></li>
+                            <li><a href="#" class="next-btn"><img src="wp-content/themes/itzontarget/assets/images/circle-arrow.svg"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -174,6 +177,36 @@
     </body>
 </html>
 <script>
+     // Nav on click
+     $('.burger').on("click", function() {
+        $('header .navigation').toggleClass("open");
+        $('header .menu-list').toggleClass("list-open");
+        $('header').toggleClass("nav-mobile-active");
+
+        if ($('header .navigation').hasClass("open")) {
+            $("#masthead").parent().addClass("scrolls");
+        }
+    });
+
+    // Add active on nav menu
+    $(".navigation a").each(function(_, ele){
+        $(ele).attr('href') === window.location.href ? $(ele).attr('class', "underline-orange") : null;
+    })
+
+      // On scroll add class on navigation
+    $(window).scroll(function () {
+        if ($("header .navigation").hasClass("open")) {
+            return;
+        }
+
+        var scroll = $(window).scrollTop();
+        if (scroll >= 100) {
+            $("#masthead").parent().addClass("scrolls");
+        }
+        if (scroll == 0) {
+            $("#masthead").parent().removeClass("scrolls");
+        }
+    });
      // Nav on click
      $('.burger').on("click", function() {
         $('header .navigation').toggleClass("open");
