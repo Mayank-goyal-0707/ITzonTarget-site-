@@ -153,6 +153,10 @@
         @include tablets {display: none;}
         @include mobiles {display: none;}
     }
+    &.generic-resource {
+        padding: 60px 0px 40px;
+
+    }
 }
 .case-study-details {
     padding: 30px 0;
@@ -273,13 +277,18 @@
         padding: 70px 0;
         @include dispflex-spcbw;
         @include tablets {
-            padding: 43px 81px;
+            padding: 43px 0px;
         }
         @include mobiles {
             margin-top: 50px;
-            padding: 30px;
+            padding: 30px 0px;
         }
     }
+    &.case-study-inner {
+        @include mobiles {
+         margin-top: 0px;
+        }
+     }
 }
 .redirect-btn{
     text-align: center;
@@ -367,3 +376,84 @@
     @include mobiles {display: block;}
 }
 /* css for case study page ends here */
+
+/*css for case-study inner page starts here*/
+.navy{
+    color: $navy !important;
+}
+.two-columns-wrapper {
+    padding: 0px 50px;
+    @include tablets {padding: 0px 20px;}
+    @include mobiles {padding: 0px 20px;}
+}
+.two-columns{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding:  0px 60px;
+    .left-columns {
+        .img-sec {
+            width: 90%;
+            height: auto;
+            border-radius: 50%;
+            margin: 0 auto;
+            img{
+                width: 100%;
+            }
+        }
+        @include tablets {margin: 0 auto;}
+        @include mobiles {margin: 0 auto;}
+    }
+    .right-columns {
+        width: 50%;
+        @include tablets { width: 100%; margin-top: 30px;}
+        @include mobiles { width: 100%; margin-top: 30px;}
+     }
+     @include tablets { padding: 40px 0px;}
+     @include mobiles { padding: 40px 0px;}
+     @include small-mobiles {padding: 20px 0px;}
+}
+// css for video section 
+.section-video-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0px;
+    .video-container{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        box-shadow: 0px 1px 30px 0px #52637433;
+        video{
+            position: relative;
+            max-width: 100%;
+        }
+        .video-btn {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 32px;
+            color: #0974E4;
+            width: 65px;
+            height: 65px;
+            border-radius: 50px;
+            border:0px;
+            background-color: #fff;
+            @include mobiles {
+                font-size: 20px;
+                width: 42px;
+                height: 45px;
+            }
+            &:hover {
+               cursor: pointer;
+            }
+        }
+    }
+    @include mobiles {
+        width: 95%;
+        padding: 0px;
+    }
+}
+/*css for case-study inner page ends here*/

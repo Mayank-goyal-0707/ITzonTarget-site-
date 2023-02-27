@@ -7,8 +7,9 @@ footer {
     .footer {
         margin: 0 auto;
         width: 90%;
-        padding: 30px 40px;
-
+        @include Desktops{
+            padding: 30px 40px;
+        }
         @include mobiles {
             padding: 70px 20px 10px 20px;
         }
