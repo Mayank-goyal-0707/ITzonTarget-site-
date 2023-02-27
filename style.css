@@ -1436,8 +1436,10 @@ footer {
       @media (max-width: 767px) {
         .grid-card .image-cardbg .overlay-text {
           padding: 25px; } }
-    .grid-card .image-cardbg:hover img {
-      transform: scale(1.1); }
+    .grid-card .image-cardbg:hover {
+      cursor: pointer; }
+      .grid-card .image-cardbg:hover img {
+        transform: scale(1.1); }
 
 .case-study-navigate {
   padding: 25px 0px;
