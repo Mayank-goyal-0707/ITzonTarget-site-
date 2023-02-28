@@ -7,6 +7,7 @@
             padding: 0px;
         }
     }
+    img{width: 100%;}
 }
 .squr-crcl-rtlft {
     position: relative;
@@ -136,7 +137,7 @@
                 width: fit-content;
                 border-radius: 50px;
                 @include font-Greycliff-CF (14px,14px,$light-navy,bolder);
-                padding:5px 10px;
+                padding: 6px 10px 3px;
                 line-height: 16px;
             }
             .card-desc {

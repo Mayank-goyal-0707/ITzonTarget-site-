@@ -191,9 +191,8 @@
         ul {
             list-style: none;
             display: block;
-            width: 85%;
             margin: 0 auto;
-
+            padding: 0px;
             li {
                 margin: 1% 0%;
             }
@@ -246,7 +245,7 @@
     padding: 42px 0px 20px;
     li {
         text-align: center;
-        width: 25%;
+        width: 23%;
         .h2-heading {
             letter-spacing: -0.02em;
             background: linear-gradient(92.84deg, rgba(0, 56, 108, 0.3) 14.69%, rgba(9, 116, 228, 0.3) 50.57%, rgba(176, 211, 248, 0.3) 81.51%), #0974E4;
@@ -422,29 +421,26 @@
     .video-container{
         width: 100%;
         position: relative;
-        overflow: hidden;
-        border-radius: 30px;
-        box-shadow: 0px 1px 30px 0px #52637433;
         video{
             position: relative;
             max-width: 100%;
+            border: 0px;
+            overflow: hidden;
+            border-radius: 30px;
+            box-shadow: 0px 1px 30px 0px #52637433;
         }
         .video-btn {
             position: absolute;
             top:50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            font-size: 32px;
-            color: #0974E4;
-            width: 65px;
-            height: 65px;
-            border-radius: 50px;
             border:0px;
-            background-color: #fff;
-            @include mobiles {
-                font-size: 20px;
-                width: 42px;
-                height: 45px;
+            background:none;
+            img{
+                @include mobiles {
+                    width: 40%;
+                    height: 40%;
+                }
             }
             &:hover {
                cursor: pointer;
