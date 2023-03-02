@@ -43,10 +43,12 @@
  width: 90%;
  margin-top: 30px;
  .two-columns-wrapper {
+    padding: 0px;
     @include tablets{padding: 0px;}
     @include mobiles {padding: 0px;}
  }
  .two-columns {
+    padding: 0px;
     .left-columns {
         width: 35%;
         @include tablets { width: 100%; text-align: center;}
