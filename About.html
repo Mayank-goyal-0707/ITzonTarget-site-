@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Resources</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="slick/slick.js"></script>
+      <script src="slick/slick.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+      <link rel="stylesheet" type="text/css" href="slick/slick.css" /> 
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- header starts here-->
+            <section class="header-content">
+                <header id="masthead" class="header">
+                    <div class="brand-logo"><img src="wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary.svg"></div>
+                    <div class="nav-items">
+                        <nav class="navigation">
+                            <ul class="menu-list">
+                                <li><a href="About.html"  class="underline-orange">About</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="case-study.html"  class="underline-orange">Case Study</a></li>
+                                <li><a href="Resource-index.html">Resources</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#" class="cta-primary">Get a free quote today</a></li>
+                            </ul>
+                        </nav>
+                        <div class="search-block">
+                            <img src="wp-content/themes/itzontarget/assets/images/magnify.svg">
+                            <a class="burger"><span></span></a>
+                        </div>
+                    </div>
+                </header>
+            </section>
+            <!-- header ends here-->
+            <div class="banner case-study">
+                <section class="pages-top-section case-index row-revert">
+                    <div class="page-top-left">
+                        <h5 class="heading-cursive">About us</h5>
+                        <h1 class="h1-internal">We have a passion for helping small businesses <span class="light-blue">level the playing field.</span></h1>
+                        <div class="regular-para">We understand the unique challenges that small businesses face and are dedicated to providing the same high-quality marketing services as larger companies, at an affordable price.</div>
+                    </div>
+                    <div class="page-top-right disp-desktop ">
+                        <img src="/wp-content/themes/itzontarget/assets/images/about-banner.png">
+                        <!-- <div class="squr-crcl-rtlft">
+                            <div class="rect-img-out">
+                                <div class="circle-img">
+                                    <img src="/wp-content/themes/itzontarget/assets/images/resource-top-cirlce.jpg">
+                                </div>
+                                <div class="rect-img">
+                                    <img src="/wp-content/themes/itzontarget/assets/images/reource-index-top-square.jpg">
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="page-top-right disp-mob"><div class="disp-mob"><img src="/wp-content/themes/itzontarget/assets/images/about-banner-mobile.png"></div></div>
+                </section>
+            </div>
+            <!-- second section starts here-->
+            <section class="detail-section">
+                <div class="simple-section middle">
+                    <h5 class="heading-cursive">Our mission</h5>
+                    <h2 class="h2-heading">We help businesses of all sizes navigate the <span class="light-blue">sometimes confusing and always hilarious </span> world
+                        of online marketing.</h2>
+                    <div class="regular-para">We have a track record of success in a wide range of industries and are always looking for new ways to help our clients succeed. We believe that small businesses are the backbone of our economy and are committed to helping them thrive. If you're a small business owner looking to take your digital marketing to the next level, we'd love to work with you.</div>                </div>
+            </section>
+            <!-- second section ends here-->
+             <!-- footer starts here-->
+             <footer>
+                <div class="footer">
+                    <div class="footer-top">
+                        <div class="footer-text">Let’s revolutionize your ad strategy.</div>
+                        <a class="cta-primary">Get a free quote today</a>
+                    </div>
+                    <div class="footer-menu">
+                        <div class="brand-logo"><img src="/wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary-Dark.svg"></div>
+                        <nav class="navigation footer-nav">
+                            <ul class="menu-list">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="case-study.html">Case Study</a></li>
+                                <li><a href="Resource-index.html">Resources</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer ends here-->
+        </div>
+    </body>
+    <script>
+         // Nav on click
+     $('.burger').on("click", function() {
+        $('header .navigation').toggleClass("open");
+        $('header .menu-list').toggleClass("list-open");
+        $('header').toggleClass("nav-mobile-active");
+
+        if ($('header .navigation').hasClass("open")) {
+            $("#masthead").parent().addClass("scrolls");
+        }
+    });
+
+    // Add active on nav menu
+    $(".navigation a").each(function(_, ele){
+        $(ele).attr('href') === window.location.href ? $(ele).attr('class', "underline-orange") : null;
+    })
+
+      // On scroll add class on navigation
+    $(window).scroll(function () {
+        if ($("header .navigation").hasClass("open")) {
+            return;
+        }
+
+        var scroll = $(window).scrollTop();
+        if (scroll >= 100) {
+            $("#masthead").parent().addClass("scrolls");
+        }
+        if (scroll == 0) {
+            $("#masthead").parent().removeClass("scrolls");
+        }
+    });
+    </script>
+</html>

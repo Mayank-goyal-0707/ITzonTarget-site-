@@ -30,12 +30,12 @@
 @mixin curved-underline($color)  {
     position: absolute;
     content: '';
-    height: 7px;
+   // height: 7px;
     width: 100% !important;
-    border: solid 4px $color;
-    border-color: $color transparent transparent transparent;
-    border-radius: 64%;
-    bottom: -18px;
+    border: solid 2px $color;
+    //border-color: $color transparent transparent transparent;
+    //border-radius: 64%;
+    bottom: -9px;
     left: -4%;
 }
 @mixin pos-abs {

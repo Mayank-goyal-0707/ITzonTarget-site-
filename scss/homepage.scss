@@ -300,11 +300,6 @@
     width: 90%;
     padding: 30px 0;
     position: relative;
-
-    .h3-heading {
-      color: black !important;
-    }
-
     .regular-para {
       @include mobiles {
         width: 100%;

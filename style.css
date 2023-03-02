@@ -103,12 +103,9 @@ h1, h2, h3, h4, h5, h6 {
           animation: line-anim 0.3s forwards;
           position: absolute;
           content: '';
-          height: 7px;
           width: 100% !important;
-          border: solid 4px #FBBB5B;
-          border-color: #FBBB5B transparent transparent transparent;
-          border-radius: 64%;
-          bottom: -18px;
+          border: solid 2px #FBBB5B;
+          bottom: -9px;
           left: -4%; }
 .navigation.open {
   z-index: 99999;
@@ -170,12 +167,9 @@ h1, h2, h3, h4, h5, h6 {
   .underline-orange::before {
     position: absolute;
     content: '';
-    height: 7px;
     width: 100% !important;
-    border: solid 4px #FBBB5B;
-    border-color: #FBBB5B transparent transparent transparent;
-    border-radius: 64%;
-    bottom: -18px;
+    border: solid 2px #FBBB5B;
+    bottom: -9px;
     left: -4%; }
 
 .open {
@@ -677,8 +671,6 @@ footer {
   width: 90%;
   padding: 30px 0;
   position: relative; }
-  .detail-section .simple-section .h3-heading {
-    color: black !important; }
   @media (max-width: 767px) {
     .detail-section .simple-section .regular-para {
       width: 100%;
@@ -1565,5 +1557,9 @@ footer {
       .case-study-navigate .redirect-btn {
         height: auto;
         padding: 12px; } }
+
+@media (min-width: 991px) {
+  .row-revert {
+    flex-direction: row-reverse; } }
 
 /*# sourceMappingURL=style.css.map */

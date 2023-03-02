@@ -1,0 +1,5 @@
+.row-revert {
+    @include Desktops {
+        flex-direction: row-reverse;
+    }
+}
