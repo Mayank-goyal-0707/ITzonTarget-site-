@@ -161,5 +161,76 @@
     }
     @include mobiles {display: block;}
 }
-
+.faqs {
+    padding: 40px 0px;
+    width: 90%;
+    margin: 0 auto;
+}  
+    .faq-list {
+        list-style: none;
+        padding: 0px;
+        margin: 100px 0px 20px;
+      li {
+         background-color: $light-blue;
+         padding: 20px;
+         border-radius: 15px;
+         margin: 20px 0px;
+        &.show {
+           background-color: #fff;
+           box-shadow: 0px 1px 30px 0px #52637433;
+          .question {
+            &:after {
+              opacity: 0;
+            }
+          }
+        }
+        .question {
+          padding: 24px 90px 24px 36px;
+          display: block;
+          cursor: pointer;
+          position: relative;
+          &:before {
+            content: '';
+            width: 18px;
+            height: 3px;
+            background: rgb(34,58,155);
+            background: linear-gradient(90deg, rgba(34,58,155,1) 0%, rgba(156,16,125,1) 100%);
+            position: absolute;
+            right: 36px;
+            top: 34px;
+          }
+          &:after {
+            content: '';
+            width: 3px;
+            height: 18px;
+            background: rgb(34,58,155);
+            background: linear-gradient(90deg, rgba(34,58,155,1) 0%, rgba(156,16,125,1) 100%);
+            position: absolute;
+            right: 43px;
+            top: 27px;
+          }
+          p {
+            // font: rem(22) $font-md;
+            // color: #3d3f54;
+          }
+          @include mobiles {
+            padding: 0px;
+          }
+        }
+        .answer {
+          padding: 0 90px 24px 36px;
+          p {
+            // font: rem(16) $font-reg;
+            // color: #000;
+            line-height: 1.4;
+          }
+          @include mobiles {
+            padding: 0px;
+          }
+        }
+        &:last-child {
+          border: none;
+        }
+      }
+    }
 /*css for about us ends here*/
