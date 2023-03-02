@@ -77,6 +77,13 @@
 .cards-wrapper-outer{
     background-color: #EFF8FC;
     padding: 30px 0px;
+    margin-top: 150px;
+    @include tablets {
+        margin-top: 100px;
+    }
+    @include mobiles {
+        margin-top: 100px;
+    }
 }
 
 .cards-wrapper-inner{

@@ -8,6 +8,9 @@ footer {
         margin: 0 auto;
         width: 90%;
         @include Desktops{
+            padding: 30px 0;
+        }
+        @include tablets{
             padding: 30px 40px;
         }
         @include mobiles {
