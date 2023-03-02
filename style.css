@@ -763,7 +763,8 @@ footer {
     text-align: center;
     background-color: #00386C;
     border-radius: 15px;
-    position: relative; }
+    position: relative;
+    z-index: 5; }
     .general-component .blue-box-cta h2,
     .general-component .blue-box-cta h5 {
       margin: 20px; }
@@ -1558,8 +1559,185 @@ footer {
         height: auto;
         padding: 12px; } }
 
+/*css for about us starts here*/
+.h4-heading {
+  font-family: 'Greycliff CF - Heavy';
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: bolder;
+  color: #00386C;
+  line-height: 31px; }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .h4-heading {
+      font-size: 26px;
+      line-height: 28px; } }
+  @media (max-width: 767px) {
+    .h4-heading {
+      font-size: 22px;
+      line-height: 24px; } }
+
+.general-component.about-us {
+  padding: 30px 0px; }
+  .general-component.about-us .blue-box-cta {
+    position: relative; }
+    .general-component.about-us .blue-box-cta::after {
+      position: absolute;
+      content: '';
+      background-image: url("/wp-content/themes/itzontarget/assets/images/tilted-arrow.png");
+      width: 113px;
+      height: 111px;
+      bottom: 0px;
+      right: 382px; }
+      @media (min-width: 768px) and (max-width: 990px) {
+        .general-component.about-us .blue-box-cta::after {
+          right: 670px; } }
+      @media (max-width: 767px) {
+        .general-component.about-us .blue-box-cta::after {
+          display: none; } }
+
 @media (min-width: 991px) {
   .row-revert {
     flex-direction: row-reverse; } }
+
+.perks-of-working {
+  padding: 50px 0px;
+  border-top: 2px solid #5263744D;
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 30px; }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .perks-of-working .two-columns-wrapper {
+      padding: 0px; } }
+  @media (max-width: 767px) {
+    .perks-of-working .two-columns-wrapper {
+      padding: 0px; } }
+  .perks-of-working .two-columns .left-columns {
+    width: 35%; }
+    @media (min-width: 768px) and (max-width: 990px) {
+      .perks-of-working .two-columns .left-columns {
+        width: 100%;
+        text-align: center; } }
+    @media (max-width: 767px) {
+      .perks-of-working .two-columns .left-columns {
+        width: 100%;
+        text-align: center; } }
+  .perks-of-working .perks-ul {
+    padding: 30px;
+    background-color: #EFF8FC;
+    border-radius: 17px; }
+    .perks-of-working .perks-ul .regular-para {
+      font-size: 17px;
+      line-height: 27px;
+      position: relative;
+      margin-left: 10px;
+      color: #003683;
+      font-weight: bold; }
+      .perks-of-working .perks-ul .regular-para::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        content: '';
+        top: 0px;
+        left: 0px;
+        background-image: url(/wp-content/themes/itzontarget/assets/images/check.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        top: 4px;
+        left: -24px; }
+
+.two-col-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .two-col-cta {
+      display: block; } }
+  @media (max-width: 767px) {
+    .two-col-cta {
+      display: block; } }
+  .two-col-cta .cta-text {
+    font-family: 'Greycliff CF - bold';
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 50.6px;
+    letter-spacing: -0.02em;
+    width: 50%; }
+    @media (min-width: 768px) and (max-width: 990px) {
+      .two-col-cta .cta-text {
+        width: 100%;
+        text-align: center; } }
+    @media (max-width: 767px) {
+      .two-col-cta .cta-text {
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        line-height: 30px; } }
+  .two-col-cta .box-cta-btn {
+    width: 30%;
+    position: relative; }
+    @media (min-width: 768px) and (max-width: 990px) {
+      .two-col-cta .box-cta-btn {
+        width: 100%;
+        text-align: center; } }
+    @media (max-width: 767px) {
+      .two-col-cta .box-cta-btn {
+        width: 100%;
+        text-align: center; } }
+    @media (max-width: 767px) {
+      .two-col-cta .box-cta-btn .cta-primary {
+        margin-bottom: 0px; } }
+
+.customer-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 40px;
+  padding: 30px 0px; }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .customer-testimonials-grid {
+      grid-template-columns: repeat(1, 1fr); } }
+  @media (max-width: 767px) {
+    .customer-testimonials-grid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 25px; } }
+
+.customer-testimonial {
+  justify-content: space-between;
+  align-items: center;
+  display: flex; }
+  .customer-testimonial .customer-image {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 1px 30px 0px #52637433; }
+    .customer-testimonial .customer-image img {
+      width: 100%;
+      height: 100%;
+      object-position: center; }
+    @media (max-width: 767px) {
+      .customer-testimonial .customer-image {
+        height: 150px;
+        width: 150px;
+        margin: 0 auto; } }
+  .customer-testimonial .testimonial-text {
+    width: 65%; }
+    @media (min-width: 768px) and (max-width: 990px) {
+      .customer-testimonial .testimonial-text {
+        width: 70%; } }
+    @media (max-width: 767px) {
+      .customer-testimonial .testimonial-text {
+        width: 100%;
+        text-align: center; } }
+  @media (max-width: 767px) {
+    .customer-testimonial {
+      display: block; } }
+
+/*css for about us ends here*/
 
 /*# sourceMappingURL=style.css.map */
