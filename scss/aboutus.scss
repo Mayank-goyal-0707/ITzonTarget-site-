@@ -98,7 +98,9 @@
         color: #fff;
         line-height: 50.6px;
         letter-spacing: -0.02em;
-        width: 50%;
+        width: 57%;
+        text-align: left;
+        padding: 0px 20px;
         @include tablets {width: 100%; text-align: center;}
         @include mobiles {width: 100%; text-align: center; font-size: 24px; line-height: 30px;}
     }
@@ -208,10 +210,6 @@
             position: absolute;
             right: 43px;
             top: 27px;
-          }
-          p {
-            // font: rem(22) $font-md;
-            // color: #3d3f54;
           }
           @include mobiles {
             padding: 0px;

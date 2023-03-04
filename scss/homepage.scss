@@ -328,7 +328,7 @@
 }
 
 .specialization {
-  .three-grids {
+  .three-grids , .two-grids {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -401,6 +401,20 @@
 
     @include mobiles {
       padding: 30px 0;
+    }
+  }
+  .two-grids {
+    li {
+      width: 44%;
+      text-align: left;
+      &:nth-child(3n) {
+        &::after {display: block;}
+      }
+      &:nth-child(odd){position: relative;}
+      &:nth-child(even) {position: unset;}
+    }
+    @include tablets {
+      width: 94%;
     }
   }
 }
