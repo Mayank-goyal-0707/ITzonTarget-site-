@@ -1,0 +1,87 @@
+/* css for about us page starts here */
+.get-started {
+    width: 90%;
+    margin: 0px auto;
+    padding: 100px 0px 20px;
+    position: relative;
+    @include tablets {
+        width: 95%;
+    }
+}
+
+.get-started-inner {
+    width: 95%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: $light-blue;
+    background-image: linear-gradient(to right, #ccc 95%, transparent 0); /* set a linear gradient as the background image */
+    background-position: bottom; /* position the gradient at the bottom of the div */
+    background-size: 100% 2px; /* set the size of the gradient to cover the entire width and have a thickness of 2px */
+    background-repeat: no-repeat; /* prevent the gradient from repeating */
+    &:nth-last-child(1){
+        background-image: none;
+    }
+    @include tablets {
+        padding: 20px 10px;
+    }
+    @include mobiles {
+        width: 100%;
+        padding: unset;
+    }
+}
+.get-started-content {
+    display: flex;
+    justify-content: space-evenly;
+    .column-1 {
+        margin-top: -117px;
+        margin-left: -79px;
+        @include tablets { margin: 0px;}
+        @include mobiles {
+            margin-top: -76px;
+            margin-left: -20px;
+        }
+    }
+    .column-2 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .hero-text {
+          width: 85%;
+          .step {
+            width: 45px;
+            height: 15px;
+            background: #fff;
+            border-radius: 50px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            @include font-Greycliff-CF (14px,14px,$light-navy,bolder);
+            line-height: 16px;
+          }
+          h3 {
+            color: $navy;
+          }
+        }
+        @include mobiles {
+            text-align: center;
+        }
+    }
+    @include mobiles {
+        display: block;
+    }
+}
+.services-lists-inner {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0px;
+    display: flex;
+
+    .arrow-down {
+        margin: 12px;
+        img {
+            width: 200px;
+            height: 100px;
+        }
+    }
+}
+/* css for about us page ends   here*/
