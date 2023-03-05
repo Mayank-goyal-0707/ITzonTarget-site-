@@ -186,12 +186,12 @@
           .question {
             &:after {
                 transform: rotate(45deg);
+                background: #FBBB5B;
                 right: 43px;
                 top: 27px;
                 @include mobiles {
                     top: -19px;
                     right: 0px;
-                    background: #FBBB5B;
                 }
             }
             &::before {
