@@ -143,9 +143,8 @@ h1, h2, h3, h4, h5, h6 {
           font-weight: normal;
           color: #fff; }
         .navigation.open ul li a:hover::before {
-          height: 22px;
-          border-radius: 64%;
-          bottom: -33px; }
+          height: 0px;
+          bottom: -7px; }
 @media (max-width: 767px) {
   .navigation {
     z-index: -1;
@@ -179,7 +178,6 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   right: 0; }
   .open .underline-orange::before {
-    border-radius: 64%;
     bottom: -10x; }
 
 .list-open {
@@ -946,6 +944,21 @@ footer {
     overflow: hidden;
     background-size: 100% 100%;
     background-repeat: no-repeat; }
+  .arrow-with-text.curved-down {
+    bottom: -121px;
+    z-index: 999;
+    right: -10px; }
+    @media (max-width: 767px) {
+      .arrow-with-text.curved-down {
+        display: block; } }
+    @media (max-width: 767px) {
+      .arrow-with-text.curved-down span {
+        display: block; } }
+    .arrow-with-text.curved-down::before {
+      background-image: url("/wp-content/themes/itzontarget/assets/images/side-curved.png");
+      transform: none;
+      bottom: -24px;
+      right: 46px; }
 
 /*css for case study page starts here */
 /* variables for colors */

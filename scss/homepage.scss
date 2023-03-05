@@ -665,6 +665,21 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+  &.curved-down {
+    bottom: -121px;
+    z-index: 999;
+    right: -10px;
+    @include mobiles {display: block;}
+    span {
+      @include mobiles {display: block;}
+    }
+    &::before {
+      background-image: url('/wp-content/themes/itzontarget/assets/images/side-curved.png');
+      transform: none;
+      bottom: -24px;
+      right: 46px;
+    }
+  }
 }
 
 // css for homepage ends here

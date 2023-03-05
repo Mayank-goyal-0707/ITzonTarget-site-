@@ -130,9 +130,8 @@
 					}
 					&:hover {
 						&::before {
-						     height: 22px;
-							 border-radius: 64% ;
-							 bottom: -33px;
+						     height: 0px;
+							 bottom: -7px;
 						}
 					}
 				}
@@ -178,7 +177,6 @@
 	right: 0;
 	.underline-orange {
 		&::before {
-			border-radius: 64%;
 			bottom: -10x;
 		}
 	}
