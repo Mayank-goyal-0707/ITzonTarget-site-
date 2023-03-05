@@ -104,14 +104,14 @@
         width: 57%;
         text-align: left;
         padding: 0px 20px;
-        @include tablets {width: 100%; text-align: center;}
+        @include tablets {width: 100%; text-align: center; padding: 0px;}
         @include mobiles {width: 100%; text-align: center; font-size: 24px; line-height: 30px; padding: 0px;}
     }
     .box-cta-btn {
         width: 30%;
         position: relative;
-        @include tablets{ width:100%; text-align: center;}
-        @include mobiles{ width:100%; text-align: center;}
+        @include tablets{ width:100%; text-align: center; padding: 0px;}
+        @include mobiles{ width:100%; text-align: center; padding: 0px;}
         .cta-primary {
             @include mobiles {margin-bottom: 0px;}
         }
