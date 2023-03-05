@@ -412,6 +412,10 @@
       }
       &:nth-child(odd){position: relative;}
       &:nth-child(even) {position: unset;}
+      @include mobiles {
+        padding: 0px;
+        width: 100%;
+      }
     }
     @include tablets {
       width: 94%;
