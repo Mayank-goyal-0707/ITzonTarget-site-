@@ -22,7 +22,10 @@
                 width: 113px ;
                 height: 111px;
                 bottom: 0px;
-                right: 382px;
+                right: 319px;
+                @include Large-Desktops {
+                    right: 401px;
+                }
                 @include tablets {
                     right: 670px;
                 }
@@ -85,7 +88,7 @@
 
 .two-col-cta {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     @include tablets {display: block;}
@@ -101,14 +104,14 @@
         width: 57%;
         text-align: left;
         padding: 0px 20px;
-        @include tablets {width: 100%; text-align: center;}
-        @include mobiles {width: 100%; text-align: center; font-size: 24px; line-height: 30px;}
+        @include tablets {width: 100%; text-align: center; padding: 0px;}
+        @include mobiles {width: 100%; text-align: center; font-size: 24px; line-height: 30px; padding: 0px;}
     }
     .box-cta-btn {
         width: 30%;
         position: relative;
-        @include tablets{ width:100%; text-align: center;}
-        @include mobiles{ width:100%; text-align: center;}
+        @include tablets{ width:100%; text-align: center; padding: 0px;}
+        @include mobiles{ width:100%; text-align: center; padding: 0px;}
         .cta-primary {
             @include mobiles {margin-bottom: 0px;}
         }
@@ -182,7 +185,25 @@
            box-shadow: 0px 1px 30px 0px #52637433;
           .question {
             &:after {
-              opacity: 0;
+                transform: rotate(45deg);
+                background: #FBBB5B;
+                right: 43px;
+                top: 27px;
+                @include mobiles {
+                    top: -19px;
+                    right: 0px;
+                }
+            }
+            &::before {
+                right: 35px;
+                top: 35px;
+                transform: rotate(45deg);
+                background: #FBBB5B;
+
+                @include mobiles {
+                    right: -8px;
+                    top: -11px;
+                }
             }
           }
         }
@@ -195,21 +216,29 @@
             content: '';
             width: 18px;
             height: 3px;
-            background: rgb(34,58,155);
-            background: linear-gradient(90deg, rgba(34,58,155,1) 0%, rgba(156,16,125,1) 100%);
+            background: #00386C;
+           // background: linear-gradient(90deg, rgba(34,58,155,1) 0%, rgba(156,16,125,1) 100%);
             position: absolute;
             right: 36px;
             top: 10px;
+            @include mobiles {
+                right: -3px;
+                top: -11px;
+            }
           }
           &:after {
             content: '';
             width: 3px;
             height: 18px;
-            background: rgb(34,58,155);
-            background: linear-gradient(90deg, rgba(34,58,155,1) 0%, rgba(156,16,125,1) 100%);
+            background: #00386C;
+           // background: linear-gradient(90deg, rgba(34,58,155,1) 0%, rgba(156,16,125,1) 100%);
             position: absolute;
             right: 43px;
             top: 3px;
+            @include mobiles {
+                top:-18px;
+                right: 5px;
+            }
           }
           @include mobiles {
             padding: 0px;

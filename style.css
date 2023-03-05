@@ -143,9 +143,8 @@ h1, h2, h3, h4, h5, h6 {
           font-weight: normal;
           color: #fff; }
         .navigation.open ul li a:hover::before {
-          height: 22px;
-          border-radius: 64%;
-          bottom: -33px; }
+          height: 0px;
+          bottom: -7px; }
 @media (max-width: 767px) {
   .navigation {
     z-index: -1;
@@ -176,13 +175,10 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   background: #fff;
   width: 100%;
-  height: calc(100vh - 89px);
   bottom: 0;
   right: 0; }
   .open .underline-orange::before {
-    height: 22px;
-    border-radius: 64%;
-    bottom: -33px; }
+    bottom: -10x; }
 
 .list-open {
   opacity: 1;
@@ -294,7 +290,7 @@ footer {
         padding: 30px 40px; } }
     @media (max-width: 767px) {
       footer .footer {
-        padding: 70px 20px 10px 20px; } }
+        padding: 70px 0px 10px 0px; } }
   footer .footer-top {
     display: flex;
     justify-content: space-between;
@@ -691,7 +687,7 @@ footer {
   color: #0974E4;
   font-weight: 400; }
 
-.specialization .three-grids {
+.specialization .three-grids, .specialization .two-grids {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -700,21 +696,21 @@ footer {
   margin: 0 auto;
   width: 90%;
   padding: 30px 0; }
-  .specialization .three-grids li {
+  .specialization .three-grids li, .specialization .two-grids li {
     width: 29%;
     margin: 2% 0%;
     padding: 10px 20px;
     text-align: center;
     position: relative; }
     @media (min-width: 991px) {
-      .specialization .three-grids li:nth-child(3n)::after {
+      .specialization .three-grids li:nth-child(3n)::after, .specialization .two-grids li:nth-child(3n)::after {
         display: none; } }
     @media (min-width: 768px) and (max-width: 990px) {
-      .specialization .three-grids li:nth-child(even)::after {
+      .specialization .three-grids li:nth-child(even)::after, .specialization .two-grids li:nth-child(even)::after {
         display: none; } }
-    .specialization .three-grids li .heading-cursive {
+    .specialization .three-grids li .heading-cursive, .specialization .two-grids li .heading-cursive {
       margin: 5px 0px; }
-    .specialization .three-grids li::after {
+    .specialization .three-grids li::after, .specialization .two-grids li::after {
       position: absolute;
       content: '';
       height: 90%;
@@ -726,22 +722,38 @@ footer {
       background-repeat: no-repeat;
       background-size: 100% 100%; }
       @media (max-width: 767px) {
-        .specialization .three-grids li::after {
+        .specialization .three-grids li::after, .specialization .two-grids li::after {
           display: none !important; } }
     @media (min-width: 768px) and (max-width: 990px) {
-      .specialization .three-grids li {
+      .specialization .three-grids li, .specialization .two-grids li {
         width: 44%; }
-        .specialization .three-grids li:nth-child(even) {
+        .specialization .three-grids li:nth-child(even), .specialization .two-grids li:nth-child(even) {
           position: unset; }
-        .specialization .three-grids li:nth-child(odd) {
+        .specialization .three-grids li:nth-child(odd), .specialization .two-grids li:nth-child(odd) {
           position: relative; } }
     @media (max-width: 767px) {
-      .specialization .three-grids li {
+      .specialization .three-grids li, .specialization .two-grids li {
         width: 96%;
         position: unset; } }
   @media (max-width: 767px) {
-    .specialization .three-grids {
+    .specialization .three-grids, .specialization .two-grids {
       padding: 30px 0; } }
+.specialization .two-grids li {
+  width: 44%;
+  text-align: left; }
+  .specialization .two-grids li:nth-child(3n)::after {
+    display: block; }
+  .specialization .two-grids li:nth-child(odd) {
+    position: relative; }
+  .specialization .two-grids li:nth-child(even) {
+    position: unset; }
+  @media (max-width: 767px) {
+    .specialization .two-grids li {
+      padding: 0px;
+      width: 100%; } }
+@media (min-width: 768px) and (max-width: 990px) {
+  .specialization .two-grids {
+    width: 94%; } }
 
 .heading-h4 {
   font-family: 'Greycliff CF - Heavy';
@@ -932,6 +944,21 @@ footer {
     overflow: hidden;
     background-size: 100% 100%;
     background-repeat: no-repeat; }
+  .arrow-with-text.curved-down {
+    bottom: -121px;
+    z-index: 999;
+    right: -10px; }
+    @media (max-width: 767px) {
+      .arrow-with-text.curved-down {
+        display: block; } }
+    @media (max-width: 767px) {
+      .arrow-with-text.curved-down span {
+        display: block; } }
+    .arrow-with-text.curved-down::before {
+      background-image: url("/wp-content/themes/itzontarget/assets/images/side-curved.png");
+      transform: none;
+      bottom: -24px;
+      right: 46px; }
 
 /*css for case study page starts here */
 /* variables for colors */
@@ -1587,7 +1614,10 @@ footer {
       width: 113px;
       height: 111px;
       bottom: 0px;
-      right: 382px; }
+      right: 319px; }
+      @media (min-width: 1140px) {
+        .general-component.about-us .blue-box-cta::after {
+          right: 401px; } }
       @media (min-width: 768px) and (max-width: 990px) {
         .general-component.about-us .blue-box-cta::after {
           right: 670px; } }
@@ -1652,7 +1682,7 @@ footer {
 
 .two-col-cta {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap; }
   @media (min-width: 768px) and (max-width: 990px) {
@@ -1669,28 +1699,34 @@ footer {
     color: #fff;
     line-height: 50.6px;
     letter-spacing: -0.02em;
-    width: 50%; }
+    width: 57%;
+    text-align: left;
+    padding: 0px 20px; }
     @media (min-width: 768px) and (max-width: 990px) {
       .two-col-cta .cta-text {
         width: 100%;
-        text-align: center; } }
+        text-align: center;
+        padding: 0px; } }
     @media (max-width: 767px) {
       .two-col-cta .cta-text {
         width: 100%;
         text-align: center;
         font-size: 24px;
-        line-height: 30px; } }
+        line-height: 30px;
+        padding: 0px; } }
   .two-col-cta .box-cta-btn {
     width: 30%;
     position: relative; }
     @media (min-width: 768px) and (max-width: 990px) {
       .two-col-cta .box-cta-btn {
         width: 100%;
-        text-align: center; } }
+        text-align: center;
+        padding: 0px; } }
     @media (max-width: 767px) {
       .two-col-cta .box-cta-btn {
         width: 100%;
-        text-align: center; } }
+        text-align: center;
+        padding: 0px; } }
     @media (max-width: 767px) {
       .two-col-cta .box-cta-btn .cta-primary {
         margin-bottom: 0px; } }
@@ -1760,7 +1796,23 @@ footer {
       background-color: #fff;
       box-shadow: 0px 1px 30px 0px #52637433; }
       .faq-list li.show .question:after {
-        opacity: 0; }
+        transform: rotate(45deg);
+        background: #FBBB5B;
+        right: 43px;
+        top: 27px; }
+        @media (max-width: 767px) {
+          .faq-list li.show .question:after {
+            top: -19px;
+            right: 0px; } }
+      .faq-list li.show .question::before {
+        right: 35px;
+        top: 35px;
+        transform: rotate(45deg);
+        background: #FBBB5B; }
+        @media (max-width: 767px) {
+          .faq-list li.show .question::before {
+            right: -8px;
+            top: -11px; } }
     .faq-list li .question {
       padding: 24px 90px 24px 36px;
       display: block;
@@ -1770,20 +1822,26 @@ footer {
         content: '';
         width: 18px;
         height: 3px;
-        background: #223a9b;
-        background: linear-gradient(90deg, #223a9b 0%, #9c107d 100%);
+        background: #00386C;
         position: absolute;
         right: 36px;
         top: 34px; }
+        @media (max-width: 767px) {
+          .faq-list li .question:before {
+            right: -3px;
+            top: -11px; } }
       .faq-list li .question:after {
         content: '';
         width: 3px;
         height: 18px;
-        background: #223a9b;
-        background: linear-gradient(90deg, #223a9b 0%, #9c107d 100%);
+        background: #00386C;
         position: absolute;
         right: 43px;
         top: 27px; }
+        @media (max-width: 767px) {
+          .faq-list li .question:after {
+            top: -18px;
+            right: 5px; } }
       @media (max-width: 767px) {
         .faq-list li .question {
           padding: 0px; } }
@@ -1798,5 +1856,120 @@ footer {
       border: none; }
 
 /*css for about us ends here*/
+/* css for about us page starts here */
+.get-started {
+  width: 90%;
+  margin: 0px auto;
+  padding: 100px 0px 20px;
+  position: relative; }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .get-started {
+      width: 95%; } }
+
+.get-started-inner {
+  background: #EFF8FC;
+  background-image: linear-gradient(to right, #ccc 95%, transparent 0);
+  /* set a linear gradient as the background image */
+  background-position: bottom;
+  /* position the gradient at the bottom of the div */
+  background-size: 100% 2px;
+  /* set the size of the gradient to cover the entire width and have a thickness of 2px */
+  background-repeat: no-repeat;
+  /* prevent the gradient from repeating */
+  padding: 20px; }
+  .get-started-inner:nth-last-child(1) {
+    background-image: none; }
+
+.get-started-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  @media (max-width: 767px) {
+    .get-started-info {
+      display: block; } }
+
+.get-started-thumbnail {
+  width: 35%;
+  margin-top: -90px;
+  margin-left: -53px; }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .get-started-thumbnail {
+      width: 46%;
+      margin-top: -90px;
+      margin-left: -33px; } }
+  @media (max-width: 767px) {
+    .get-started-thumbnail {
+      width: 100%;
+      text-align: center;
+      margin: unset; } }
+
+.get-started-intro {
+  width: 60%; }
+  .get-started-intro .step {
+    width: 45px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Greycliff CF';
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bolder;
+    color: #0974E4;
+    line-height: 16px; }
+    @media (max-width: 767px) {
+      .get-started-intro .step {
+        margin: 0 auto; } }
+  .get-started-intro h3 {
+    color: #00386C;
+    position: relative; }
+    .get-started-intro h3 .hero-icon {
+      position: absolute;
+      left: -51px;
+      top: -13px; }
+      @media (max-width: 767px) {
+        .get-started-intro h3 .hero-icon {
+          left: 2px; } }
+    @media (max-width: 560px) {
+      .get-started-intro h3 {
+        padding-left: 18%;
+        text-align: left; } }
+  @media (max-width: 767px) {
+    .get-started-intro {
+      width: 100%;
+      text-align: center; } }
+  @media (min-width: 768px) and (max-width: 990px) {
+    .get-started-intro {
+      width: 55%; } }
+
+.services-lists-inner {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0px; }
+  .services-lists-inner .arrow-side {
+    position: relative; }
+    @media (max-width: 524px) and (min-width: 420px) {
+      .services-lists-inner .arrow-side {
+        font-size: 29px; } }
+    @media (max-width: 418px) {
+      .services-lists-inner .arrow-side {
+        font-size: 29px; } }
+    .services-lists-inner .arrow-side::after {
+      position: absolute;
+      content: '';
+      top: -33px;
+      right: -171px;
+      width: 150px;
+      height: 150px;
+      background-image: url("/wp-content/themes/itzontarget/assets/images/arrow-downward.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%; }
+      @media (max-width: 418px) {
+        .services-lists-inner .arrow-side::after {
+          top: -3px; } }
+
+/* css for about us page ends   here*/
 
 /*# sourceMappingURL=style.css.map */

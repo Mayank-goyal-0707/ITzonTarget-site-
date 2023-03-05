@@ -10,77 +10,161 @@
 }
 
 .get-started-inner {
-    width: 95%;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: $light-blue;
+    background: $light-blue;
     background-image: linear-gradient(to right, #ccc 95%, transparent 0); /* set a linear gradient as the background image */
     background-position: bottom; /* position the gradient at the bottom of the div */
     background-size: 100% 2px; /* set the size of the gradient to cover the entire width and have a thickness of 2px */
     background-repeat: no-repeat; /* prevent the gradient from repeating */
-    &:nth-last-child(1){
-        background-image: none;
-    }
-    @include tablets {
-        padding: 20px 10px;
-    }
-    @include mobiles {
-        width: 100%;
-        padding: unset;
-    }
+    padding: 20px;
+    &:nth-last-child(1) {background-image: none;}
 }
-.get-started-content {
+
+.get-started-info {
     display: flex;
-    justify-content: space-evenly;
-    .column-1 {
-        margin-top: -117px;
-        margin-left: -79px;
-        @include tablets { margin: 0px;}
-        @include mobiles {
-            margin-top: -76px;
-            margin-left: -20px;
-        }
-    }
-    .column-2 {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        .hero-text {
-          width: 85%;
-          .step {
-            width: 45px;
-            height: 15px;
-            background: #fff;
-            border-radius: 50px;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            @include font-Greycliff-CF (14px,14px,$light-navy,bolder);
-            line-height: 16px;
-          }
-          h3 {
-            color: $navy;
-          }
-        }
-        @include mobiles {
-            text-align: center;
-        }
-    }
-    @include mobiles {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include mobiles  {
         display: block;
     }
 }
+.get-started-thumbnail {
+    width:35%;
+    margin-top: -90px;
+    margin-left: -53px;
+    @include tablets {
+        width: 46%;
+        margin-top: -90px;
+        margin-left: -33px;
+    }
+    @include mobiles {width: 100%; text-align: center; margin: unset;}
+}
+.get-started-intro {
+    width: 60%;
+    //margin-top: 20px;
+    .step {
+      width: 45px;
+      height: 15px;
+      background: #fff;
+      border-radius: 50px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      @include font-Greycliff-CF (14px,14px,$light-navy,bolder);
+      line-height: 16px;
+      @include mobiles {
+        margin: 0 auto;
+      }
+    }
+    h3 {
+        color: $navy;
+        position: relative;
+        .hero-icon {
+            position: absolute;
+            left: -51px;
+            top: -13px;
+            @include mobiles {
+                left: 2px;
+            }
+        }
+        @include small-mobiles {
+            padding-left: 18%;
+            text-align: left;
+        }
+    }
+    @include mobiles {
+        width: 100%;
+        text-align: center;
+    }
+    @include tablets {width: 55%;}
+}
+// .get-started-inner {
+//     width: 95%;
+//     margin: 0 auto;
+//     padding: 40px;
+//     background-color: $light-blue;
+//     background-image: linear-gradient(to right, #ccc 95%, transparent 0); /* set a linear gradient as the background image */
+//     background-position: bottom; /* position the gradient at the bottom of the div */
+//     background-size: 100% 2px; /* set the size of the gradient to cover the entire width and have a thickness of 2px */
+//     background-repeat: no-repeat; /* prevent the gradient from repeating */
+//     &:nth-last-child(1){
+//         background-image: none;
+//     }
+//     @include tablets {
+//         padding: 20px 10px;
+//     }
+//     @include mobiles {
+//         width: 100%;
+//         padding: unset;
+//     }
+// }
+// .get-started-content {
+//     display: flex;
+//     justify-content: space-evenly;
+//     .column-1 {
+//         margin-top: -117px;
+//         margin-left: -79px;
+//         @include tablets { margin: 0px;}
+//         @include mobiles {
+//            margin: 0 auto;
+//         }
+//     }
+//     .column-2 {
+//         display: flex;
+//         justify-content: space-evenly;
+//         align-items: center;
+//         .hero-text {
+//           width: 85%;
+//           .step {
+//             width: 45px;
+//             height: 15px;
+//             background: #fff;
+//             border-radius: 50px;
+//             padding: 10px 20px;
+//             display: flex;
+//             align-items: center;
+//             @include font-Greycliff-CF (14px,14px,$light-navy,bolder);
+//             line-height: 16px;
+//           }
+//           h3 {
+//             color: $navy;
+//           }
+//           @include mobiles {width: unset;}
+//         }
+//         @include mobiles {
+//             text-align: center;
+//             display: inline-block;
+//         }
+//     }
+//     @include mobiles {
+//         display: block;
+//     }
+// }
+
 .services-lists-inner {
     width: 90%;
     margin: 0 auto;
-    padding: 30px 0px;
-    display: flex;
-
-    .arrow-down {
-        margin: 12px;
-        img {
-            width: 200px;
-            height: 100px;
+    padding: 0px;
+    .arrow-side{
+        position: relative;
+        @include small {
+            font-size: 29px;
+        }
+        @include x-small {
+            font-size: 29px;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            top: -33px;
+            right: -171px;
+            width: 150px;
+            height: 150px;
+            background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-downward.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            @include x-small {
+                top: -3px;
+            }
         }
     }
 }

@@ -74,7 +74,11 @@
         @content;
     }
 }
-
+@mixin small {
+    @media (max-width:524px) and (min-width:420px) {
+        @content;
+    }
+}
 @mixin x-small {
     @media (max-width:418px){
         @content;

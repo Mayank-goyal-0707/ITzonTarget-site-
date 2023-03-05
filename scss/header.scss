@@ -130,9 +130,8 @@
 					}
 					&:hover {
 						&::before {
-						     height: 22px;
-							 border-radius: 64% ;
-							 bottom: -33px;
+						     height: 0px;
+							 bottom: -7px;
 						}
 					}
 				}
@@ -173,14 +172,12 @@
 	position: fixed;
 	background: #fff;
 	width: 100%;
-	height: calc(100vh - 89px);
+	//height: calc(100vh - 89px);
 	bottom: 0;
 	right: 0;
 	.underline-orange {
 		&::before {
-			height: 22px;
-			border-radius: 64%;
-			bottom: -33px;
+			bottom: -10x;
 		}
 	}
 }
