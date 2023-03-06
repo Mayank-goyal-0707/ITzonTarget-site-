@@ -227,6 +227,14 @@
     @include mobiles {
         padding: 30px 0px;
     }
+    &.center {padding: 50px 30px;
+    @include tablets {
+        padding: 30px 12px;
+    }
+    @include mobiles {
+        padding: 30px 12px;
+    }
+    }
 }
 .res-counters {
     list-style: none;
@@ -264,7 +272,7 @@
     .redirection{
         width: 90%;        
         margin: 0 auto;
-        padding: 70px 0;
+        padding: 40px 0;
         @include dispflex-spcbw;
         @include tablets {
             padding: 43px 0px;
@@ -283,7 +291,7 @@
 .redirect-btn{
     text-align: center;
     background: #fff;
-    padding: 20px 0;
+    padding: 20px 30px;
     border-radius: 50px;
     text-decoration: none;
     width: fit-content;
@@ -291,6 +299,7 @@
     @include font-greyclif-bold(18px , $light-navy ,700);
     @include mobiles {
         height: 45px;
+        width: 45px;
         padding: 0px;
     }
     ul{
