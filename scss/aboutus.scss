@@ -1,89 +1,118 @@
 /*css for about us starts here*/
 .h4-heading {
-    @include font-greyclif-heavy(28px, $navy ,bolder);
+    @include font-greyclif-heavy(28px, $navy, bolder);
     line-height: 31px;
+
     @include tablets {
         font-size: 26px;
         line-height: 28px;
     }
+
     @include mobiles {
         font-size: 22px;
         line-height: 24px;
     }
 }
-.general-component{
+
+.general-component {
     &.about-us {
         padding: 30px 0px;
+
         .blue-box-cta {
-               position: relative;
-               &::after{
+            position: relative;
+            @include tablets {
+                padding: 30px 0;
+                overflow: hidden;
+            }
+        }
+
+        .cta-primary {
+            position: relative;
+            &::after {
                 @include pos-abs;
                 background-image: url('/wp-content/themes/itzontarget/assets/images/tilted-arrow.png');
-                width: 113px ;
-                height: 111px;
-                bottom: 0px;
-                right: 319px;
-                @include Large-Desktops {
-                    right: 401px;
+                width: 113px;
+                height: 113px;
+                right: 100%;
+                top: 5px;
+
+                @include mobiles {
+                    display: none;
                 }
-                @include tablets {
-                    right: 670px;
-                }
-                @include mobiles {display: none;}
-               }
+            }
         }
     }
 }
+
 .row-revert {
     @include Desktops {
         flex-direction: row-reverse;
     }
 }
+
 .perks-of-working {
- padding: 50px 0px;
- border-top: 2px solid #5263744D;
- margin: 0 auto;
- width: 90%;
- margin-top: 30px;
- .two-columns-wrapper {
-    padding: 0px;
-    @include tablets{padding: 0px;}
-    @include mobiles {padding: 0px;}
- }
- .two-columns {
-    padding: 0px;
-    .left-columns {
-        width: 35%;
-        @include tablets { width: 100%; text-align: center;}
-        @include mobiles {width: 100%; text-align:center;}
-    }
- }
- .perks-ul {
-    padding: 30px;
-    background-color: $light-blue;
-    border-radius: 17px;
-    .regular-para {
-        font-size: 17px;
-        line-height: 27px;
-        position: relative;
-        margin-left: 10px;
-        color: #003683;
-        font-weight: bold;
-        &::before{
-            @include pos-abs;
-            width: 20px;
-            height: 20px;
-            content: '';
-            top: 0px;
-            left: 0px;
-            background-image: url(/wp-content/themes/itzontarget/assets/images/check.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            top:4px;
-            left: -24px;
+    padding: 50px 0px;
+    border-top: 2px solid #5263744D;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 30px;
+
+    .two-columns-wrapper {
+        padding: 0px;
+
+        @include tablets {
+            padding: 0px;
+        }
+
+        @include mobiles {
+            padding: 0px;
         }
     }
- }
+
+    .two-columns {
+        padding: 0px;
+
+        .left-columns {
+            width: 35%;
+
+            @include tablets {
+                width: 100%;
+                text-align: center;
+            }
+
+            @include mobiles {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .perks-ul {
+        padding: 30px;
+        background-color: $light-blue;
+        border-radius: 17px;
+
+        .regular-para {
+            font-size: 17px;
+            line-height: 27px;
+            position: relative;
+            margin-left: 25px;
+            color: #003683;
+            font-weight: bold;
+
+            &::before {
+                @include pos-abs;
+                width: 20px;
+                height: 20px;
+                content: '';
+                background-image: url(/wp-content/themes/itzontarget/assets/images/check.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                top: 2px;
+                left: -30px;
+            }
+        }
+    }
 }
 
 .two-col-cta {
@@ -91,8 +120,15 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    @include tablets {display: block;}
-    @include mobiles {display: block;}
+
+    @include tablets {
+        display: block;
+    }
+
+    @include mobiles {
+        display: block;
+    }
+
     .cta-text {
         font-family: 'Greycliff CF - bold';
         font-size: 32px;
@@ -104,38 +140,68 @@
         width: 57%;
         text-align: left;
         padding: 0px 20px;
-        @include tablets {width: 100%; text-align: center; padding: 0px;}
-        @include mobiles {width: 100%; text-align: center; font-size: 24px; line-height: 30px; padding: 0px;}
+
+        @include tablets {
+            width: 100%;
+            text-align: center;
+            padding: 0px;
+        }
+
+        @include mobiles {
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            line-height: 30px;
+            padding: 0px;
+        }
     }
+
     .box-cta-btn {
         width: 30%;
         position: relative;
-        @include tablets{ width:100%; text-align: center; padding: 0px;}
-        @include mobiles{ width:100%; text-align: center; padding: 0px;}
+
+        @include tablets {
+            width: 100%;
+            text-align: center;
+            padding: 0px;
+        }
+
+        @include mobiles {
+            width: 100%;
+            text-align: center;
+            padding: 0px;
+        }
+
         .cta-primary {
-            @include mobiles {margin-bottom: 0px;}
+            @include mobiles {
+                margin-bottom: 0px;
+            }
         }
     }
 }
 
 .customer-testimonials-grid {
     display: grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 40px;
     padding: 30px 0px;
+
     @include tablets {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
+
     @include mobiles {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 25px;
     }
 }
+
 .customer-testimonial {
     justify-content: space-between;
     align-items: center;
     display: flex;
+
     .customer-image {
         width: 175px;
         height: 175px;
@@ -143,121 +209,105 @@
         position: relative;
         overflow: hidden;
         box-shadow: 0px 1px 30px 0px #52637433;
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         @include mobiles {
             height: 150px;
             width: 150px;
             margin: 0 auto;
         }
     }
+
     .testimonial-text {
         width: 65%;
+
         @include tablets {
             width: 70%;
         }
+
         @include mobiles {
             width: 100%;
             text-align: center;
         }
     }
-    @include mobiles {display: block;}
+
+    @include mobiles {
+        display: block;
+    }
 }
+
 .faqs {
     padding: 40px 0px;
     width: 90%;
     margin: 0 auto;
-}  
-    .faq-list {
-        list-style: none;
-        padding: 0px;
-        margin: 50px 0px 20px;
-      li {
-         background-color: $light-blue;
-         padding: 20px;
-         border-radius: 15px;
-         margin: 20px 0px;
-        &.show {
-           background-color: #fff;
-           box-shadow: 0px 1px 30px 0px #52637433;
-          .question {
-            &:after {
-                transform: rotate(45deg);
-                background: #FBBB5B;
-                right: 43px;
-                top: 27px;
-                @include mobiles {
-                    top: -19px;
-                    right: 0px;
-                }
-            }
-            &::before {
-                right: 35px;
-                top: 35px;
-                transform: rotate(45deg);
-                background: #FBBB5B;
+}
 
-                @include mobiles {
-                    right: -8px;
-                    top: -11px;
+.faq-list {
+    list-style: none;
+    padding: 0px;
+    margin: 50px 0px 20px;
+
+    li {
+        background-color: $light-blue;
+        padding: 20px 55px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+
+        @include mobiles {
+            padding: 10px 20px;
+        }
+
+        &.show {
+            background-color: #fff;
+            box-shadow: 0px 1px 30px 0px #52637433;
+
+            .question {
+                &::before {
+                    background-image: url(/wp-content/themes/itzontarget/assets/images/golden-cross.svg);
                 }
             }
-          }
         }
+
         .question {
-          padding: 0px 90px 0px 36px;
-          display: block;
-          cursor: pointer;
-          position: relative;
-          &:before {
-            content: '';
-            width: 18px;
-            height: 3px;
-            background: #00386C;
-           // background: linear-gradient(90deg, rgba(34,58,155,1) 0%, rgba(156,16,125,1) 100%);
-            position: absolute;
-            right: 36px;
-            top: 10px;
-            @include mobiles {
-                right: -3px;
-                top: -11px;
+            display: block;
+            cursor: pointer;
+            position: relative;
+            padding-right: 50px;
+
+            &:before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-image: url(/wp-content/themes/itzontarget/assets/images/blue-plus.svg);
+                background-repeat: no-repeat;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-size: 100% 100%;
             }
-          }
-          &:after {
-            content: '';
-            width: 3px;
-            height: 18px;
-            background: #00386C;
-           // background: linear-gradient(90deg, rgba(34,58,155,1) 0%, rgba(156,16,125,1) 100%);
-            position: absolute;
-            right: 43px;
-            top: 3px;
-            @include mobiles {
-                top:-18px;
-                right: 5px;
-            }
-          }
-          @include mobiles {
-            padding: 0px;
-          }
         }
+
         .answer {
-          padding: 0 90px 24px 36px;
-          p {
-            // font: rem(16) $font-reg;
-            // color: #000;
-            line-height: 1.4;
-          }
-          @include mobiles {
-            padding: 0px;
-          }
+            padding-right: 50px;
+
+            p {
+                line-height: 1.4;
+            }
         }
+
+        .regular-para {
+            margin: 0 0 17px 0;
+        }
+
         &:last-child {
-          border: none;
+            border: none;
         }
-      }
     }
+}
+
 /*css for about us ends here*/
