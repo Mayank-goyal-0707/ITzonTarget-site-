@@ -1160,6 +1160,9 @@ footer {
           top: 9px;
           left: -27px;
           border-radius: 50px; }
+      @media (max-width: 767px) {
+        .case-study-section .case-study-right ul {
+          margin: 0px 20px; } }
     @media (max-width: 767px) {
       .case-study-section .case-study-right {
         width: 100%; } }
