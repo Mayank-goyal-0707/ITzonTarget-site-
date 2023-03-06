@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact US</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="slick/slick.js"></script>
+	    <script src="slick/slick.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+	    <link rel="stylesheet" type="text/css" href="slick/slick.css" /> 
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- header starts here-->
+            <section class="header-content">
+                <header id="masthead" class="header">
+                    <div class="brand-logo"><img src="wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary.svg"></div>
+                    <div class="nav-items">
+                        <nav class="navigation">
+                            <ul class="menu-list">
+                                <li><a href="About.html"  class="underline-orange">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="case-study.html"  class="underline-orange">Case Study</a></li>
+                                <li><a href="Resource-index.html">Resources</a></li>
+                                <li><a href="contactus.html">Contact</a></li>
+                                <li><a href="#" class="cta-primary">Get a free quote today</a></li>
+                            </ul>
+                        </nav>
+                        <div class="search-block">
+                            <img src="wp-content/themes/itzontarget/assets/images/magnify.svg">
+                            <a class="burger"><span></span></a>
+                        </div>
+                    </div>
+                </header>
+            </section>
+			<!-- header ends here-->
+            <!-- first section starts here-->
+             <section class="pages-top-section">
+                <div class="page-top-left">
+                   <h5 class="heading-cursive">Contact us</h5>
+                   <h1 class="h1-internal">Get your <span class="light-blue">free quote</span> started today.</h1>
+                   <div class="regular-para">Get the ball rolling toward an effective online marketing solution for your business.</div>
+                </div>
+                <div class="page-top-right">
+                    <div class="img-circle-btm">
+                        <div class="img-box">
+                           <img src="wp-content/themes/itzontarget/assets/images/contactus.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- form starts here-->
+             <section class="contact-us-wrapper">
+                <h2 class="h2-heading">Project details</h2>
+                <div class="contact-us">
+                    <!-- form starts here-->
+                </div>
+             </section>
+             <!-- footer starts here-->
+             <footer>
+                <div class="footer">
+                    <div class="footer-top">
+                        <div class="footer-text">Let’s revolutionize your ad strategy.</div>
+                        <a class="cta-primary">Get a free quote today</a>
+                    </div>
+                    <div class="footer-menu">
+                        <div class="brand-logo"><img src="/wp-content/themes/itzontarget/assets/images/ITZonTarget_Logo_Primary-Dark.svg"></div>
+                        <nav class="navigation footer-nav">
+                            <ul class="menu-list">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="case-study.html">Case Study</a></li>
+                                <li><a href="Resource-index.html">Resources</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer section ends here-->
+        </div>
+    </body>
+</html>
+<script>
+    // Nav on click
+    $('.burger').on("click", function() {
+        $('header .navigation').toggleClass("open");
+        $('header .menu-list').toggleClass("list-open");
+        $('header').toggleClass("nav-mobile-active");
+
+        if ($('header .navigation').hasClass("open")) {
+            $("#masthead").parent().addClass("scrolls");
+        }
+    });
+
+    // Add active on nav menu
+    $(".navigation a").each(function(_, ele){
+        $(ele).attr('href') === window.location.href ? $(ele).attr('class', "underline-orange") : null;
+    })
+
+      // On scroll add class on navigation
+    $(window).scroll(function () {
+        if ($("header .navigation").hasClass("open")) {
+            return;
+        }
+
+        var scroll = $(window).scrollTop();
+        if (scroll >= 100) {
+            $("#masthead").parent().addClass("scrolls");
+        }
+        if (scroll == 0) {
+            $("#masthead").parent().removeClass("scrolls");
+        }
+    });
+</script>
