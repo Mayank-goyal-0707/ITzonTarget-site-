@@ -17,6 +17,14 @@
                 width: 80px;
                 height: 150px;
                 top: 30px;
+                background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-resources.svg');
+                @include mobiles{
+                    right: 5px;
+                }
+            }
+            @include mobiles {
+                right: -10px;
+                top: -21px;
             }
         }
     }

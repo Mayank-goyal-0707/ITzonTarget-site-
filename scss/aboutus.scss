@@ -123,10 +123,12 @@
 
     @include tablets {
         display: block;
+        padding: 0px 20px;
     }
 
     @include mobiles {
         display: block;
+        padding: 0px 20px;
     }
 
     .cta-text {
