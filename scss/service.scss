@@ -53,11 +53,12 @@
         }
 
         @include mobiles {
-            width: 100%;
+            width: 60%;
             position: static;
             margin-bottom: 15px;
         }
     }
+    @include mobiles {text-align: center;}
 }
 
 .get-started-outer {
@@ -124,6 +125,12 @@
     width: 90%;
     margin: 0 auto;
     padding: 0px;
+    .heading-cursive {
+        br {
+              display: none;
+              @include small-mobiles {display: block;}
+        }
+    }
     .arrow-side{
         position: relative;
         @include small {
@@ -142,9 +149,6 @@
             background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-downward.svg');
             background-repeat: no-repeat;
             background-size: 100% 100%;
-            @include x-small {
-                top: -3px;
-            }
         }
     }
 }

@@ -784,6 +784,9 @@ footer {
       .general-component .blue-box-cta {
         padding: 40px 10px;
         z-index: 3; } }
+    @media (max-width: 418px) {
+      .general-component .blue-box-cta {
+        width: 87%; } }
   .general-component::after {
     position: absolute;
     content: '';
@@ -802,9 +805,7 @@ footer {
         z-index: 6; } }
   @media (min-width: 768px) and (max-width: 990px) {
     .general-component {
-      padding: 30px 0; }
-      .general-component .blue-box-cta {
-        width: unset; } }
+      padding: 30px 0; } }
   @media (max-width: 767px) {
     .general-component {
       padding: 30px 0; } }
@@ -1879,9 +1880,12 @@ footer {
         top: -20%; } }
     @media (max-width: 767px) {
       .get-started-inner > img {
-        width: 100%;
+        width: 60%;
         position: static;
         margin-bottom: 15px; } }
+  @media (max-width: 767px) {
+    .get-started-inner {
+      text-align: center; } }
 
 .get-started-outer {
   position: relative;
@@ -1939,6 +1943,11 @@ footer {
   width: 90%;
   margin: 0 auto;
   padding: 0px; }
+  .services-lists-inner .heading-cursive br {
+    display: none; }
+    @media (max-width: 560px) {
+      .services-lists-inner .heading-cursive br {
+        display: block; } }
   .services-lists-inner .arrow-side {
     position: relative; }
     @media (max-width: 524px) and (min-width: 420px) {
@@ -1957,9 +1966,6 @@ footer {
       background-image: url("/wp-content/themes/itzontarget/assets/images/arrow-downward.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%; }
-      @media (max-width: 418px) {
-        .services-lists-inner .arrow-side::after {
-          top: -3px; } }
 
 /* css for about us page ends   here*/
 /*css for internal case study page starts here */

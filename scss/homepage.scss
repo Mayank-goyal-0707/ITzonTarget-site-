@@ -453,6 +453,9 @@
       padding: 40px 10px;
       z-index: 3;
     }
+    @include x-small {
+      width: 87%;
+    }
   }
 
   &::after {
@@ -475,9 +478,6 @@
 
   @include tablets {
     padding: 30px 0;
-    .blue-box-cta {
-      width: unset;
-    }
   }
 
   @include mobiles {
