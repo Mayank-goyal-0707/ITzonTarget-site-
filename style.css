@@ -1841,49 +1841,59 @@ footer {
   margin: 0px auto;
   padding: 100px 0px 20px;
   position: relative; }
-  @media (min-width: 768px) and (max-width: 990px) {
-    .get-started {
-      width: 95%; } }
+  .get-started .arrow-with-text.curved-down {
+    top: 25px;
+    z-index: 999;
+    right: 25px; }
+    .get-started .arrow-with-text.curved-down::before {
+      bottom: -24px;
+      right: 46px;
+      width: 80px;
+      height: 150px;
+      top: 30px; }
+
+@media (max-width: 767px) {
+  .get-started-info {
+    display: block; } }
 
 .get-started-inner {
-  background: #EFF8FC;
-  background-image: linear-gradient(to right, #ccc 95%, transparent 0);
-  /* set a linear gradient as the background image */
-  background-position: bottom;
-  /* position the gradient at the bottom of the div */
-  background-size: 100% 2px;
-  /* set the size of the gradient to cover the entire width and have a thickness of 2px */
-  background-repeat: no-repeat;
-  /* prevent the gradient from repeating */
-  padding: 20px; }
-  .get-started-inner:nth-last-child(1) {
-    background-image: none; }
-
-.get-started-info {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: flex-end;
+  padding: 45px 45px 30px 100px;
+  background: #EFF8FC;
+  margin-left: 10%; }
   @media (max-width: 767px) {
-    .get-started-info {
+    .get-started-inner {
+      margin-left: unset;
+      padding: 20px;
       display: block; } }
+  .get-started-inner > img {
+    position: absolute;
+    left: 0;
+    top: -15%;
+    height: 90%;
+    border-radius: 20px; }
+    @media (min-width: 768px) and (max-width: 990px) {
+      .get-started-inner > img {
+        width: 225px;
+        top: -20%; } }
+    @media (max-width: 767px) {
+      .get-started-inner > img {
+        width: 100%;
+        position: static;
+        margin-bottom: 15px; } }
 
-.get-started-thumbnail {
-  width: 35%;
-  margin-top: -90px;
-  margin-left: -53px; }
-  @media (min-width: 768px) and (max-width: 990px) {
-    .get-started-thumbnail {
-      width: 46%;
-      margin-top: -90px;
-      margin-left: -33px; } }
-  @media (max-width: 767px) {
-    .get-started-thumbnail {
-      width: 100%;
-      text-align: center;
-      margin: unset; } }
+.get-started-outer {
+  position: relative;
+  border-top: 2px solid #ccc; }
+  .get-started-outer:nth-child(2) {
+    border-top: unset; }
+    @media (max-width: 767px) {
+      .get-started-outer:nth-child(2) .get-started-inner > img {
+        margin-top: -50px; } }
 
 .get-started-intro {
-  width: 60%; }
+  width: 75%; }
   .get-started-intro .step {
     width: 45px;
     height: 15px;
@@ -1906,14 +1916,16 @@ footer {
     position: relative; }
     .get-started-intro h3 .hero-icon {
       position: absolute;
-      left: -51px;
-      top: -13px; }
+      left: -75px;
+      top: -10px; }
       @media (max-width: 767px) {
         .get-started-intro h3 .hero-icon {
-          left: 2px; } }
-    @media (max-width: 560px) {
+          left: 0;
+          width: 45px;
+          top: -10px; } }
+    @media (max-width: 767px) {
       .get-started-intro h3 {
-        padding-left: 18%;
+        padding-left: 60px;
         text-align: left; } }
   @media (max-width: 767px) {
     .get-started-intro {
@@ -1921,7 +1933,7 @@ footer {
       text-align: center; } }
   @media (min-width: 768px) and (max-width: 990px) {
     .get-started-intro {
-      width: 55%; } }
+      width: 70%; } }
 
 .services-lists-inner {
   width: 90%;
