@@ -303,7 +303,7 @@
     @include font-greyclif-bold(18px , $light-navy ,700);
     @include mobiles {
         height: 45px;
-        width: 45px;
+        width: 45px !important;
         padding: 0px;
     }
     ul{
