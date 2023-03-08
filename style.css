@@ -2146,7 +2146,7 @@ footer {
         .contact-us .contact-us-form .form-one-column .checkboxes-wrapper {
           column-count: 1; } }
     .contact-us .contact-us-form .form-one-column .input-checkbox {
-      margin: 15px 0px 0px;
+      padding: 15px 0px 0px;
       position: relative; }
       .contact-us .contact-us-form .form-one-column .input-checkbox input[type="checkbox"] {
         position: absolute;
