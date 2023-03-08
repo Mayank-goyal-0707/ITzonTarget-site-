@@ -2140,14 +2140,11 @@ footer {
   .contact-us .contact-us-form .form-one-column {
     padding: 25px 0px 0px; }
     .contact-us .contact-us-form .form-one-column .checkboxes-wrapper {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(1, 1fr);
-      gap: 20px; }
+      column-count: 2;
+      padding: 20px 0px; }
       @media (max-width: 767px) {
         .contact-us .contact-us-form .form-one-column .checkboxes-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-          gap: 10px; } }
+          column-count: 1; } }
     .contact-us .contact-us-form .form-one-column .input-checkbox {
       margin: 15px 0px 0px;
       position: relative; }
