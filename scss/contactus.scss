@@ -10,6 +10,9 @@
     border-radius: 15px;
     box-shadow: 0px 1px 10px rgba(82, 99, 116, 0.15);
     .contact-us-form {
+      .form-one-column , .form-one-column {
+         margin-bottom: 20px;
+      }
       .form-two-column {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -32,18 +35,133 @@
             border-radius: 5px;
             border: 1px solid #5263744D;
             padding: 12px 20px;
+            &:focus {
+               outline: none;
+            }
         }
       }
       .form-one-column {
-        padding: 25px 0px ;
-        .checkbox-option {
-           
+        padding: 25px 0px 0px ;
+        .checkboxes-wrapper {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(1, 1fr);
+         gap: 20px;
+         @include mobiles {
+             grid-template-columns: repeat(1 , 1fr);
+             gap: 10px;
+         }
         }
+        .input-checkbox {
+         margin: 15px 0px 0px;
+         input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+          }
+          label {
+            display: inline-block;
+            position: relative;
+            padding-left: 30px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $navy;
+            font-weight: 500;
+            cursor: pointer;
+            //css to add customised checkbox
+            &::before {
+               content: "";
+               display: inline-block;
+               position: absolute;
+               left: 0;
+               top: 4;
+               width: 20px;
+               height: 20px;
+               border: 1px solid #ccc;
+               border-radius: 4px;
+               background-color: $checkbox-bg-color;
+             }
+             // css to add blue tick
+             &::after {
+               content: url(/wp-content/themes/itzontarget/assets/images/checkbox.svg);
+               display: inline-block;
+               position: absolute;
+               left: 5px;
+               top: -1px;
+               width: 10px;
+               height: 10px;
+               // border: 2px solid $checkbox-checked-color;
+               // border-top: none;
+               // border-right: none;
+               // transform: rotate(45deg);
+               opacity: 0;
+               transition: all 0.2s;
+             }
+
+          }
+           // Show the checkmark when checkbox is checked
+          input[type="checkbox"]:checked + label::after {
+            opacity: 1;
+          }
+        }
+      }
+      .form-radio-group {
+         padding: 10px 0px;
+         display: flex;
+         label {
+            padding-right: 30px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $navy;
+            font-weight: 500;
+            cursor: pointer;
+         }
+         input {
+            margin-right: 5px;} 
+      }
+      .form-text-area {
+         padding: 20px 0px 0px;
+         textarea {
+            width: 100%;
+            border-radius: 7px;
+            min-height: 200px;
+            border:1px solid #ccc;
+            padding: 20px 0px;
+            @include small-mobiles {
+               min-height: 125px;
+            }
+            &:focus {
+              outline: none;
+            }
+         }
+      }
+      button[type="submit"] {
+         width: fit-content;
+         font-family: 'Greycliff CF - Extra Bold';
+         font-size: 16px;
+         line-height: 18px;
+         font-weight: normal;
+         color: #fff;
+         border: 0px;
+         padding: 15px 30px;         // padding: 22px;
+         text-align:center;
+         background: linear-gradient(92.84deg, rgba(0, 56, 108, 0.3) 14.69%, rgba(9, 116, 228, 0.3) 50.57%, rgba(176, 211, 248, 0.3) 81.51%), #0974E4;
+         //box-shadow: 0px 1px 30px rgb(82 99 116 / 20%);
+         border-radius: 60px;
       }
     }
     @include small-mobiles {
         padding: 20px;
     }
+}
+.contact-us-details {
+   display: flex;
+   /* column-count: 2; */
+   align-items: center;
+   justify-content: space-around;
+   @include mobiles {
+      display: block;
+      text-align: center;
+   }
 }
 /*code for contact us form ends here*/
 

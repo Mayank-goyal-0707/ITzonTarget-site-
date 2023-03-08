@@ -239,6 +239,16 @@
         padding: 30px 12px;
     }
     }
+    &.contact-us {
+        width: 90%;
+        margin: 30px auto;
+        @include tablets {
+            width: 80%;
+        }
+        @include mobiles {
+            width: 80%;
+        }
+    }
 }
 .res-counters {
     list-style: none;
