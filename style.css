@@ -1263,7 +1263,7 @@ footer {
   @media (max-width: 767px) {
     .redirect-btn {
       height: 45px;
-      width: 45px;
+      width: 45px !important;
       padding: 0px; } }
   .redirect-btn ul {
     display: flex;
@@ -1918,8 +1918,7 @@ footer {
 .get-started-intro {
   width: 75%; }
   .get-started-intro .step {
-    width: 45px;
-    height: 15px;
+    width: max-content;
     background: #fff;
     border-radius: 50px;
     padding: 10px 20px;
@@ -2150,10 +2149,27 @@ footer {
           grid-template-columns: repeat(1, 1fr);
           gap: 10px; } }
     .contact-us .contact-us-form .form-one-column .input-checkbox {
-      margin: 15px 0px 0px; }
+      margin: 15px 0px 0px;
+      position: relative; }
       .contact-us .contact-us-form .form-one-column .input-checkbox input[type="checkbox"] {
         position: absolute;
-        opacity: 0; }
+        opacity: 0;
+        margin: 0;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        z-index: 3;
+        cursor: pointer; }
+      .contact-us .contact-us-form .form-one-column .input-checkbox input[type="checkbox"] + label::after {
+        content: url(/wp-content/themes/itzontarget/assets/images/checkbox.svg);
+        display: inline-block;
+        position: absolute;
+        left: 5px;
+        top: -1px;
+        width: 10px;
+        height: 10px;
+        opacity: 0;
+        transition: all 0.2s; }
       .contact-us .contact-us-form .form-one-column .input-checkbox label {
         display: inline-block;
         position: relative;
@@ -2174,16 +2190,6 @@ footer {
           border: 1px solid #ccc;
           border-radius: 4px;
           background-color: #fff; }
-        .contact-us .contact-us-form .form-one-column .input-checkbox label::after {
-          content: url(/wp-content/themes/itzontarget/assets/images/checkbox.svg);
-          display: inline-block;
-          position: absolute;
-          left: 5px;
-          top: -1px;
-          width: 10px;
-          height: 10px;
-          opacity: 0;
-          transition: all 0.2s; }
       .contact-us .contact-us-form .form-one-column .input-checkbox input[type="checkbox"]:checked + label::after {
         opacity: 1; }
   .contact-us .contact-us-form .form-radio-group {

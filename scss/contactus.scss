@@ -54,9 +54,35 @@
         }
         .input-checkbox {
          margin: 15px 0px 0px;
+         position: relative;
          input[type="checkbox"] {
             position: absolute;
             opacity: 0;
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            z-index: 3;
+            cursor: pointer;
+          }
+
+          input[type="checkbox"] + label {
+             // css to add blue tick
+             &::after {
+               content: url(/wp-content/themes/itzontarget/assets/images/checkbox.svg);
+               display: inline-block;
+               position: absolute;
+               left: 5px;
+               top: -1px;
+               width: 10px;
+               height: 10px;
+               // border: 2px solid $checkbox-checked-color;
+               // border-top: none;
+               // border-right: none;
+               // transform: rotate(45deg);
+               opacity: 0;
+               transition: all 0.2s;
+             }
           }
           label {
             display: inline-block;
@@ -80,23 +106,6 @@
                border-radius: 4px;
                background-color: $checkbox-bg-color;
              }
-             // css to add blue tick
-             &::after {
-               content: url(/wp-content/themes/itzontarget/assets/images/checkbox.svg);
-               display: inline-block;
-               position: absolute;
-               left: 5px;
-               top: -1px;
-               width: 10px;
-               height: 10px;
-               // border: 2px solid $checkbox-checked-color;
-               // border-top: none;
-               // border-right: none;
-               // transform: rotate(45deg);
-               opacity: 0;
-               transition: all 0.2s;
-             }
-
           }
            // Show the checkmark when checkbox is checked
           input[type="checkbox"]:checked + label::after {
