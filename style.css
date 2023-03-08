@@ -1192,7 +1192,7 @@ footer {
       .simple-blue-bg.center {
         padding: 30px 12px; } }
   .simple-blue-bg.contact-us {
-    width: 90%;
+    width: 85%;
     margin: 30px auto; }
     @media (min-width: 768px) and (max-width: 990px) {
       .simple-blue-bg.contact-us {
@@ -2223,6 +2223,8 @@ footer {
     text-align: center;
     background: linear-gradient(92.84deg, rgba(0, 56, 108, 0.3) 14.69%, rgba(9, 116, 228, 0.3) 50.57%, rgba(176, 211, 248, 0.3) 81.51%), #0974E4;
     border-radius: 60px; }
+    .contact-us .contact-us-form button[type="submit"]:hover {
+      cursor: pointer; }
   @media (max-width: 560px) {
     .contact-us {
       padding: 20px; } }

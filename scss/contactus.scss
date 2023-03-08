@@ -147,6 +147,9 @@
          background: linear-gradient(92.84deg, rgba(0, 56, 108, 0.3) 14.69%, rgba(9, 116, 228, 0.3) 50.57%, rgba(176, 211, 248, 0.3) 81.51%), #0974E4;
          //box-shadow: 0px 1px 30px rgb(82 99 116 / 20%);
          border-radius: 60px;
+         &:hover {
+            cursor: pointer;
+         }
       }
     }
     @include small-mobiles {
