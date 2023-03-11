@@ -35,7 +35,8 @@
             display: block;
             @include font-Greycliff-CF (18px ,27px, $navy , 900);
         }
-        input {
+        input:not([type="radio"]) {
+            width: 100%;
             margin: 10px 0px;
             border-radius: 5px;
             border: 1px solid #5263744D;
@@ -66,6 +67,10 @@
 
                   .wpcf7-list-item {
                      width: 50%;
+
+                     @include mobiles {
+                        width: 100%;
+                     }
                   }
                }
             }
@@ -164,7 +169,7 @@
          }
       }
       button[type="submit"], input[type="submit"] {
-         width: fit-content;
+         width: fit-content !important;
          font-family: 'Greycliff CF - Extra Bold';
          font-size: 16px;
          line-height: 18px;
@@ -175,7 +180,7 @@
          text-align:center;
          background: linear-gradient(92.84deg, rgba(0, 56, 108, 0.3) 14.69%, rgba(9, 116, 228, 0.3) 50.57%, rgba(176, 211, 248, 0.3) 81.51%), #0974E4;
          //box-shadow: 0px 1px 30px rgb(82 99 116 / 20%);
-         border-radius: 60px;
+         border-radius: 60px !important;
          &:hover {
             cursor: pointer;
          }
@@ -190,6 +195,7 @@
    /* column-count: 2; */
    align-items: center;
    justify-content: space-around;
+   margin-bottom: 20px;
    @include mobiles {
       display: block;
       text-align: center;
