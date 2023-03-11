@@ -10,6 +10,11 @@
     border-radius: 15px;
     box-shadow: 0px 1px 10px rgba(82, 99, 116, 0.15);
     .contact-us-form {
+
+      br {
+         display: none;
+      }
+
       .form-one-column , .form-one-column {
          margin-bottom: 20px;
       }
@@ -39,76 +44,94 @@
                outline: none;
             }
         }
+        .checkboxes-wrapper,
+        .form-radio-group {
+         .wpcf7-list-item {
+            margin-left: unset;
+         }
+        }
       }
       .form-one-column {
         padding: 25px 0px 0px ;
         .checkboxes-wrapper {
-         column-count: 2;
-         padding: 20px 0px;
-         @include mobiles {
-             column-count: 1;
-         }
-        }
-        .input-checkbox {
-         padding: 15px 0px 0px;
-         position: relative;
-         input[type="checkbox"] {
-            position: absolute;
-            opacity: 0;
-            margin: 0;
-            width: 20px;
-            height: 20px;
-            top: 0;
-            z-index: 3;
-            cursor: pointer;
-          }
+      //    column-count: 2;
+      //    padding: 20px 0px;
+      //    @include mobiles {
+      //        column-count: 1;
+      //    }
+            .wpcf7-form-control {
+               &.wpcf7-checkbox{
+                  display: flex;
+                  flex-wrap: wrap;
 
-          input[type="checkbox"] + label {
-             // css to add blue tick
-             &::after {
-               content: url(/wp-content/themes/itzontarget/assets/images/checkbox.svg);
-               display: inline-block;
-               position: absolute;
-               left: 5px;
-               top: -1px;
-               width: 10px;
-               height: 10px;
-               // border: 2px solid $checkbox-checked-color;
-               // border-top: none;
-               // border-right: none;
-               // transform: rotate(45deg);
-               opacity: 0;
-               transition: all 0.2s;
-             }
-          }
-          label {
-            display: inline-block;
-            position: relative;
-            padding-left: 30px;
-            font-size: 16px;
-            line-height: 24px;
-            color: $navy;
-            font-weight: 500;
-            cursor: pointer;
-            //css to add customised checkbox
-            &::before {
-               content: "";
-               display: inline-block;
-               position: absolute;
-               left: 0;
-               top: 4;
-               width: 20px;
-               height: 20px;
-               border: 1px solid #ccc;
-               border-radius: 4px;
-               background-color: $checkbox-bg-color;
-             }
-          }
-           // Show the checkmark when checkbox is checked
-          input[type="checkbox"]:checked + label::after {
-            opacity: 1;
-          }
-        }
+                  .wpcf7-list-item {
+                     width: 50%;
+                  }
+               }
+            }
+            
+            .wpcf7-list-item {
+               label {
+                  padding: 15px 0px 0px;
+                  position: relative;
+                  input[type="checkbox"] {
+                     position: absolute;
+                     opacity: 0;
+                     margin: 0;
+                     width: 20px;
+                     height: 20px;
+                     z-index: 3;
+                     cursor: pointer;
+                   }
+         
+                   input[type="checkbox"] + .wpcf7-list-item-label {
+                      // css to add blue tick
+                      &::after {
+                        content: url(/wp-content/themes/itzontarget/assets/images/checkbox.svg);
+                        display: inline-block;
+                        position: absolute;
+                        left: 5px;
+                        top: -1px;
+                        width: 10px;
+                        height: 10px;
+                        // border: 2px solid $checkbox-checked-color;
+                        // border-top: none;
+                        // border-right: none;
+                        // transform: rotate(45deg);
+                        opacity: 0;
+                        transition: all 0.2s;
+                      }
+                   }
+                   .wpcf7-list-item-label {
+                     display: inline-block;
+                     position: relative;
+                     padding-left: 30px;
+                     font-size: 16px;
+                     line-height: 24px;
+                     color: $navy;
+                     font-weight: 500;
+                     cursor: pointer;
+                     //css to add customised checkbox
+                     &::before {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        top: 4;
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        background-color: $checkbox-bg-color;
+                      }
+                   }
+                    // Show the checkmark when checkbox is checked
+                   input[type="checkbox"]:checked + .wpcf7-list-item-label::after {
+                     opacity: 1;
+                   }
+                 }
+            }
+         }
       }
       .form-radio-group {
          padding: 10px 0px;
@@ -131,7 +154,7 @@
             border-radius: 7px;
             min-height: 200px;
             border:1px solid #ccc;
-            padding: 20px 0px;
+            padding: 20px 20px;
             @include small-mobiles {
                min-height: 125px;
             }
@@ -140,7 +163,7 @@
             }
          }
       }
-      button[type="submit"] {
+      button[type="submit"], input[type="submit"] {
          width: fit-content;
          font-family: 'Greycliff CF - Extra Bold';
          font-size: 16px;

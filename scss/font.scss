@@ -1,37 +1,35 @@
-// creating font-family
-@font-face {
-    font-family: 'Greycliff CF - Heavy';
-    src: url('assets/font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.ttf') format('truetype'),
-    url('assets/font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.woff') format('woff'),
-    url('assets/font/Fontspring-DEMO-greycliffcf-heavy/Fontspring-DEMO-greycliffcf-heavy.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: "Greycliff CF - bold";
-    src: url('assets/font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.ttf') format('truetype'),
-    url('assets/font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.woff') format('woff'),
-    url('assets/font/Fontspring-DEMO-greycliffcf-bold/Fontspring-DEMO-greycliffcf-bold.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: "Greycliff CF - Extra Bold";
-    src: url('assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.ttf') format('truetype'),
-    url('assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.woff') format('woff'),
-    url('assets/font/Fontspring-DEMO-greycliffcf-extrabold/Fontspring-DEMO-greycliffcf-extrabold.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: "Greycliff CF";
-    src: url('assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.ttf') format('truetype'),
-    url('assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff') format('woff'),
-    url('assets/font/Fontspring-DEMO-greycliffcf-regular/Fontspring-DEMO-greycliffcf-regular.woff2') format('woff2');
-
-}
-
 @font-face {
     font-family: "Verveine";
     src: url('assets/font/verveine/VerveineRegular.TTF') format('truetype'),
     url('assets/font/verveine/VerveineRegular.woff') format('woff'),
     url('assets/font/verveine/VerveineRegular.woff2') format('woff2');
 
+}
+
+@font-face {
+    font-family: 'Greycliff CF - Heavy';
+    src: url('assets/font/AdobeFonts/Heavy/GreycliffCFHeavy.woff2') format('woff2'),
+         url('assets/font/AdobeFonts/Heavy/GreycliffCFHeavy.woff') format('woff'),
+         url('assets/font/AdobeFonts/Heavy/GreycliffCFHeavy.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Greycliff CF';
+    src: url('assets/font/AdobeFonts/Regular/GreycliffCFRegular.woff2') format('woff2'),
+         url('assets/font/AdobeFonts/Regular/GreycliffCFRegular.woff') format('woff'),
+         url('assets/font/AdobeFonts/Regular/GreycliffCFRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Greycliff CF - bold';
+    src: url('assets/font/AdobeFonts/Bold/GreycliffCFBold.woff2') format('woff2'),
+         url('assets/font/AdobeFonts/Bold/GreycliffCFBold.woff') format('woff'),
+         url('assets/font/AdobeFonts/Bold/GreycliffCFBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Greycliff CF - Extra Bold';
+    src: url('assets/font/AdobeFonts/ExtraBold/GreycliffCFExtraBold.woff2') format('woff2'),
+         url('assets/font/AdobeFonts/ExtraBold/GreycliffCFExtraBold.woff') format('woff'),
+         url('assets/font/AdobeFonts/ExtraBold/GreycliffCFExtraBold.ttf') format('truetype');
 }

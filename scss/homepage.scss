@@ -328,7 +328,82 @@
 }
 
 .specialization {
-  .three-grids , .two-grids {
+  .three-grids {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0 auto;
+    width: 90%;
+    padding: 30px 0;
+
+    li {
+      width: 33%;
+      margin: 2% 0%;
+      padding: 10px 20px;
+      text-align: center;
+      position: relative;
+
+      &:nth-child(3n) {
+        @include Desktops {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        @include tablets {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      .heading-cursive {
+        margin: 5px 0px;
+      }
+
+      &::after {
+        @include pos-abs;
+        height: 90%;
+        width: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0%;
+        background: url("/wp-content/themes/itzontarget/assets/images/border-right.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        @include mobiles {
+          display: none !important;
+        }
+      }
+
+      @include tablets {
+        width: 48%;
+
+        &:nth-child(even) {
+          position: unset;
+        }
+
+        &:nth-child(odd) {
+          position: relative;
+        }
+      }
+
+      @include mobiles {
+        width: 98%;
+        position: unset;
+      }
+    }
+
+    @include mobiles {
+      padding: 30px 0;
+    }
+  }
+  .two-grids {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -403,6 +478,7 @@
       padding: 30px 0;
     }
   }
+  
   .two-grids {
     li {
       width: 48%;
