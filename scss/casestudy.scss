@@ -466,9 +466,11 @@
             border: 0px;
             overflow: hidden;
             border-radius: 30px;
-            box-shadow: 0px 1px 30px 0px #52637433;
+            // box-shadow: 0px 1px 30px 0px #52637433;
+            height: calc(100vw/1.77);
         }
         .video-btn {
+            display: none;
             position: absolute;
             top:50%;
             left: 50%;
