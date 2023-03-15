@@ -14,16 +14,19 @@ footer {
             padding: 30px 40px;
         }
         @include mobiles {
-            padding: 70px 0px 10px 0px;
+            padding: 0 0 10px 0;
+            width: 85%;
         }
     }
 
     .footer-top {
         @include dispflex-spcbw;
+        align-items: unset;
+
         flex-wrap: wrap;
         padding-bottom: 50px;
         border-bottom: 2px solid #60aef580;
-        padding-top: 50px;
+        padding-top: 30px;
 
         @include tablets {
             display: block;
@@ -34,7 +37,7 @@ footer {
         }
 
         @include small-mobiles {
-            padding: 0px 16px;
+            padding: 40px 16px;
         }
 
     }
@@ -56,7 +59,6 @@ footer {
             @include font-greyclif-bold(27px, #fff, 700);
             line-height: 110%;
             text-align: center;
-            width: 214px;
             margin: 0 auto;
         }
 
@@ -111,58 +113,6 @@ footer {
 
         @include mobiles {
             display: none;
-        }
-    }
-}
-
-
-.cta-primary {
-    text-decoration: none;
-    width: max-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    padding: 22px 36px;
-    gap: 10px;
-    background: linear-gradient(92.84deg, rgba(0, 56, 108, 0.3) 14.69%, rgba(9, 116, 228, 0.3) 50.57%, rgba(176, 211, 248, 0.3) 81.51%), #0974E4;
-    box-shadow: 0px 1px 30px rgba(82, 99, 116, 0.2);
-    border-radius: 60px;
-    border: 0px;
-    @include font-greyclif-extrabold(16px, $white, normal);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-
-    &:hover {
-        cursor: pointer;
-    }
-
-    @include tablets {
-        margin: 35px auto 20px auto;
-    }
-
-    @include mobiles {
-        margin: 35px auto 0px auto;
-        @include font-greyclif-extrabold(14px, $white, normal);
-        padding: 22px;
-    }
-
-    @include small-mobiles {
-        margin-bottom: 35px;
-    }
-
-    &.secondary {
-        background: $white;
-        color: $light-navy;
-        box-shadow: 0px 1px 30px rgba(82, 99, 116, 0.2);
-
-        @include tablets {
-            margin: 35px 0px;
-        }
-
-        @include mobiles {
-            margin: 35px 0px;
         }
     }
 }

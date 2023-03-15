@@ -16,7 +16,6 @@
 @mixin font-greyclif-extrabold ($font-size , $font-color , $font-weight) {
     font-family: 'Greycliff CF - Extra Bold';
     font-size: $font-size;
-    line-height: $font-size;
     font-weight: $font-weight;
     color: $font-color;
 }
@@ -33,10 +32,11 @@
    // height: 7px;
     width: 100% !important;
     border: solid 2px $color;
+    background-color: $color;
     //border-color: $color transparent transparent transparent;
     //border-radius: 64%;
     bottom: -9px;
-    left: -4%;
+    left: -1px;;
 }
 @mixin pos-abs {
     position: absolute;

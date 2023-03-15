@@ -1,761 +1,424 @@
-//css for homepage starts here
-.disp-mob {
-  @include tablets {
-    display: none;
-  }
+.page-template-default {
+  &.home {
+    .banner-section {
 
-  @include Desktops {
-    display: none;
-  }
+      .get-more-cutomers {
+        @include dispflex-spcbw;
+        width: 90%;
+        margin: 0 auto;
 
-  @include mobiles {
-    display: block;
-  }
-  img {
-    width: 100%;
-  }
-}
+        .left-text {
+          max-width: 50%;
 
-.disp-desktop {
-  @include mobiles {
-    display: none;
-  }
-}
-
-.get-more-cutomers {
-  @include dispflex-spcbw;
-  width: 90%;
-  padding: 30px 0;
-  margin: 0 auto;
-
-  .left-text {
-    max-width: 50%;
-
-    @include tablets {
-      max-width: unset;
-    }
-
-    @include mobiles {
-      max-width: unset;
-    }
-
-    @include small-mobiles {
-      padding: 0px;
-    }
-  }
-
-  .right-img {
-    img {
-      width: 100%;
-
-      @include mobiles {
-        width: 100%;
-      }
-    }
-
-    @include tablets {
-      text-align: center;
-    }
-
-    @include mobiles {
-      text-align: right;
-    }
-  }
-
-  @include tablets {
-    display: block;
-  }
-
-  @include mobiles {
-    display: block;
-    padding: 20px 0px;
-  }
-
-  .cta-primary {
-    @include tablets {
-      margin: 35px 0px 0px;
-    }
-
-    @include mobiles {
-      margin: 35px 0px 0px;
-    }
-  }
-}
-
-.h1-heading {
-  @include font-greyclif-heavy(64px, $navy, 900);
-  line-height: 110%;
-  z-index: 2;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-
-  @include tablets {
-    font-size: 68px;
-  }
-
-  @include mobiles {
-    font-size: 54px;
-    line-height: 105%;
-  }
-}
-
-.light-blue {
-  color: $light-navy;
-}
-
-.underline-double {
-  position: relative;
-
-  &::after {
-    @include pos-abs;
-    width: 100%;
-    height: 55px;
-    background-image: url("/wp-content/themes/itzontarget/assets/images/underline1.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    bottom: -17px;
-    left: 0%;
-    z-index: -1;
-  }
-}
-
-.underline-double {
-  &.opened-left {
-    position: relative;
-
-    &::after {
-      @include pos-abs;
-      width: 100%;
-      height: 55px;
-      background-image: url("/wp-content/themes/itzontarget/assets/images/under-line-open-left.svg");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      bottom: -32px;
-      left: 0%;
-      z-index: 2;
-    }
-  }
-}
-
-.regular-para {
-  @include font-Greycliff-CF(18px, 27px, #526374, 500);
-  margin: 20px 0px;
-}
-
-.has-arrow {
-  position: relative;
-
-  &::after {
-    @include pos-abs;
-    width: 121px;
-    height: 165px;
-    background-image: url("/wp-content/themes/itzontarget/assets/images/side-curved.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
-    @include Large-Desktops {
-      top: -98px;
-      right: -130px;
-    }
-
-    @include Desktops {
-      top: -98px;
-      right: -130px;
-    }
-
-    @include tablets {
-      height: 119px;
-      top: -67px;
-      right: -126px;
-    }
-
-    @include mobiles {
-      background: url("/wp-content/themes/itzontarget/assets/images/arrow-mob-left-svg.svg");
-      width: 58px;
-      height: 61px;
-      top: -31px;
-      right: -78px;
-      overflow: hidden;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  }
-}
-
-.cta-sec {
-  margin: 60px 0px 20px 0px;
-}
-
-// css for nobel customer section stars here
-.our-clients-section {
-  background-color: $light-blue;
-
-  .noble-customers {
-    margin: 0 auto;
-    width: 90%;
-    padding: 30px 0;
-
-    ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0px;
-      margin: 40px auto 20px auto;
-      justify-content: left;
-      align-items: center;
-
-      @include tablets {
-        width: 100%;
-        margin: 20px auto;
-      }
-
-      @include mobiles {
-        margin: 20px auto;
-      }
-
-      @include small-mobiles {
-        width: 100%;
-      }
-
-      li {
-        width: 23%;
-        margin: 1%;
-        text-align: center;
-
-        img {
-          @include Desktops {
-            width: 172px;
+          @include tablets {
+            max-width: unset;
           }
 
           @include mobiles {
-            width: 126px;
+            max-width: unset;
           }
 
           @include small-mobiles {
-            width: 108px;
+            padding: 0px;
+          }
+        }
+
+        .right-img {
+          img {
+            width: 100%;
+
+            @include mobiles {
+              width: 100%;
+            }
+          }
+
+          @include tablets {
+            text-align: center;
+          }
+
+          @include mobiles {
+            text-align: right;
           }
         }
 
         @include tablets {
-          width: 46%;
-          margin: 2%;
+          display: block;
         }
 
         @include mobiles {
-          width: 48%;
-          margin: 6% 0%;
+          display: block;
+          width: 85%;
+          text-align: center;
         }
-      }
-    }
 
-    @include tablets {
-      padding: 50px 0;
-    }
+        .cta-sec {
 
-    @include mobiles {
-      padding: 30px 0;
-    }
-  }
-}
-
-.h3-heading {
-  @include font-greyclif-bold(32px, $light-navy, 700);
-  line-height: 35px;
-  letter-spacing: -1%;
-
-  @include mobiles {
-    font-size: 24px;
-    line-height: 27.6px;
-  }
-}
-
-.h2-heading {
-  @include font-greyclif-heavy(44px, $navy, 700);
-  line-height: 50.6px;
-  letter-spacing: -2%;
-
-  @include mobiles {
-    font-size: 32px;
-    line-height: 37px;
-  }
-
-  @include mobiles {
-    font-size: 34px;
-    line-height: 37px;
-  }
-}
-
-.circled-outline {
-  position: relative;
-  background-image: url('/wp-content/themes/itzontarget/assets/images/circle-open-top.svg');
-  background-size: 106% 93%;
-  display: inline-block;
-  padding: 8px 7px;
-  background-repeat: no-repeat;
-}
-
-.detail-section {
-  .simple-section {
-    margin: 0 auto;
-    width: 90%;
-    padding: 30px 0;
-    position: relative;
-    .regular-para {
-      @include mobiles {
-        width: 100%;
-        margin-top: 20px;
-      }
-    }
-
-    .cta-sec {
-      margin: 35px 0px;
-    }
-
-    &.with-arrow-text {
-      @include tablets {
-        padding-bottom: 100px;
-      }
-    }
-
-    @include mobiles {
-      padding: 30px 0;
-    }
-  }
-}
-
-.heading-cursive {
-  @include font-Verveine(26px, 26px, $light-navy, 400);
-}
-
-.specialization {
-  .three-grids {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0px;
-    margin: 0 auto;
-    width: 90%;
-    padding: 30px 0;
-
-    li {
-      width: 33%;
-      margin: 2% 0%;
-      padding: 10px 20px;
-      text-align: center;
-      position: relative;
-
-      &:nth-child(3n) {
-        @include Desktops {
-          &::after {
-            display: none;
+          @include small-mobiles {
+            margin: 35px 0 20px 0;
           }
-        }
-      }
 
-      &:nth-child(even) {
-        @include tablets {
-          &::after {
-            display: none;
-          }
-        }
-      }
-
-      .heading-cursive {
-        margin: 5px 0px;
-      }
-
-      &::after {
-        @include pos-abs;
-        height: 90%;
-        width: 2px;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0%;
-        background: url("/wp-content/themes/itzontarget/assets/images/border-right.svg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-
-        @include mobiles {
-          display: none !important;
-        }
-      }
-
-      @include tablets {
-        width: 48%;
-
-        &:nth-child(even) {
-          position: unset;
-        }
-
-        &:nth-child(odd) {
-          position: relative;
-        }
-      }
-
-      @include mobiles {
-        width: 98%;
-        position: unset;
-      }
-    }
-
-    @include mobiles {
-      padding: 30px 0;
-    }
-  }
-  .two-grids {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    //justify-content: space-between;
-    padding: 0px;
-    margin: 0 auto;
-    width: 90%;
-    padding: 30px 0;
-
-    li {
-      width: 32%;
-      margin: 2% 0%;
-      padding: 10px 20px;
-      text-align: center;
-      position: relative;
-
-      &:nth-child(3n) {
-        @include Desktops {
-          &::after {
-            display: none;
-          }
-        }
-      }
-
-      &:nth-child(even) {
-        @include tablets {
-          &::after {
-            display: none;
-          }
-        }
-      }
-
-      .heading-cursive {
-        margin: 5px 0px;
-      }
-
-      &::after {
-        @include pos-abs;
-        height: 90%;
-        width: 2px;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0%;
-        background: url("/wp-content/themes/itzontarget/assets/images/border-right.svg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-
-        @include mobiles {
-          display: none !important;
-        }
-      }
-
-      @include tablets {
-        width: 48%;
-
-        &:nth-child(even) {
-          position: unset;
-        }
-
-        &:nth-child(odd) {
-          position: relative;
-        }
-      }
-
-      @include mobiles {
-        width: 98%;
-        position: unset;
-      }
-    }
-
-    @include mobiles {
-      padding: 30px 0;
-    }
-  }
-  
-  .two-grids {
-    li {
-      width: 48%;
-      text-align: left;
-      &:nth-child(3n) {
-        &::after {display: block;}
-      }
-      &:nth-child(odd){position: relative;}
-      &:nth-child(even) {position: unset;}
-      @include mobiles {
-        padding: 0px;
-        width: 100%;
-      }
-    }
-    @include tablets {
-      width: 96%;
-    }
-  }
-}
-
-.heading-h4 {
-  @include font-greyclif-heavy(22px, $navy, 900);
-  line-height: 26.2px;
-  letter-spacing: -1%;
-  margin: 17px 0px;
-}
-
-.general-component {
-  position: relative;
-
-  .blue-box-cta {
-    margin: 0 auto;
-    width: 90%;
-    padding: 60px 0;
-    position: relative;
-    text-align: center;
-    background-color: $navy;
-    border-radius: 15px;
-    position: relative;
-    z-index: 5;
-    h2,
-    h5 {
-      margin: 20px;
-    }
-
+          .cta-primary {
+            position: relative;
     
-    @include mobiles {
-      padding: 40px 10px;
-      z-index: 3;
-    }
-    @include x-small {
-      width: 87%;
-    }
-  }
+            @include tablets {
+              margin: 35px 0px 0px;
+            }
 
-  &::after {
-    @include pos-abs;
-    width: 200px;
-    height: 200px;
-    bottom: -60px;
-    right: 0px;
-    background-image: url("/wp-content/themes/itzontarget/assets/images/dotted-box-grid.svg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+            &:hover::before {
+              animation: line-anim 0.3s forwards;
+              position: absolute;
+              content: '';
+              width: 73% !important;
+              border: solid 1px #fff;
+              background-color: #fff;
+              bottom: 17px;
+    
+              @include mobiles {
+                width: 80% !important;
+              }
+            }
+    
+            &.has-arrow {
+              position: relative;
 
-    @include mobiles {
-      width: 130px;
-      height: 130px;
-      right: 0px;
-      z-index: 6;
-    }
-  }
+              @include Desktops {
+                margin-left: 0 !important;
+              }
+              @include tablets {
+                margin-left: 0 !important;
+              }
 
-  @include tablets {
-    padding: 30px 0;
-  }
-
-  @include mobiles {
-    padding: 30px 0;
-  }
-}
-
-.testimonial-section {
-  background-color: $light-blue;
-
-  .customer-slider-section {
-    position: relative;
-    margin: 0 auto;
-    width: 90%;
-    padding: 30px 0;
-
-    .slick-dots {
-      position: unset;
-      padding: 10px 0px;
-
-      li {
-        margin: 20px 0px;
-
-        button {
-          &::before {
-            content: "";
-            height: 10px;
-            width: 10px;
-            border-radius: 50%;
-            border: 1px solid $light-navy;
-          }
-        }
-
-        &.slick-active {
-          button {
-            &::before {
-              background: $light-navy;
+              &::after {
+                @include pos-abs;
+                width: 121px;
+                height: 165px;
+                background-image: url("/wp-content/themes/itzontarget/assets/images/side-curved.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+    
+                @include Large-Desktops {
+                  top: -98px;
+                  right: -130px;
+                }
+    
+                @include Desktops {
+                  top: -98px;
+                  right: -130px;
+                }
+    
+                @include tablets {
+                  height: 119px;
+                  top: -67px;
+                  right: -126px;
+                }
+    
+                @include mobiles {
+                  background: url("/wp-content/themes/itzontarget/assets/images/side-curved.png");
+                  right: -125px;
+                  overflow: hidden;
+                  background-repeat: no-repeat;
+                  top: -75px;
+                  background-size: 80% 80%;
+                }
+    
+                @include small-mobiles {
+                  top: -27px;
+                  right: -56px;
+                  width: 55px;
+                  height: 90px;
+                }
+              }
             }
           }
         }
       }
     }
 
-    @include mobiles {
-      padding: 30px 0;
-      width: unset;
-    }
-  }
+    .our-clients-section {
+      background-color: $light-blue;
 
-  .customer-slide {
-    @include dispflex-spcbw;
-    display: flex !important;
-    width: 70%;
-    margin: 0 auto;
-    padding: 15px 20px;
+      .noble-customers {
+        margin: 0 auto;
+        width: 90%;
+        padding: 30px 0;
 
-    @include tablets {
-      display: block !important;
-    }
+        ul {
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0px;
+          margin: 40px auto 20px auto;
+          justify-content: left;
+          align-items: center;
 
-    @include mobiles {
-      display: block !important;
-      width: 90%;
-    }
-  }
+          @include tablets {
+            width: 100%;
+            margin: 20px auto;
+          }
 
-  .client-image {
-    margin: 10px;
-    width: 194px;
-    height: 194px;
-    box-shadow: 0px 1px 10px rgba(82, 99, 116, 0.15);
-    border-radius: 200px;
-    background-image: url("/wp-content/themes/itzontarget/assets/images/client1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+          @include mobiles {
+            margin: 20px auto;
+          }
 
-    &::after {
-      @include pos-abs;
-      width: 62px;
-      height: 62px;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      top: 8%;
-      right: -11%;
-      background-image: url("/wp-content/themes/itzontarget/assets/images/quotes.svg");
-    }
+          @include small-mobiles {
+            width: 100%;
+          }
 
-    @include tablets {
-      margin: 10px auto;
-    }
+          li {
+            width: 23%;
+            margin: 1%;
+            text-align: center;
 
-    @include mobiles {
-      margin: 10px auto;
-    }
-  }
+            img {
+              @include Desktops {
+                width: 172px;
+              }
 
-  .client-texts {
-    width: 74%;
+              @include mobiles {
+                width: 172px;
+              }
 
-    .h3-heading {
-      color: $navy;
-      line-height: 120%;
-      font-size: 32px;
-      letter-spacing: -0.01em;
-      margin: 10px 0px;
+              @include small-mobiles {
+                width: 108px;
+              }
+            }
 
-      @include mobiles {
-        font-size: 24px;
-        line-height: 27px;
+            @include tablets {
+              width: 46%;
+              margin: 2%;
+            }
+
+            @include mobiles {
+              width: 48%;
+              margin: 6% 0%;
+            }
+          }
+        }
+
+        @include tablets {
+          padding: 50px 0;
+        }
+
+        @include mobiles {
+          padding: 30px 0;
+          width: 85%;
+        }
       }
     }
 
-    @include tablets {
-      width: 100%;
-      text-align: center;
+    .specialization {
+      .three-grids {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 90%;
+        padding-top: 0;
+
+        li {
+          width: 33%;
+          margin: 2% 0%;
+          padding: 10px 20px;
+          text-align: center;
+          position: relative;
+
+          &:nth-child(3n) {
+            @include Desktops {
+              &::after {
+                display: none;
+              }
+            }
+          }
+
+          &:nth-child(even) {
+            @include tablets {
+              &::after {
+                display: none;
+              }
+            }
+          }
+
+          .heading-cursive {
+            margin: 5px 0px;
+          }
+
+          &::after {
+            @include pos-abs;
+            height: 90%;
+            width: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0%;
+            background: url("/wp-content/themes/itzontarget/assets/images/border-right.svg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+            @include mobiles {
+              display: none !important;
+            }
+          }
+
+          @include tablets {
+            width: 50%;
+
+            &:nth-child(even) {
+              position: unset;
+            }
+
+            &:nth-child(odd) {
+              position: relative;
+            }
+          }
+
+          @include mobiles {
+            width: 100%;
+            position: unset;
+          }
+        }
+
+        @include mobiles {
+          width: 85%;
+        }
+      }
     }
 
-    @include mobiles {
-      font-size: 24px;
-      line-height: 27px;
-      width: 100%;
-      text-align: center;
-    }
-  }
+    .testimonial-section {
+      background-color: $light-blue;
 
-  //css for slick slide
-  .customer-slider.slick-initialized.slick-slider {
-    width: 90%;
-    margin: 0 auto;
+      .customer-slider-section {
+        position: relative;
+        margin: 0 auto;
+        width: 90%;
+        padding: 30px 0;
 
-    @include tablets {
-      width: 100%;
-    }
+        .slick-dots {
+          position: unset;
+          padding: 10px 0px;
 
-    @include mobiles {
-      width: unset;
+          li {
+            margin: 0;
+
+            button {
+              &::before {
+                content: "";
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                border: 1px solid $light-navy;
+              }
+            }
+
+            &.slick-active {
+              button {
+                &::before {
+                  background: $light-navy;
+                }
+              }
+            }
+          }
+        }
+
+        @include mobiles {
+          padding: 30px 0;
+          width: 85%;
+        }
+      }
+
+      .customer-slide {
+        @include dispflex-spcbw;
+        display: flex !important;
+        width: 70%;
+        margin: 0 auto;
+        padding: 15px 20px;
+
+        @include tablets {
+          display: block !important;
+        }
+
+        @include mobiles {
+          display: block !important;
+          width: 85%;
+        }
+      }
+
+      .client-image {
+        margin: 10px;
+        width: 194px;
+        height: 194px;
+        box-shadow: 0px 1px 10px rgba(82, 99, 116, 0.15);
+        border-radius: 200px;
+        background-image: url("/wp-content/themes/itzontarget/assets/images/client1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        &::after {
+          @include pos-abs;
+          width: 62px;
+          height: 62px;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          top: 8%;
+          right: -11%;
+          background-image: url("/wp-content/themes/itzontarget/assets/images/quotes.svg");
+        }
+
+        @include tablets {
+          margin: 10px auto;
+        }
+
+        @include mobiles {
+          margin: 10px auto;
+        }
+      }
+
+      .client-texts {
+        width: 74%;
+        margin-left: 20px;
+
+        .h3-heading {
+          color: $navy;
+          line-height: 120%;
+          font-size: 32px;
+          letter-spacing: -0.01em;
+          margin: 10px 0px;
+
+          @include mobiles {
+            font-size: 24px;
+            line-height: 27px;
+          }
+        }
+
+        @include tablets {
+          width: 100%;
+          text-align: center;
+          margin-left: unset;
+        }
+
+        @include mobiles {
+          font-size: 24px;
+          line-height: 27px;
+          width: 100%;
+          text-align: center;
+          margin-left: unset;
+        }
+      }
+
+      //css for slick slide
+      .customer-slider.slick-initialized.slick-slider {
+        width: 90%;
+        margin: 0 auto;
+
+        @include tablets {
+          width: 100%;
+        }
+
+        @include mobiles {
+          width: 85%;
+        }
+      }
     }
   }
 }
-
-.arrow-with-text {
-  position: absolute;
-  height: 100px;
-  text-align: center;
-  bottom: 0;
-  right: 68px;
-
-  @include mobiles {
-    display: none;
-  }
-
-  span {
-    //position: absolute;
-    font-family: 'Verveine';
-    color: $light-navy;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 26px;
-    transform: rotate(-11deg);
-    width: 100%;
-    display: block;
-
-    @include tablets {
-      right: 86px;
-    }
-
-    @include mobiles {
-      display: none;
-    }
-  }
-
-  &::before {
-    position: absolute;
-    content: '';
-    background: url('/wp-content/themes/itzontarget/assets/images/arrow-mob-left-svg.svg');
-    width: 49px;
-    height: 89px;
-    /* top: -74px; */
-    bottom: -8px;
-    transform: rotateX(172deg) rotateY(35deg) rotateZ(315deg);
-    /* right: 283px; */
-    overflow: hidden;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
-  &.curved-down {
-    bottom: -121px;
-    z-index: 999;
-    right: -10px;
-    @include mobiles {display: block;}
-    span {
-      @include mobiles {display: block;}
-    }
-    &::before {
-      background-image: url('/wp-content/themes/itzontarget/assets/images/side-curved.png');
-      transform: none;
-      bottom: -24px;
-      right: 46px;
-    }
-  }
-}
-
-// css for homepage ends here

@@ -1,162 +1,338 @@
-/* css for about us page starts here */
-.get-started {
-    width: 90%;
-    margin: 0px auto;
-    padding: 100px 0px 20px;
-    position: relative;
+.page-template-pages {
+    &.page-template-services-page {
 
-    .arrow-with-text {
-        &.curved-down {
-            top: 25px;
-            z-index: 999;
-            right: 25px;
+        .services-lists-wrapper {
 
-            &::before {
-                bottom: -24px;
-                right: 46px;
-                width: 80px;
-                height: 150px;
-                top: 30px;
-                background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-resources.svg');
-                @include mobiles{
-                    right: 5px;
+            @include Desktops {
+                padding-top: 0;
+            }
+
+            @include tablets {
+                padding-top: 0;
+            }
+
+            @include mobiles {
+                padding-bottom: 0;
+            }
+
+            .services-lists-inner {
+                width: 90%;
+                margin: 0 auto;
+                padding: 0px;
+                padding-bottom: 30px;
+
+                .heading-cursive {
+                    br {
+                        display: none;
+
+                        @include small-mobiles {
+                            display: block;
+                        }
+                    }
+                }
+
+                .arrow-side {
+                    position: relative;
+
+                    @include small {
+                        font-size: 29px;
+                    }
+
+                    @include x-small {
+                        font-size: 29px;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: -33px;
+                        right: -171px;
+                        width: 150px;
+                        height: 150px;
+                        background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-downward.svg');
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+
+                        @include mobiles {
+                            position: absolute;
+                            top: -40px;
+                            right: -70px;
+                            width: 60px;
+                            background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-downward-100.svg');
+                        }
+                    }
+                }
+
+                @include mobiles {
+                    width: 85%;
                 }
             }
-            @include mobiles {
-                right: -10px;
-                top: -21px;
-            }
-        }
-    }
-}
 
-.get-started-info {
-    @include mobiles  {
-        display: block;
-    }
-}
-.get-started-inner {
-    display: flex;
-    justify-content: flex-end;
-    padding: 45px 45px 30px 100px;
-    background: $light-blue;
-    margin-left: 10%;
+            .specialization {
+                .two-grids {
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    //justify-content: space-between;
+                    padding: 0;
+                    margin: 0 auto;
+                    width: 90%;
 
-    @include mobiles {
-        margin-left: unset;
-        padding: 20px;
-        display: block;
-    }
+                    li {
+                        margin: 2% 0 0;
+                        padding: 0 20px;
+                        text-align: left;
+                        position: relative;
+                        width: 48%;
 
-    > img {
-        position: absolute;
-        left: 0;
-        top: -15%;
-        height: 90%;
-        border-radius: 20px;
+                        &:nth-child(3n) {
+                            @include Desktops {
+                                &::after {
+                                    display: none;
+                                }
+                            }
 
-        @include tablets {
-            width: 225px;
-            top: -20%;
-        }
+                            &::after {
+                                display: block;
+                            }
+                        }
 
-        @include mobiles {
-            width: 60%;
-            position: static;
-            margin-bottom: 15px;
-        }
-    }
-    @include mobiles {text-align: center;}
-}
+                        &:nth-child(odd) {
+                            position: relative;
+                            padding-left: 0;
+                        }
 
-.get-started-outer {
-    position: relative;
-    border-top: 2px solid #ccc;
+                        &:nth-child(even) {
+                            position: unset;
+                        }
 
-    &:nth-child(2) {
-        border-top: unset;
+                        &:nth-child(even) {
+                            @include tablets {
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                        }
 
-        .get-started-inner {
-            @include mobiles {
-                >img {
-                    margin-top: -50px;
+                        .heading-cursive {
+                            margin: 5px 0px;
+                        }
+
+                        &::after {
+                            @include pos-abs;
+                            height: 90%;
+                            width: 2px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 0%;
+                            background: url("/wp-content/themes/itzontarget/assets/images/border-right.svg");
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+
+                            @include mobiles {
+                                display: none !important;
+                            }
+                        }
+
+                        @include tablets {
+                            width: 48%;
+                            text-align: left;
+
+                            &:nth-child(even) {
+                                position: unset;
+                            }
+
+                            &:nth-child(odd) {
+                                position: relative;
+                            }
+                        }
+
+                        @include mobiles {
+                            position: unset;
+                            padding: 0px;
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+
+                    @include tablets {
+                        padding-bottom: 30px;
+                    }
+
+                    @include mobiles {
+                        width: 85%;
+                        padding-bottom: 30px;
+                    }
                 }
             }
         }
-    }
-}
 
-.get-started-intro {
-    width: 75%;
-    //margin-top: 20px;
-    .step {
-      width: max-content;
-      background: #fff;
-      border-radius: 50px;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      @include font-Greycliff-CF (14px,14px,$light-navy,bolder);
-      line-height: 16px;
-      @include mobiles {
-        margin: 0 auto;
-      }
-    }
-    h3 {
-        color: $navy;
-        position: relative;
-        .hero-icon {
-            position: absolute;
-            left: -75px;
-            top: -10px;
-            @include mobiles {
-                left: 0;
-                width: 45px;
-                top: -10px;
+        .detail-section {
+            .simple-section {
+                &.pm-middle-section {
+                    @include mobiles {
+                        padding-bottom: 0;
+                    }
+                }
             }
         }
 
-        @include mobiles {
-            padding-left: 60px;
-            text-align: left;
-        }
-    }
-    @include mobiles {
-        width: 100%;
-        text-align: center;
-    }
-    @include tablets {width: 70%;}
-}
+        .get-started-wrapper {
+            // @include tablets {
+            //     padding-bottom: 100px;
+            // }
 
-.services-lists-inner {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0px;
-    .heading-cursive {
-        br {
-              display: none;
-              @include small-mobiles {display: block;}
-        }
-    }
-    .arrow-side{
-        position: relative;
-        @include small {
-            font-size: 29px;
-        }
-        @include x-small {
-            font-size: 29px;
-        }
-        &::after {
-            position: absolute;
-            content: '';
-            top: -33px;
-            right: -171px;
-            width: 150px;
-            height: 150px;
-            background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-downward.svg');
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+            .get-started {
+                width: 90%;
+                margin: 0px auto;
+                padding: 100px 0 0;
+                position: relative;
+
+                @include mobiles {
+                    width: 85%;
+                }
+
+                .arrow-with-text {
+                    &.curved-down {
+                        top: 25px;
+                        z-index: 999;
+                        right: 25px;
+
+                        &::before {
+                            bottom: -24px;
+                            right: 46px;
+                            width: 80px;
+                            height: 150px;
+                            top: 30px;
+                            background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-resources.svg');
+
+                            @include mobiles {
+                                right: 5px;
+                            }
+                        }
+
+                        @include mobiles {
+                            right: -10px;
+                            top: -21px;
+                        }
+                    }
+                }
+
+                .get-started-outer {
+                    position: relative;
+                    border-top: 2px solid #ccc;
+
+                    &:nth-child(2) {
+                        border-top: unset;
+
+                        .get-started-inner {
+                            @include mobiles {
+                                >img {
+                                    margin-top: -50px;
+                                }
+                            }
+                        }
+                    }
+
+                    .get-started-inner {
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: 45px 45px 30px 100px;
+                        background: $light-blue;
+                        margin-left: 10%;
+
+                        @include mobiles {
+                            margin-left: unset;
+                            padding: 20px;
+                            display: block;
+                        }
+
+                        >img {
+                            position: absolute;
+                            left: 0;
+                            top: -15%;
+                            border-radius: 20px;
+                            box-shadow: 0px 1px 30px rgba(82, 99, 116, 20%);
+
+                            @include tablets {
+                                width: 225px;
+                                top: -20%;
+                            }
+
+                            @include mobiles {
+                                width: 60%;
+                                position: static;
+                                margin-bottom: 15px;
+                            }
+                        }
+
+                        @include mobiles {
+                            text-align: center;
+                        }
+                    }
+
+                    .get-started-intro {
+                        width: 75%;
+
+                        //margin-top: 20px;
+                        .step {
+                            width: max-content;
+                            background: #fff;
+                            border-radius: 50px;
+                            padding: 10px 20px;
+                            display: flex;
+                            align-items: center;
+                            @include font-Greycliff-CF (14px, 14px, $light-navy, bolder);
+                            line-height: 16px;
+
+                            @include mobiles {
+                                margin: 0 auto;
+                            }
+                        }
+
+                        h3 {
+                            color: $navy;
+                            position: relative;
+
+                            .hero-icon {
+                                position: absolute;
+                                left: -75px;
+                                top: -5px;
+
+                                @include mobiles {
+                                    position: static;
+                                    left: 0;
+                                    width: 45px;
+                                    top: -10px;
+                                    margin-right: 10px;
+                                }
+                            }
+
+                            @include mobiles {
+                                position: static;
+                                display: flex !important;
+                                align-items: center;
+                                justify-content: center;
+                                width: 80%;
+                                margin: 20px auto;
+                                flex-direction: column;
+                            }
+                        }
+
+                        @include mobiles {
+                            width: 100%;
+                            text-align: center;
+                        }
+
+                        @include tablets {
+                            width: 70%;
+                        }
+                    }
+
+                }
+
+            }
+
         }
     }
 }
-/* css for about us page ends   here*/

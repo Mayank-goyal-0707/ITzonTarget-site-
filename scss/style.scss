@@ -1,15 +1,13 @@
 @import 'font';
 @import 'variable';
-@import 'global';
 @import 'layout';
-@import 'header';
 @import 'mixins';
+
+@import 'header';
 @import 'footer';
 @import 'global';
 @import 'homepage';
-@import 'casestudy';
-@import 'resource.scss';
 @import 'aboutus.scss';
 @import 'service.scss';
-@import 'internal_case_Study.scss';
+@import 'internal-pages.scss';
 @import 'contactus.scss';
