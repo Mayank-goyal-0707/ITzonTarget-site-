@@ -136,6 +136,7 @@
 
     .our-clients-section {
       background-color: $light-blue;
+      margin: 20px 0;
 
       .noble-customers {
         margin: 0 auto;
@@ -202,6 +203,16 @@
         @include mobiles {
           padding: 30px 0;
           width: 85%;
+        }
+      }
+    }
+
+    .general-component {
+      .blue-box-cta {
+        .h2-heading {
+          @include mobiles {
+            line-height: 41px;
+          }
         }
       }
     }

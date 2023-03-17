@@ -53,7 +53,9 @@
                 background-color: $light-blue;
                 border-radius: 17px;
 
-                .regular-para {
+                p {
+                    @include font-Greycliff-CF(18px, 27px, #526374, 500);
+                    margin: 20px 0px;
                     font-size: 17px;
                     line-height: 27px;
                     position: relative;
@@ -76,66 +78,97 @@
             }
         }
 
-        .customer-testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(1, 1fr);
-            gap: 40px;
-            padding: 30px 0px;
+        .our-clients-section {
+            background-color: $light-blue;
 
-            @include tablets {
-                grid-template-columns: repeat(1, 1fr);
-            }
+            .noble-customers {
+                width: 90%;
+                margin: 0 auto;
 
-            @include mobiles {
-                grid-template-columns: repeat(1, 1fr);
-                gap: 25px;
-            }
-
-            .customer-testimonial {
-                justify-content: space-between;
-                align-items: center;
-                display: flex;
-
-                .customer-image {
-                    width: 175px;
-                    height: 175px;
-                    border-radius: 50%;
-                    position: relative;
-                    overflow: hidden;
-                    box-shadow: 0px 1px 30px 0px #52637433;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-
-                    @include mobiles {
-                        height: 150px;
-                        width: 150px;
-                        margin: 0 auto;
-                    }
-                }
-
-                .testimonial-text {
-                    width: 65%;
-                    margin-left: 10px;
-
-                    @include tablets {
-                        width: 70%;
-                    }
-
-                    @include mobiles {
-                        width: 100%;
-                        text-align: center;
-                    }
+                @include tablets {
+                    width: 90%;
                 }
 
                 @include mobiles {
-                    display: block;
+                    width: 85%;
+                }
+
+                .customer-testimonials-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(1, 1fr);
+                    gap: 40px;
+                    padding: 30px 0px;
+
+                    @include tablets {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+
+                    @include mobiles {
+                        grid-template-columns: repeat(1, 1fr);
+                        gap: 25px;
+                    }
+
+                    .customer-testimonial {
+                        justify-content: space-between;
+                        align-items: center;
+                        display: flex;
+
+                        .customer-image {
+                            width: 175px;
+                            height: 175px;
+                            border-radius: 50%;
+                            position: relative;
+                            overflow: hidden;
+                            box-shadow: 0px 1px 30px 0px #52637433;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+
+                            @include mobiles {
+                                height: 150px;
+                                width: 150px;
+                                margin: 0 auto;
+                            }
+                        }
+
+                        .testimonial-text {
+                            width: 65%;
+                            margin-left: 10px;
+
+                            @include tablets {
+                                width: 70%;
+                            }
+
+                            @include mobiles {
+                                width: 100%;
+                                text-align: center;
+                                margin-left: unset;
+                            }
+                        }
+
+                        @include mobiles {
+                            display: block;
+                        }
+                    }
                 }
             }
+        }
+
+        .general-component {
+            & ~ .detail-section {
+                .simple-section {
+                    padding-top: 30px;
+                    padding-bottom: 50px;
+                }
+            }
+        }
+
+        .simple-blue-bg {
+            margin-top: 30px;
         }
 
         .faq-wrapper {
@@ -201,6 +234,14 @@
 
                         .answer {
                             padding-right: 50px;
+
+                            @include tablets {
+                                padding-right: 0;
+                            }
+
+                            @include mobiles {
+                                padding-right: 0;
+                            }
 
                             p {
                                 line-height: 1.4;

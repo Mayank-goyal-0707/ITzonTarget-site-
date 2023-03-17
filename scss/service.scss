@@ -73,17 +73,27 @@
                     list-style: none;
                     display: flex;
                     flex-wrap: wrap;
-                    //justify-content: space-between;
                     padding: 0;
                     margin: 0 auto;
                     width: 90%;
+                    gap: 20px 2%;
 
                     li {
-                        margin: 2% 0 0;
-                        padding: 0 20px;
                         text-align: left;
                         position: relative;
-                        width: 48%;
+                        width: 49%;
+
+                        .regular-para {
+                            text-align: justify;
+
+                            @include tablets {
+                                text-align: justify;
+                            }
+
+                            @include mobiles {
+                                text-align: center;
+                            }
+                        }
 
                         &:nth-child(3n) {
                             @include Desktops {
@@ -100,17 +110,26 @@
                         &:nth-child(odd) {
                             position: relative;
                             padding-left: 0;
+                            padding-right: 4%;
+
+                            @include mobiles {
+                                padding-right: 0;
+                            }
                         }
 
                         &:nth-child(even) {
                             position: unset;
-                        }
+                            padding-left: 2%;
+                            padding-right: 0;
 
-                        &:nth-child(even) {
                             @include tablets {
                                 &::after {
                                     display: none;
                                 }
+                            }
+
+                            @include mobiles {
+                                padding-left: 0;
                             }
                         }
 
@@ -135,7 +154,6 @@
                         }
 
                         @include tablets {
-                            width: 48%;
                             text-align: left;
 
                             &:nth-child(even) {
@@ -155,13 +173,8 @@
                         }
                     }
 
-                    @include tablets {
-                        padding-bottom: 30px;
-                    }
-
                     @include mobiles {
                         width: 85%;
-                        padding-bottom: 30px;
                     }
                 }
             }
