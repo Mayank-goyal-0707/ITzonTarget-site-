@@ -1,0 +1,53 @@
+// css for spacing issues
+.footer {
+    .footer-top {
+        @include small-mobiles {
+            padding-bottom: 4px;
+        }
+    }
+}
+.home {
+    .banner-section {
+       margin-bottom: 30px;
+       @include tablets {
+        margin-bottom: unset;
+       }
+    }
+    .general-component{
+        +.detail-section{
+          .simple-section{
+            &.section-with-arrow {
+                @include small-mobiles {
+                    margin-top: -20px;
+                }
+            }
+          }
+        }
+    }
+}
+// css for about us page issue 
+.page-template-about-us-page {
+   .our-clients-section {
+    +.simple-blue-bg {
+      margin-top: 50px;
+      margin-bottom: -10px;    }
+   }
+}
+// css for chronogram page issue 
+.case_study-template-default {
+    &.single-case_study {
+        .client-overview-wrapper{
+            @include mobiles {
+                padding: 0px;
+            }
+        }
+
+    }
+}
+
+// css for contact us page 
+.page-template-contact-us-page {
+    .simple-blue-bg {
+        margin: 30px auto 55px;
+    }
+}
