@@ -1690,6 +1690,13 @@
     &.asp_w_container_1 {
         &.asp_w_container_1_1 {
             display: none;
+            position: sticky;
+            top: 108px;
+            z-index: 10;
+
+            @include mobiles {
+                top: 75px;
+            }
 
             .asp_m_1_1,
             .promagnifier {
