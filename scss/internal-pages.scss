@@ -60,7 +60,8 @@
         }
     }
 
-    .image-slider-outer {
+    .image-slider-outer,
+    .normal-image-slider {
 
         .slick-prev,
         .slick-next {
@@ -130,6 +131,14 @@
                 width: 64%;
                 box-shadow: 10px 10px 10px -10px #52637433;
             }
+        }
+    }
+
+    .normal-image-slider {
+        margin: 0 auto;
+
+        .image-slides {
+            margin-right: 20px;
         }
     }
 
