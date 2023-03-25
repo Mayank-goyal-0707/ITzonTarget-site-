@@ -22,10 +22,15 @@
                 padding-bottom: 30px;
 
                 .heading-cursive {
+                    width: fit-content;
+                    position: relative;
+                    background-color: #fff;
+                    z-index: 4;
+                    padding-right: 10px;
                     br {
                         display: none;
 
-                        @include small-mobiles {
+                        @include mobiles{
                             display: block;
                         }
                     }
@@ -33,7 +38,7 @@
 
                 .arrow-side {
                     position: relative;
-
+                    z-index: 4;
                     @include small {
                         font-size: 29px;
                     }
@@ -42,25 +47,25 @@
                         font-size: 29px;
                     }
 
-                    &::after {
-                        position: absolute;
-                        content: '';
-                        top: -33px;
-                        right: -235px;
-                        width: 220px;
-                        height: 150px;
-                        background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-downward.svg');
-                        background-repeat: no-repeat;
-                        background-size: 100% 100%;
+                    // &::after {
+                    //     position: absolute;
+                    //     content: '';
+                    //     top: -33px;
+                    //     right: -235px;
+                    //     width: 220px;
+                    //     height: 150px;
+                    //     background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-downward.svg');
+                    //     background-repeat: no-repeat;
+                    //     background-size: 100% 100%;
 
-                        @include mobiles {
-                            position: absolute;
-                            top: -40px;
-                            right: -70px;
-                            width: 60px;
-                            background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-downward-100.svg');
-                        }
-                    }
+                    //     @include mobiles {
+                    //         position: absolute;
+                    //         top: -40px;
+                    //         right: -70px;
+                    //         width: 60px;
+                    //         background-image: url('/wp-content/themes/itzontarget/assets/images/arrow-downward-100.svg');
+                    //     }
+                    // }
                 }
 
                 @include mobiles {
@@ -94,7 +99,49 @@
                                 text-align: center;
                             }
                         }
-
+                        &:nth-child(1){
+                           &::before {
+                            position: absolute;
+                            width: 269px;
+                            background-position: right;
+                            height: 162px;
+                            background-image: url(/wp-content/themes/itzontarget/assets/images/arrow-downward.svg);
+                            background-size: 100% 100%;
+                            background-repeat: no-repeat;
+                            z-index: -2px;
+                            top: -111px;
+                            right: -34px;
+                            content: '';
+                            @include mobiles {
+                                width: 256px;
+                                height: 120px;
+                                top:-125px;
+                                left: 111px;
+                            }
+                            @include tabletups {
+                                top: -107px;
+                                z-index: 5;
+                                left: 78px;
+                                width: 204px;
+                                height: 79px;
+                                top: -86px;
+                                z-index: 5;
+                                left: 102px;
+                            }
+                            @include small-mobiles {
+                              width: 101px;
+                              height: 79px;
+                              top: -92px;
+                              margin-left: 70px;
+                              left: 69px;
+                            }
+                            @include x-small {
+                                width: 68px;
+                                height: 75px;
+                                margin-left: 55px;
+                            }
+                           }
+                        }
                         &:nth-child(3n) {
                             @include Desktops {
                                 &::after {

@@ -103,3 +103,9 @@
     @content;
   }
 }
+
+@mixin tabletups {
+    @media (max-width:620px) {
+        @content;
+    }
+}

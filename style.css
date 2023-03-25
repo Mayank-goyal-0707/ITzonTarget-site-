@@ -971,20 +971,22 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     padding: 0px 60px; }
-    .two-columns-wrapper .two-columns .left-columns .img-sec {
-      width: 90%;
-      height: auto;
-      border-radius: 50%;
-      margin: 0 auto; }
-      .two-columns-wrapper .two-columns .left-columns .img-sec img {
-        width: 100%; }
-    @media (min-width: 768px) and (max-width: 990px) {
-      .two-columns-wrapper .two-columns .left-columns {
-        margin: 0 auto; } }
-    @media (max-width: 767px) {
-      .two-columns-wrapper .two-columns .left-columns {
-        margin: 0 auto;
-        width: 85%; } }
+    .two-columns-wrapper .two-columns .left-columns {
+      max-width: 40%; }
+      .two-columns-wrapper .two-columns .left-columns .img-sec {
+        width: 90%;
+        height: auto;
+        border-radius: 50%;
+        margin: 0 auto; }
+        .two-columns-wrapper .two-columns .left-columns .img-sec img {
+          width: 100%; }
+      @media (min-width: 768px) and (max-width: 990px) {
+        .two-columns-wrapper .two-columns .left-columns {
+          margin: 0 auto; } }
+      @media (max-width: 767px) {
+        .two-columns-wrapper .two-columns .left-columns {
+          margin: 0 auto;
+          width: 85%; } }
     .two-columns-wrapper .two-columns .right-columns {
       width: 50%; }
       @media (min-width: 768px) and (max-width: 990px) {
@@ -1316,8 +1318,9 @@ footer {
       .case-study-details .case-study-section .case-study-right .regular-para p {
         margin-bottom: 15px; }
         .case-study-details .case-study-section .case-study-right .regular-para p img {
-          width: 100%;
-          height: auto; }
+          display: block;
+          margin-left: auto;
+          margin-right: auto; }
       @media (max-width: 767px) {
         .case-study-details .case-study-section .case-study-right {
           width: 100%; } }
@@ -1530,6 +1533,21 @@ footer {
     transform: scaleX(0); }
   to {
     transform: scaleX(1); } }
+.asp_w_container.asp_w_container_1.asp_w_container_1_1 {
+  display: none;
+  position: sticky;
+  top: 108px;
+  z-index: 10; }
+  @media (max-width: 767px) {
+    .asp_w_container.asp_w_container_1.asp_w_container_1_1 {
+      top: 75px; } }
+  .asp_w_container.asp_w_container_1.asp_w_container_1_1 .asp_m_1_1,
+  .asp_w_container.asp_w_container_1.asp_w_container_1_1 .promagnifier {
+    background: linear-gradient(92.84deg, rgba(0, 56, 108, 0.3) 14.69%, rgba(9, 116, 228, 0.3) 50.57%, rgba(176, 211, 248, 0.3) 81.51%), #0974E4 !important; }
+
+#ajaxsearchprores1_1 {
+  background: linear-gradient(92.84deg, rgba(0, 56, 108, 0.3) 14.69%, rgba(9, 116, 228, 0.3) 50.57%, rgba(176, 211, 248, 0.3) 81.51%), #0974E4 !important; }
+
 .page-template-default.home .banner-section .get-more-cutomers {
   display: flex;
   justify-content: space-between;
@@ -1835,44 +1853,44 @@ footer {
       .page-template-default.home .testimonial-section .customer-slider.slick-initialized.slick-slider {
         width: 85%; } }
 
-.page-template-pages.page-template-about-us-page .perks-of-working {
+.page-template-pages.page-template-about-us-page .perks-of-working, .page-template-pages.page-template-testimonial-page .perks-of-working, .page-template-pages.page-template-faq-page .perks-of-working {
   border-top: 2px solid #5263744D;
   margin: 0 auto;
   width: 90%; }
   @media (max-width: 767px) {
-    .page-template-pages.page-template-about-us-page .perks-of-working {
+    .page-template-pages.page-template-about-us-page .perks-of-working, .page-template-pages.page-template-testimonial-page .perks-of-working, .page-template-pages.page-template-faq-page .perks-of-working {
       width: 85%; } }
-  .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper {
+  .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper, .page-template-pages.page-template-testimonial-page .perks-of-working .two-columns-wrapper, .page-template-pages.page-template-faq-page .perks-of-working .two-columns-wrapper {
     padding: 50px 50px 20px; }
     @media (min-width: 768px) and (max-width: 990px) {
-      .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper {
+      .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper, .page-template-pages.page-template-testimonial-page .perks-of-working .two-columns-wrapper, .page-template-pages.page-template-faq-page .perks-of-working .two-columns-wrapper {
         padding: 0 0 30px; } }
     @media (max-width: 767px) {
-      .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper {
+      .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper, .page-template-pages.page-template-testimonial-page .perks-of-working .two-columns-wrapper, .page-template-pages.page-template-faq-page .perks-of-working .two-columns-wrapper {
         padding: 0 0 30px; } }
-    .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns {
+    .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns, .page-template-pages.page-template-testimonial-page .perks-of-working .two-columns-wrapper .two-columns, .page-template-pages.page-template-faq-page .perks-of-working .two-columns-wrapper .two-columns {
       padding: 0px; }
-      .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns .left-columns {
+      .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns .left-columns, .page-template-pages.page-template-testimonial-page .perks-of-working .two-columns-wrapper .two-columns .left-columns, .page-template-pages.page-template-faq-page .perks-of-working .two-columns-wrapper .two-columns .left-columns {
         width: 35%; }
         @media (min-width: 768px) and (max-width: 990px) {
-          .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns .left-columns {
+          .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns .left-columns, .page-template-pages.page-template-testimonial-page .perks-of-working .two-columns-wrapper .two-columns .left-columns, .page-template-pages.page-template-faq-page .perks-of-working .two-columns-wrapper .two-columns .left-columns {
             width: 100%;
             text-align: center; } }
         @media (max-width: 767px) {
-          .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns .left-columns {
+          .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns .left-columns, .page-template-pages.page-template-testimonial-page .perks-of-working .two-columns-wrapper .two-columns .left-columns, .page-template-pages.page-template-faq-page .perks-of-working .two-columns-wrapper .two-columns .left-columns {
             width: 100%;
             text-align: center; } }
       @media (min-width: 768px) and (max-width: 990px) {
-        .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns {
+        .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns, .page-template-pages.page-template-testimonial-page .perks-of-working .two-columns-wrapper .two-columns, .page-template-pages.page-template-faq-page .perks-of-working .two-columns-wrapper .two-columns {
           padding: 30px 0; } }
       @media (max-width: 767px) {
-        .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns {
+        .page-template-pages.page-template-about-us-page .perks-of-working .two-columns-wrapper .two-columns, .page-template-pages.page-template-testimonial-page .perks-of-working .two-columns-wrapper .two-columns, .page-template-pages.page-template-faq-page .perks-of-working .two-columns-wrapper .two-columns {
           padding: 30px 0 0; } }
-  .page-template-pages.page-template-about-us-page .perks-of-working .perks-ul {
+  .page-template-pages.page-template-about-us-page .perks-of-working .perks-ul, .page-template-pages.page-template-testimonial-page .perks-of-working .perks-ul, .page-template-pages.page-template-faq-page .perks-of-working .perks-ul {
     padding: 30px;
     background-color: #EFF8FC;
     border-radius: 17px; }
-    .page-template-pages.page-template-about-us-page .perks-of-working .perks-ul p {
+    .page-template-pages.page-template-about-us-page .perks-of-working .perks-ul p, .page-template-pages.page-template-testimonial-page .perks-of-working .perks-ul p, .page-template-pages.page-template-faq-page .perks-of-working .perks-ul p {
       font-family: 'Greycliff CF';
       font-size: 18px;
       line-height: 27px;
@@ -1885,7 +1903,7 @@ footer {
       margin-left: 25px;
       color: #003683;
       font-weight: bold; }
-      .page-template-pages.page-template-about-us-page .perks-of-working .perks-ul p::before {
+      .page-template-pages.page-template-about-us-page .perks-of-working .perks-ul p::before, .page-template-pages.page-template-testimonial-page .perks-of-working .perks-ul p::before, .page-template-pages.page-template-faq-page .perks-of-working .perks-ul p::before {
         position: absolute;
         content: '';
         width: 20px;
@@ -1896,102 +1914,102 @@ footer {
         background-size: 100% 100%;
         top: 2px;
         left: -30px; }
-.page-template-pages.page-template-about-us-page .our-clients-section {
+.page-template-pages.page-template-about-us-page .our-clients-section, .page-template-pages.page-template-testimonial-page .our-clients-section, .page-template-pages.page-template-faq-page .our-clients-section {
   background-color: #EFF8FC; }
-  .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers {
+  .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers {
     width: 90%;
     margin: 0 auto; }
     @media (min-width: 768px) and (max-width: 990px) {
-      .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers {
+      .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers {
         width: 90%; } }
     @media (max-width: 767px) {
-      .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers {
+      .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers {
         width: 85%; } }
-    .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid {
+    .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(1, 1fr);
       gap: 40px;
       padding: 30px 0px; }
       @media (min-width: 768px) and (max-width: 990px) {
-        .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid {
+        .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid {
           grid-template-columns: repeat(1, 1fr); } }
       @media (max-width: 767px) {
-        .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid {
+        .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid {
           grid-template-columns: repeat(1, 1fr);
           gap: 25px; } }
-      .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial {
+      .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial {
         justify-content: space-between;
         align-items: center;
         display: flex; }
-        .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image {
+        .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image {
           width: 175px;
           height: 175px;
           border-radius: 50%;
           position: relative;
           overflow: hidden;
           box-shadow: 0px 1px 30px 0px #52637433; }
-          .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image img {
+          .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image img, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image img, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image img {
             width: 100%;
             height: 100%;
             object-fit: cover; }
           @media (max-width: 767px) {
-            .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image {
+            .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .customer-image {
               height: 150px;
               width: 150px;
               margin: 0 auto; } }
-        .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text {
+        .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text {
           width: 65%;
           margin-left: 10px; }
           @media (min-width: 768px) and (max-width: 990px) {
-            .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text {
+            .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text {
               width: 70%; } }
           @media (max-width: 767px) {
-            .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text {
+            .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial .testimonial-text {
               width: 100%;
               text-align: center;
               margin-left: unset; } }
         @media (max-width: 767px) {
-          .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial {
+          .page-template-pages.page-template-about-us-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial, .page-template-pages.page-template-testimonial-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial, .page-template-pages.page-template-faq-page .our-clients-section .noble-customers .customer-testimonials-grid .customer-testimonial {
             display: block; } }
-.page-template-pages.page-template-about-us-page .general-component ~ .detail-section .simple-section {
+.page-template-pages.page-template-about-us-page .general-component ~ .detail-section .simple-section, .page-template-pages.page-template-testimonial-page .general-component ~ .detail-section .simple-section, .page-template-pages.page-template-faq-page .general-component ~ .detail-section .simple-section {
   padding-top: 30px;
   padding-bottom: 50px; }
-.page-template-pages.page-template-about-us-page .simple-blue-bg {
+.page-template-pages.page-template-about-us-page .simple-blue-bg, .page-template-pages.page-template-testimonial-page .simple-blue-bg, .page-template-pages.page-template-faq-page .simple-blue-bg {
   margin-top: 30px; }
-.page-template-pages.page-template-about-us-page .faq-wrapper .faqs {
+.page-template-pages.page-template-about-us-page .faq-wrapper .faqs, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs, .page-template-pages.page-template-faq-page .faq-wrapper .faqs {
   padding: 30px 0px;
   width: 90%;
   margin: 0 auto; }
   @media (max-width: 767px) {
-    .page-template-pages.page-template-about-us-page .faq-wrapper .faqs {
+    .page-template-pages.page-template-about-us-page .faq-wrapper .faqs, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs, .page-template-pages.page-template-faq-page .faq-wrapper .faqs {
       width: 85%; } }
-  .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list {
+  .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list {
     list-style: none;
     padding: 0px;
     margin: 50px 0px 20px; }
-    .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li {
+    .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li {
       background-color: #EFF8FC;
       padding: 20px 55px;
       border-radius: 15px;
       margin-bottom: 20px; }
       @media (max-width: 767px) {
-        .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li {
+        .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li {
           padding: 10px 20px; } }
-      .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li.show {
+      .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li.show, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li.show, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li.show {
         background-color: #fff;
         box-shadow: 0px 1px 30px 0px #52637433; }
-        .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li.show .question::before {
+        .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li.show .question::before, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li.show .question::before, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li.show .question::before {
           background-image: url(/wp-content/themes/itzontarget/assets/images/golden-cross.svg); }
-        .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li.show .heading-h4 {
+        .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li.show .heading-h4, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li.show .heading-h4, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li.show .heading-h4 {
           color: #0974E4; }
-      .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .question {
+      .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .question, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li .question, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li .question {
         display: block;
         cursor: pointer;
         position: relative;
         padding-right: 50px;
         -webkit-tap-highlight-color: transparent; }
-        .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .question:before {
+        .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .question:before, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li .question:before, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li .question:before {
           content: '';
           width: 20px;
           height: 20px;
@@ -2002,19 +2020,19 @@ footer {
           top: 50%;
           background-size: 100% 100%;
           transform: translateY(-50%); }
-      .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .answer {
+      .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .answer, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li .answer, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li .answer {
         padding-right: 50px; }
         @media (min-width: 768px) and (max-width: 990px) {
-          .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .answer {
+          .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .answer, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li .answer, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li .answer {
             padding-right: 0; } }
         @media (max-width: 767px) {
-          .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .answer {
+          .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .answer, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li .answer, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li .answer {
             padding-right: 0; } }
-        .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .answer p {
+        .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .answer p, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li .answer p, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li .answer p {
           line-height: 1.4; }
-      .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .regular-para {
+      .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li .regular-para, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li .regular-para, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li .regular-para {
         margin: 0 0 17px 0; }
-      .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li:last-child {
+      .page-template-pages.page-template-about-us-page .faq-wrapper .faqs .faq-list li:last-child, .page-template-pages.page-template-testimonial-page .faq-wrapper .faqs .faq-list li:last-child, .page-template-pages.page-template-faq-page .faq-wrapper .faqs .faq-list li:last-child {
         border: none; }
 
 @media (min-width: 991px) {
@@ -2031,36 +2049,26 @@ footer {
   margin: 0 auto;
   padding: 0px;
   padding-bottom: 30px; }
-  .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .heading-cursive br {
-    display: none; }
-    @media (max-width: 560px) {
-      .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .heading-cursive br {
-        display: block; } }
+  .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .heading-cursive {
+    width: fit-content;
+    position: relative;
+    background-color: #fff;
+    z-index: 4;
+    padding-right: 10px; }
+    .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .heading-cursive br {
+      display: none; }
+      @media (max-width: 767px) {
+        .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .heading-cursive br {
+          display: block; } }
   .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
-    position: relative; }
+    position: relative;
+    z-index: 4; }
     @media (max-width: 524px) and (min-width: 420px) {
       .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
         font-size: 29px; } }
     @media (max-width: 418px) {
       .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
         font-size: 29px; } }
-    .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side::after {
-      position: absolute;
-      content: '';
-      top: -33px;
-      right: -171px;
-      width: 150px;
-      height: 150px;
-      background-image: url("/wp-content/themes/itzontarget/assets/images/arrow-downward.svg");
-      background-repeat: no-repeat;
-      background-size: 100% 100%; }
-      @media (max-width: 767px) {
-        .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side::after {
-          position: absolute;
-          top: -40px;
-          right: -70px;
-          width: 60px;
-          background-image: url("/wp-content/themes/itzontarget/assets/images/arrow-downward-100.svg"); } }
   @media (max-width: 767px) {
     .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner {
       width: 85%; } }
@@ -2084,6 +2092,46 @@ footer {
       @media (max-width: 767px) {
         .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li .regular-para {
           text-align: center; } }
+    .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(1)::before {
+      position: absolute;
+      width: 269px;
+      background-position: right;
+      height: 162px;
+      background-image: url(/wp-content/themes/itzontarget/assets/images/arrow-downward.svg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      z-index: -2px;
+      top: -111px;
+      right: -34px;
+      content: ''; }
+      @media (max-width: 767px) {
+        .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(1)::before {
+          width: 256px;
+          height: 120px;
+          top: -125px;
+          left: 111px; } }
+      @media (max-width: 620px) {
+        .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(1)::before {
+          top: -107px;
+          z-index: 5;
+          left: 78px;
+          width: 204px;
+          height: 79px;
+          top: -86px;
+          z-index: 5;
+          left: 102px; } }
+      @media (max-width: 560px) {
+        .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(1)::before {
+          width: 101px;
+          height: 79px;
+          top: -92px;
+          margin-left: 70px;
+          left: 69px; } }
+      @media (max-width: 418px) {
+        .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(1)::before {
+          width: 68px;
+          height: 75px;
+          margin-left: 55px; } }
     @media (min-width: 991px) {
       .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(3n)::after {
         display: none; } }
@@ -2305,11 +2353,17 @@ footer {
 @media (max-width: 767px) {
   .resource-template-default.single-resource .image-slider-outer .slick-prev,
   .resource-template-default.single-resource .image-slider-outer .slick-next,
+  .resource-template-default.single-resource .normal-image-slider .slick-prev,
+  .resource-template-default.single-resource .normal-image-slider .slick-next,
   .case_study-template-default.single-case_study .image-slider-outer .slick-prev,
-  .case_study-template-default.single-case_study .image-slider-outer .slick-next {
+  .case_study-template-default.single-case_study .image-slider-outer .slick-next,
+  .case_study-template-default.single-case_study .normal-image-slider .slick-prev,
+  .case_study-template-default.single-case_study .normal-image-slider .slick-next {
     top: 103%; } }
 .resource-template-default.single-resource .image-slider-outer .slick-prev,
-.case_study-template-default.single-case_study .image-slider-outer .slick-prev {
+.resource-template-default.single-resource .normal-image-slider .slick-prev,
+.case_study-template-default.single-case_study .image-slider-outer .slick-prev,
+.case_study-template-default.single-case_study .normal-image-slider .slick-prev {
   border: 2px solid;
   left: 0px;
   z-index: 999;
@@ -2318,7 +2372,9 @@ footer {
   border-bottom-right-radius: 15px;
   background-color: #fff !important; }
   .resource-template-default.single-resource .image-slider-outer .slick-prev::before,
-  .case_study-template-default.single-case_study .image-slider-outer .slick-prev::before {
+  .resource-template-default.single-resource .normal-image-slider .slick-prev::before,
+  .case_study-template-default.single-case_study .image-slider-outer .slick-prev::before,
+  .case_study-template-default.single-case_study .normal-image-slider .slick-prev::before {
     content: url("/wp-content/themes/itzontarget/assets/images/arrow-slick-left.svg");
     width: 28px;
     height: 28px;
@@ -2328,18 +2384,24 @@ footer {
     left: 5px;
     opacity: 1; }
   .resource-template-default.single-resource .image-slider-outer .slick-prev:hover,
-  .case_study-template-default.single-case_study .image-slider-outer .slick-prev:hover {
+  .resource-template-default.single-resource .normal-image-slider .slick-prev:hover,
+  .case_study-template-default.single-case_study .image-slider-outer .slick-prev:hover,
+  .case_study-template-default.single-case_study .normal-image-slider .slick-prev:hover {
     background-color: #fff; }
   @media (max-width: 767px) {
     .resource-template-default.single-resource .image-slider-outer .slick-prev,
-    .case_study-template-default.single-case_study .image-slider-outer .slick-prev {
+    .resource-template-default.single-resource .normal-image-slider .slick-prev,
+    .case_study-template-default.single-case_study .image-slider-outer .slick-prev,
+    .case_study-template-default.single-case_study .normal-image-slider .slick-prev {
       width: 50%;
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
       border-bottom-left-radius: 15px;
       box-shadow: -10px 10px 10px -10px #52637433; } }
 .resource-template-default.single-resource .image-slider-outer .slick-next,
-.case_study-template-default.single-case_study .image-slider-outer .slick-next {
+.resource-template-default.single-resource .normal-image-slider .slick-next,
+.case_study-template-default.single-case_study .image-slider-outer .slick-next,
+.case_study-template-default.single-case_study .normal-image-slider .slick-next {
   right: 0px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -2349,7 +2411,9 @@ footer {
   padding: 20px;
   background-color: #fff !important; }
   .resource-template-default.single-resource .image-slider-outer .slick-next::before,
-  .case_study-template-default.single-case_study .image-slider-outer .slick-next::before {
+  .resource-template-default.single-resource .normal-image-slider .slick-next::before,
+  .case_study-template-default.single-case_study .image-slider-outer .slick-next::before,
+  .case_study-template-default.single-case_study .normal-image-slider .slick-next::before {
     content: url("/wp-content/themes/itzontarget/assets/images/arrow-slick-right.svg");
     width: 28px;
     height: 28px;
@@ -2360,12 +2424,20 @@ footer {
     opacity: 1; }
   @media (max-width: 767px) {
     .resource-template-default.single-resource .image-slider-outer .slick-next,
-    .case_study-template-default.single-case_study .image-slider-outer .slick-next {
+    .resource-template-default.single-resource .normal-image-slider .slick-next,
+    .case_study-template-default.single-case_study .image-slider-outer .slick-next,
+    .case_study-template-default.single-case_study .normal-image-slider .slick-next {
       border-bottom-left-radius: 0px;
       border-top-left-radius: 0px;
       border-bottom-right-radius: 15px;
       width: 64%;
       box-shadow: 10px 10px 10px -10px #52637433; } }
+.resource-template-default.single-resource .normal-image-slider,
+.case_study-template-default.single-case_study .normal-image-slider {
+  margin: 0 auto; }
+  .resource-template-default.single-resource .normal-image-slider .image-slides,
+  .case_study-template-default.single-case_study .normal-image-slider .image-slides {
+    margin-right: 20px; }
 .resource-template-default.single-resource .client-overview-wrapper,
 .case_study-template-default.single-case_study .client-overview-wrapper {
   width: 90%;
@@ -2573,5 +2645,9 @@ footer {
 
 .page-template-contact-us-page .simple-blue-bg {
   margin: 30px auto 55px; }
+
+.resource-template-default .case-study + .simple-blue-bg {
+  margin-top: 50px;
+  margin-bottom: 30px; }
 
 /*# sourceMappingURL=style.css.map */
