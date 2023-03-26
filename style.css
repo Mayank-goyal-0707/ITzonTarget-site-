@@ -1619,7 +1619,7 @@ footer {
         background-image: url("/wp-content/themes/itzontarget/assets/images/side-curved.png");
         background-repeat: no-repeat;
         background-size: 100% 100%; }
-        @media (min-width: 1140px) {
+        @media (max-width: 1200px) {
           .page-template-default.home .banner-section .get-more-cutomers .cta-sec .cta-primary.has-arrow::after {
             top: -98px;
             right: -130px; } }
@@ -2048,9 +2048,11 @@ footer {
   width: 90%;
   margin: 0 auto;
   padding: 0px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; }
   .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .heading-cursive {
-    width: fit-content;
     position: relative;
     background-color: #fff;
     z-index: 4;
@@ -2061,14 +2063,42 @@ footer {
         .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .heading-cursive br {
           display: block; } }
   .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
-    position: relative;
-    z-index: 4; }
+    margin-top: 51px;
+    position: absolute;
+    left: 36%; }
+    .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side img {
+      width: 100%; }
+    @media (max-width: 1200px) {
+      .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
+        left: 34%; } }
+    @media (max-width: 991px) {
+      .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
+        left: 31%; } }
+    @media (max-width: 900px) {
+      .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
+        left: 28%; } }
+    @media (max-width: 767px) {
+      .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
+        top: 16%;
+        z-index: 5;
+        left: 20%; } }
+    @media (max-width: 591px) {
+      .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
+        top: 18%;
+        left: 26%;
+        width: 29%; } }
+    @media (max-width: 480px) {
+      .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
+        left: 31%; } }
     @media (max-width: 524px) and (min-width: 420px) {
       .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
         font-size: 29px; } }
     @media (max-width: 418px) {
       .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
-        font-size: 29px; } }
+        padding: 0px 10px; } }
+    @media (max-width: 380px) {
+      .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner .arrow-side {
+        padding: 0px 10px 0px 28px; } }
   @media (max-width: 767px) {
     .page-template-pages.page-template-services-page .services-lists-wrapper .services-lists-inner {
       width: 85%; } }
@@ -2092,46 +2122,6 @@ footer {
       @media (max-width: 767px) {
         .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li .regular-para {
           text-align: center; } }
-    .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(1)::before {
-      position: absolute;
-      width: 269px;
-      background-position: right;
-      height: 162px;
-      background-image: url(/wp-content/themes/itzontarget/assets/images/arrow-downward.svg);
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      z-index: -2px;
-      top: -111px;
-      right: -34px;
-      content: ''; }
-      @media (max-width: 767px) {
-        .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(1)::before {
-          width: 256px;
-          height: 120px;
-          top: -125px;
-          left: 111px; } }
-      @media (max-width: 620px) {
-        .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(1)::before {
-          top: -107px;
-          z-index: 5;
-          left: 78px;
-          width: 204px;
-          height: 79px;
-          top: -86px;
-          z-index: 5;
-          left: 102px; } }
-      @media (max-width: 560px) {
-        .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(1)::before {
-          width: 101px;
-          height: 79px;
-          top: -92px;
-          margin-left: 70px;
-          left: 69px; } }
-      @media (max-width: 418px) {
-        .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(1)::before {
-          width: 68px;
-          height: 75px;
-          margin-left: 55px; } }
     @media (min-width: 991px) {
       .page-template-pages.page-template-services-page .services-lists-wrapper .specialization .two-grids li:nth-child(3n)::after {
         display: none; } }

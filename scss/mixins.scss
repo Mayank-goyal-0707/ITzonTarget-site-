@@ -97,13 +97,36 @@
         @content;
     }
 }
-
+@mixin Desktop-down {
+    @media (max-width:991px) {
+        @content;
+    }
+}
+@mixin tabletslandscape {
+    @media (max-width:900px) {
+        @content;
+    }
+}
 @mixin Large-Desktops {
-  @media (min-width:1140px) {
+  @media (max-width:1200px) {
     @content;
   }
 }
-
+@mixin medmobiles {
+    @media (max-width:591px) {
+        @content;
+    }
+}
+@mixin mobilessm {
+    @media (max-width:480px) {
+        @content;
+    }
+}
+@mixin mobilenormal {
+    @media (max-width:380px) {
+        @content;
+    }
+}
 @mixin tabletups {
     @media (max-width:620px) {
         @content;
